@@ -45,6 +45,8 @@
             <div class="mood-G2B5sx valign-text-middle">Mood</div>
         </a>
         </div>
+
+        
         <a href="{{ route('search-by-energy-level') }}">
           <div class="group-9-C61RwL">
             <div class="energy-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
@@ -53,8 +55,9 @@
             <div class="group-6-9dtg3L">
               <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
               <img class="vector-16-jUlmuf" src="img/vector-16-5@2x.svg" />
-            </div></div
-        ></a>
+            </div>
+          </div>
+        </a>
         <div class="pick-the-mood-C61RwL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-56px">
           PICK THE MOOD
         </div>
@@ -95,6 +98,15 @@
           <div class="whimsical-Ut9V1h valign-text-middle inter-medium-chicago-14px">Whimsical</div>
         </div>
         <div class="gif-frame-C61RwL"><img class="mood-1-RbxIY1" src="img/mood-1@2x.gif" /></div>
+        <div class="view-results-below-C61RwL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+          View results below
+        </div>
+        <img class="vector-15-C61RwL" src="img/vector-15-1@2x.svg" />
+        <img class="vector-16-C61RwL" src="img/vector-16-9@2x.svg" />
+        <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />
+
+
+
         <img class="vector-25-C61RwL" src="img/vector-25@1x.svg" />
         <div class="rectangle-76-C61RwL"></div>
         <div class="x2021-copyr-s-reserved-C61RwL">© 2021 Copyright LoseFound. All Rights Reserved.</div>
@@ -179,12 +191,6 @@
         <div class="heart-1-VkPPtx"><img class="vector-fLGRxx" src="img/vector-84@2x.svg" /></div>
         <div class="heart-2-VkPPtx"><img class="vector-Upkd2T" src="img/vector-3@2x.svg" /></div>
         <div class="heart-3-VkPPtx"><img class="vector-WLlorL" src="img/vector-4@2x.svg" /></div>
-        <div class="view-results-below-C61RwL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
-          View results below
-        </div>
-        <img class="vector-15-C61RwL" src="img/vector-15-1@2x.svg" />
-        <img class="vector-16-C61RwL" src="img/vector-16-9@2x.svg" />
-        <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />
         
         <div class="rectangle-79-C61RwL border-2px-eerie-black"></div>
         <div class="load-more-C61RwL valign-text-middle">Load more</div>

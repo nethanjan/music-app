@@ -2140,12 +2140,10 @@
     width: auto;
     color: var(--paradiso);
 }
-/* ul.ais-Menu-list {
-    float: left;
-    display: flex;
+ul.ais-Menu-list {
     list-style: none;
     list-style-type: none;
-} */
+}
 .page-choose-the-genre .instrument-G2B5sx {
     background-color: transparent;
     flex-shrink: 1;
@@ -2189,6 +2187,21 @@
     white-space: nowrap;
     width: auto;
 }
+.page-choose-the-genre .energy-level-G2B5sx-highlight {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 38px;
+    letter-spacing: 0px;
+    line-height: 38px;
+    margin-left: 94px;
+    min-height: 38px;
+    min-width: 115px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    color: var(--paradiso);
+}
 .page-choose-the-genre .mood-G2B5sx {
     background-color: transparent;
     flex-shrink: 1;
@@ -2202,6 +2215,21 @@
     text-align: center;
     white-space: nowrap;
     width: auto;
+}
+.page-choose-the-genre .mood-G2B5sx-highlight {
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 38px;
+    letter-spacing: 0px;
+    line-height: 38px;
+    margin-left: 90px;
+    min-height: 38px;
+    min-width: 54px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    color: var(--paradiso);
 }
 .ourstorybeginsfree-regular-normal-eerie-black-30px {
     color: var(--eerie-black);

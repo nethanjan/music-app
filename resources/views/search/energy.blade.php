@@ -62,6 +62,7 @@
                 </div>
             </a>
         </div>
+        
         <a href="{{ route('search-by-instrument') }}">
           <div class="group-9-C61RwL">
             <div class="instrument-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
@@ -70,19 +71,35 @@
             <div class="group-6-9dtg3L">
               <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
               <img class="vector-16-jUlmuf" src="img/vector-16-5@2x.svg" />
-            </div></div
-        ></a>
+            </div>
+          </div>
+        </a>
         <a href="{{ route('search-by-mood') }}">
           <div class="group-8-C61RwL">
             <div class="mood-3cZhlu valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">Mood</div>
             <div class="group-6-3cZhlu">
               <img class="vector-15-agmLXU" src="img/vector-15@2x.svg" />
               <img class="vector-16-agmLXU" src="img/vector-16-3@2x.svg" />
-            </div></div
-        ></a>
+            </div>
+          </div>
+        </a>
         <div class="pick-the-e-ergy-level-C61RwL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-56px">
           PICK THE ENERGY LEVEL
         </div>
+        <div class="gif-frame-C61RwL"><img class="energy-1-RbxIY1" src="img/energy-1@2x.gif" /></div>
+        <div class="component-3-C61RwL">
+          <div class="low-zmv7IO valign-text-middle inter-medium-chicago-14px">Low</div>
+          <div class="medium-zmv7IO valign-text-middle">Medium</div>
+          <div class="high-zmv7IO valign-text-middle inter-medium-chicago-14px">High</div>
+        </div>
+        <div class="view-results-below-C61RwL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+          View results below
+        </div>
+        <img class="vector-15-C61RwL" src="img/vector-15-1@2x.svg" />
+        <img class="vector-16-C61RwL" src="img/vector-16-7@2x.svg" />
+        <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />
+
+
         <div class="results-200-C61RwL valign-text-middle">Results: 200</div>
         <div class="title-C61RwL valign-text-middle inter-bold-black-16px">Title</div>
         <div class="friendship-C61RwL valign-text-middle inter-normal-black-14px">Friendship</div>
@@ -148,18 +165,7 @@
         <div class="heart-1-VkPPtx"><img class="vector-fLGRxx" src="img/vector-84@2x.svg" /></div>
         <div class="heart-2-VkPPtx"><img class="vector-Upkd2T" src="img/vector-3@2x.svg" /></div>
         <div class="heart-3-VkPPtx"><img class="vector-WLlorL" src="img/vector-4@2x.svg" /></div>
-        <div class="gif-frame-C61RwL"><img class="energy-1-RbxIY1" src="img/energy-1@2x.gif" /></div>
-        <div class="component-3-C61RwL">
-          <div class="low-zmv7IO valign-text-middle inter-medium-chicago-14px">Low</div>
-          <div class="medium-zmv7IO valign-text-middle">Medium</div>
-          <div class="high-zmv7IO valign-text-middle inter-medium-chicago-14px">High</div>
-        </div>
-        <div class="view-results-below-C61RwL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
-          View results below
-        </div>
-        <img class="vector-15-C61RwL" src="img/vector-15-1@2x.svg" />
-        <img class="vector-16-C61RwL" src="img/vector-16-7@2x.svg" />
-        <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />
+        
         
         <div class="rectangle-79-C61RwL border-2px-eerie-black"></div>
         <div class="load-more-C61RwL valign-text-middle">Load more</div>

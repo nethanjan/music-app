@@ -12,8 +12,13 @@
           </div>
           <img class="vector-18-C61RwL" src="img/vector-18@2x.svg" />
           <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />
-          <div class="choose-the-genre-C61RwL valign-text-middle">CHOOSE THE GENRE</div>    
+          <div class="choose-the-genre-C61RwL valign-text-middle">CHOOSE THE GENRE</div>
           <div class="component-1-C61RwL">
+          <div id="genre-filters">
+
+          </div>     
+          </div> 
+          <!-- <div class="component-1-C61RwL">
             <div class="x40s-9p2GBv valign-text-middle inter-medium-chicago-14px">40’s</div>
             <div class="americana-9p2GBv valign-text-middle inter-medium-chicago-14px">Americana</div>
             <div class="holiday-9p2GBv valign-text-middle inter-medium-chicago-14px">Holiday</div>
@@ -48,7 +53,7 @@
             <div class="hip-hop-5mfU7d valign-text-middle inter-medium-chicago-14px">Hip Hop</div>
             <div class="mnemonic-5mfU7d valign-text-middle inter-medium-chicago-14px">Mnemonic</div>
             <div class="tropical-5mfU7d valign-text-middle inter-medium-chicago-14px">Tropical</div>
-          </div>
+          </div> -->
           <a href="{{ route('search-by-instrument') }}">
           <div class="group-8-C61RwL">
             <div class="instrument-3cZhlu valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
@@ -116,6 +121,108 @@
           </div>
         </div>
         <!-- end instrument search filter -->
+
+        <!-- energy level search filter -->
+        <div id="energy-level-options" class="filter-options page-pick-the-energy-level" style="display: none">
+          <a href="{{ route('search-by-instrument') }}">
+            <div class="group-9-C61RwL">
+              <div class="instrument-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+                Instrument
+              </div>
+              <div class="group-6-9dtg3L">
+                <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
+                <img class="vector-16-jUlmuf" src="img/vector-16-5@2x.svg" />
+              </div>
+            </div>
+          </a>
+          <a href="{{ route('search-by-mood') }}">
+            <div class="group-8-C61RwL">
+              <div class="mood-3cZhlu valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">Mood</div>
+              <div class="group-6-3cZhlu">
+                <img class="vector-15-agmLXU" src="img/vector-15@2x.svg" />
+                <img class="vector-16-agmLXU" src="img/vector-16-3@2x.svg" />
+              </div>
+            </div>
+          </a>
+          <div class="pick-the-e-ergy-level-C61RwL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-56px">
+            PICK THE ENERGY LEVEL
+          </div>
+          <div class="gif-frame-C61RwL"><img class="energy-1-RbxIY1" src="img/energy-1@2x.gif" /></div>
+          <div class="component-3-C61RwL">
+            <div class="low-zmv7IO valign-text-middle inter-medium-chicago-14px">Low</div>
+            <div class="medium-zmv7IO valign-text-middle">Medium</div>
+            <div class="high-zmv7IO valign-text-middle inter-medium-chicago-14px">High</div>
+          </div>
+          <div class="view-results-below-C61RwL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+            View results below
+          </div>
+          <img class="vector-15-C61RwL" src="img/vector-15-1@2x.svg" />
+          <img class="vector-16-C61RwL" src="img/vector-16-7@2x.svg" />
+          <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />
+        </div>
+        <!-- end energy level search filter -->
+
+        <!-- start mood search filter -->
+        <div id="mood-options" class="filter-options page-pick-the-mood" style="display: none">
+          <a href="{{ route('search-by-energy-level') }}">
+            <div class="group-9-C61RwL">
+              <div class="energy-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+                Energy
+              </div>
+              <div class="group-6-9dtg3L">
+                <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
+                <img class="vector-16-jUlmuf" src="img/vector-16-5@2x.svg" />
+              </div>
+            </div>
+          </a>
+          <div class="pick-the-mood-C61RwL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-56px">
+            PICK THE MOOD
+          </div>
+          <div class="component-1-C61RwL">
+            <div class="anthemic-9p2GBv valign-text-middle inter-medium-chicago-14px">Anthemic</div>
+            <div class="edgy-9p2GBv valign-text-middle inter-medium-chicago-14px">Edgy</div>
+            <div class="magical-9p2GBv valign-text-middle inter-medium-chicago-14px">Magical</div>
+            <div class="quirky-9p2GBv valign-text-middle inter-medium-chicago-14px">Quirky</div>
+          </div>
+          <div class="component-2-C61RwL">
+            <div class="atmospheric-esxmfg valign-text-middle inter-medium-chicago-14px">Atmospheric</div>
+            <div class="emotional-esxmfg valign-text-middle inter-medium-chicago-14px">Emotional</div>
+            <div class="minimal-esxmfg valign-text-middle inter-medium-chicago-14px">Minimal</div>
+            <div class="sexy-esxmfg valign-text-middle inter-medium-chicago-14px">Sexy</div>
+          </div>
+          <div class="component-3-C61RwL">
+            <div class="beautiful-zmv7IO valign-text-middle inter-medium-chicago-14px">Beautiful</div>
+            <div class="epic-zmv7IO valign-text-middle">Epic</div>
+            <div class="mysterious-zmv7IO valign-text-middle inter-medium-chicago-14px">Mysterious</div>
+            <div class="swagger-zmv7IO valign-text-middle inter-medium-chicago-14px">Swagger</div>
+          </div>
+          <div class="component-4-C61RwL">
+            <div class="building-p4wM3n valign-text-middle inter-medium-chicago-14px">Building</div>
+            <div class="hopeful-p4wM3n valign-text-middle inter-medium-chicago-14px">Hopeful</div>
+            <div class="ominous-p4wM3n valign-text-middle inter-medium-chicago-14px">Ominous</div>
+            <div class="unexpected-p4wM3n valign-text-middle inter-medium-chicago-14px">Unexpected</div>
+          </div>
+          <div class="component-5-C61RwL">
+            <div class="dramatic-9wWKr1 valign-text-middle inter-medium-chicago-14px">Dramatic</div>
+            <div class="inspirational-9wWKr1 valign-text-middle inter-medium-chicago-14px">Inspirational</div>
+            <div class="optimistic-9wWKr1 valign-text-middle inter-medium-chicago-14px">Optimistic</div>
+            <div class="upbeat-9wWKr1 valign-text-middle inter-medium-chicago-14px">Upbeat</div>
+          </div>
+          <div class="component-5-VMr6Om">
+            <div class="driving-Ut9V1h valign-text-middle inter-medium-chicago-14px">Driving</div>
+            <div class="laid-back-Ut9V1h valign-text-middle inter-medium-chicago-14px">Laid Back</div>
+            <div class="playful-Ut9V1h valign-text-middle inter-medium-chicago-14px">Playful</div>
+            <div class="whimsical-Ut9V1h valign-text-middle inter-medium-chicago-14px">Whimsical</div>
+          </div>
+          <div class="gif-frame-C61RwL"><img class="mood-1-RbxIY1" src="img/mood-1@2x.gif" /></div>
+          <div class="view-results-below-C61RwL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+            View results below
+          </div>
+          <img class="vector-15-C61RwL" src="img/vector-15-1@2x.svg" />
+          <img class="vector-16-C61RwL" src="img/vector-16-9@2x.svg" />
+          <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />
+        </div>
+        <!-- end mood search filter -->
         
         <!-- HEADER -->
         <div class="rectangle-71-C61RwL"></div>
@@ -155,16 +262,16 @@
                     Instrument
                 </div>
             <!-- </a> -->
-            <a href="{{ route('search-by-energy-level') }}">
-                <div class="energy-level-G2B5sx valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px search-menu-item">
+            <!-- <a href="{{ route('search-by-energy-level') }}"> -->
+                <div id="energy-levelMenu" class="energy-level-G2B5sx valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px search-menu-item" onclick="filterTypeToggle('energy-level')">
                     Energy level
                 </div>
-            </a>
-            <a href="{{ route('search-by-mood') }}">
-                <div class="mood-G2B5sx valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px search-menu-item">
+            <!-- </a> -->
+            <!-- <a href="{{ route('search-by-mood') }}"> -->
+                <div id="moodMenu" class="mood-G2B5sx valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px search-menu-item" onclick="filterTypeToggle('mood')">
                     Mood
                 </div>
-            </a>
+            <!-- </a> -->
         </div>
         
         <div class="rectangle-75-C61RwL"></div>

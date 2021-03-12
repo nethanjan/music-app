@@ -10,26 +10,24 @@ const search = instantsearch({
 
 search.addWidgets([
     instantsearch.widgets.menu({
-        container: "#type-list",
-        attribute: "type",
-        defaultRefinement: "genre",
-        transformItems(items) {
-            const sortedItems = items.sort(function (a, b) {
-                const sortOrderA = a.label.split("_");
-                const sortOrderB = b.label.split("_");
-                const label = sortOrderA[1] - sortOrderB[1];
-                return label;
-            });
-            return sortedItems.map((item) => ({
-                ...item,
-                label: item.label.split("_")[0],
-            }));
-        },
+        container: "#genre-filters",
+        attribute: "genreType",
+        // transformItems(items) {
+        //     const sortedItems = items.sort(function (a, b) {
+        //         const sortOrderA = a.label.split("_");
+        //         const sortOrderB = b.label.split("_");
+        //         const label = sortOrderA[1] - sortOrderB[1];
+        //         return label;
+        //     });
+        //     return sortedItems.map((item) => ({
+        //         ...item,
+        //         label: item.label.split("_")[0],
+        //     }));
+        // },
         templates: {
             item: `
-            <a href="{{url}}">
-              <div class="{{label}}-G2B5sx valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px"><span class="menu-item">{{label}}</span></div>
-            </a>
+            <div class="{{label}}-9p2GBv valign-text-middle inter-medium-chicago-14px">{{label}}</div>
+
           `,
         },
     }),
