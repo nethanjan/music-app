@@ -1,0 +1,2003 @@
+/* screen - page-pick-the-instrument */
+
+.border-1px-black {
+  border: 1px solid var(--black);
+}
+.border-1px-eerie-black {
+  border: 1px solid var(--eerie-black);
+}
+.border-2px-eerie-black {
+  border: 2px solid var(--eerie-black);
+}
+.inter-bold-black-16px {
+  color: var(--black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-bold-eerie-black-16px {
+  color: var(--eerie-black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-medium-chicago-12px {
+  color: var(--chicago);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+}
+.inter-medium-chicago-14px {
+  color: var(--chicago);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+.inter-normal-black-14px {
+  color: var(--black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-eerie-black-14px {
+  color: var(--eerie-black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-eerie-black-16px {
+  color: var(--eerie-black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-white-16px {
+  color: var(--white);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.ourstorybeginsfree-regular-normal-eerie-black-30px {
+  color: var(--eerie-black);
+  font-family: 'Our Story Begins FREE-Regular', Helvetica, Arial, serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+.ourstorybeginsfree-regular-normal-eerie-black-56px {
+  color: var(--eerie-black);
+  font-family: 'Our Story Begins FREE-Regular', Helvetica, Arial, serif;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+}
+.page-pick-the-instrument {
+  background-color: var(--white);
+  height: 2075px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+.page-pick-the-instrument .action-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 1055px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 1397px;
+  white-space: nowrap;
+  width: 118px;
+}
+.page-pick-the-instrument .barking-owl-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 133px;
+  position: absolute;
+  top: 17px;
+  width: 116px;
+}
+.page-pick-the-instrument .buttonsoli-arydefault-C61RwL {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 41px;
+  justify-content: flex-start;
+  left: 1076px;
+  min-width: 282px;
+  position: absolute;
+  top: 1072px;
+  width: auto;
+}
+.page-pick-the-instrument .buttonsoli-arydefault-QxM5SU {
+  background-color: transparent;
+  height: 41px;
+  left: 1076px;
+  pointer-events: auto;
+  position: absolute;
+  top: 1152px;
+  transition: all 0.2s ease;
+  width: 282px;
+}
+.page-pick-the-instrument .buttonsoli-arydefault-QxM5SU:hover {
+
+opacity: 0;
+}
+.page-pick-the-instrument .buttonsoli-arydefault-VMr6Om {
+  background-color: transparent;
+  height: 41px;
+  left: 1076px;
+  pointer-events: auto;
+  position: absolute;
+  top: 1072px;
+  transition: all 0.2s ease;
+  width: 282px;
+}
+.page-pick-the-instrument .buttonsoli-arydefault-VMr6Om:hover {
+
+opacity: 0;
+}
+.page-pick-the-instrument .buttonsoli-arydefault-mzXdH9 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 41px;
+  justify-content: flex-start;
+  left: 1076px;
+  min-width: 282px;
+  position: absolute;
+  top: 1152px;
+  width: auto;
+}
+.page-pick-the-instrument .component-1-C61RwL {
+  background-color: transparent;
+  height: 95px;
+  left: 484px;
+  position: absolute;
+  top: 251px;
+  transform: rotate(90.00deg);
+  width: 153px;
+}
+.page-pick-the-instrument .component-2-C61RwL {
+  background-color: transparent;
+  height: 119px;
+  left: 666px;
+  position: absolute;
+  top: 236px;
+  transform: rotate(90.00deg);
+  width: 165px;
+}
+.page-pick-the-instrument .component-3-C61RwL {
+  background-color: transparent;
+  height: 119px;
+  left: 854px;
+  position: absolute;
+  top: 239px;
+  transform: rotate(90.00deg);
+  width: 165px;
+}
+.page-pick-the-instrument .content-QVVfMl {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 25px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  width: 129px;
+}
+.page-pick-the-instrument .content-VQyg8I {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 25px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  width: 161px;
+}
+.page-pick-the-instrument .content-p1rkmu {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 25px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  width: 129px;
+}
+.page-pick-the-instrument .content-yNlhqY {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 25px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  width: 161px;
+}
+.page-pick-the-instrument .drop-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1582px;
+  white-space: nowrap;
+  width: 372px;
+}
+.page-pick-the-instrument .electronic-9p2GBv {
+  background-color: transparent;
+  height: 22px;
+  left: -36px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 36px;
+  transform: rotate(-90.00deg);
+  white-space: nowrap;
+  width: 97px;
+}
+.page-pick-the-instrument .ellipse-1-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 133px;
+  position: absolute;
+  top: 1149px;
+  width: 22px;
+}
+.page-pick-the-instrument .ellipse-1-VMr6Om {
+  background-color: transparent;
+  height: 22px;
+  left: 272px;
+  position: absolute;
+  top: 1149px;
+  width: 22px;
+}
+.page-pick-the-instrument .energy-3cZhlu {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 20px;
+  letter-spacing: 0.00px;
+  line-height: 38px;
+  margin-bottom: -18px;
+  min-height: 20px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 126px;
+}
+.page-pick-the-instrument .energy-level-G2B5sx {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 38px;
+  letter-spacing: 0.00px;
+  line-height: 38px;
+  margin-left: 94px;
+  min-height: 38px;
+  min-width: 115px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .forget-it--ets-search-Irc3DO {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 25px;
+  min-height: 25px;
+  min-width: 161px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .forget-it--ets-search-qNCdGS {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 25px;
+  min-height: 25px;
+  min-width: 161px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .frame-21-C61RwL {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 38px;
+  justify-content: flex-end;
+  left: 413px;
+  min-width: 615px;
+  padding: 0 9px;
+  position: absolute;
+  top: 83px;
+  width: auto;
+}
+.page-pick-the-instrument .friendship-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1490px;
+  white-space: nowrap;
+  width: 372px;
+}
+.page-pick-the-instrument .genre-9dtg3L {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 20px;
+  letter-spacing: 0.00px;
+  line-height: 38px;
+  margin-bottom: -18px;
+  min-height: 20px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 110px;
+}
+.page-pick-the-instrument .genre-G2B5sx {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 38px;
+  letter-spacing: 0.00px;
+  line-height: 38px;
+  min-height: 38px;
+  min-width: 57px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .gif-frame-C61RwL {
+  align-items: flex-end;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 297px;
+  justify-content: flex-start;
+  left: 0px;
+  overflow: hidden;
+  padding: 20px 521px;
+  position: absolute;
+  top: 416px;
+  width: 1440px;
+}
+.page-pick-the-instrument .group-6-3cZhlu {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 16px;
+  margin-right: 3.0px;
+  margin-top: 16px;
+  position: relative;
+  width: 87px;
+}
+.page-pick-the-instrument .group-6-9dtg3L {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 16px;
+  margin-right: 1.0px;
+  margin-top: 15px;
+  position: relative;
+  transform: rotate(-180.00deg);
+  width: 87px;
+}
+.page-pick-the-instrument .group-8-C61RwL {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 1236px;
+  min-height: 52px;
+  position: absolute;
+  top: 190px;
+  width: 126px;
+}
+.page-pick-the-instrument .group-9-C61RwL {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: flex-start;
+  left: 80px;
+  min-height: 52px;
+  position: absolute;
+  top: 190px;
+  width: 110px;
+}
+.page-pick-the-instrument .guitar-esxmfg {
+  background-color: transparent;
+  height: 22px;
+  left: -48px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  transform: rotate(-90.00deg);
+  white-space: nowrap;
+  width: 121px;
+}
+.page-pick-the-instrument .heart-1-2P4qUJ {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1163px;
+  overflow: hidden;
+  padding: 2.0px 1.0px;
+  position: absolute;
+  top: 1627px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-1-C61RwL {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1163px;
+  overflow: hidden;
+  padding: 2.0px 1.0px;
+  position: absolute;
+  top: 1443px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-1-HlKRTo {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1163px;
+  overflow: hidden;
+  padding: 2.0px 1.0px;
+  position: absolute;
+  top: 1811px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-1-J1YQmd {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1163px;
+  overflow: hidden;
+  padding: 2.0px 1.0px;
+  position: absolute;
+  top: 1719px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-1-QxM5SU {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1163px;
+  overflow: hidden;
+  padding: 2.0px 1.0px;
+  position: absolute;
+  top: 1581px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-1-VMr6Om {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1163px;
+  overflow: hidden;
+  padding: 2.0px 1.0px;
+  position: absolute;
+  top: 1489px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-1-VkPPtx {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1163px;
+  overflow: hidden;
+  padding: 2.0px 1.0px;
+  position: absolute;
+  top: 1857px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-1-a5WPlX {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1163px;
+  overflow: hidden;
+  padding: 2.0px 1.0px;
+  position: absolute;
+  top: 1765px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-1-mzXdH9 {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1163px;
+  overflow: hidden;
+  padding: 2.0px 1.0px;
+  position: absolute;
+  top: 1535px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-1-qr8e7q {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1163px;
+  overflow: hidden;
+  padding: 2.0px 1.0px;
+  position: absolute;
+  top: 1673px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-2-2P4qUJ {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1109px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 1627px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-2-C61RwL {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1109px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 1443px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-2-HlKRTo {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1109px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 1811px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-2-J1YQmd {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1109px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 1719px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-2-QxM5SU {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1109px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 1581px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-2-VMr6Om {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1109px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 1489px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-2-VkPPtx {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1109px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 1857px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-2-a5WPlX {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1109px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 1765px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-2-mzXdH9 {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1109px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 1535px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-2-qr8e7q {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1109px;
+  overflow: hidden;
+  padding: 0 3px;
+  position: absolute;
+  top: 1673px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-3-2P4qUJ {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1055px;
+  overflow: hidden;
+  padding: 0 2px;
+  position: absolute;
+  top: 1627px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-3-C61RwL {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1055px;
+  overflow: hidden;
+  padding: 0 2px;
+  position: absolute;
+  top: 1443px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-3-HlKRTo {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1055px;
+  overflow: hidden;
+  padding: 0 2px;
+  position: absolute;
+  top: 1811px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-3-J1YQmd {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1055px;
+  overflow: hidden;
+  padding: 0 2px;
+  position: absolute;
+  top: 1719px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-3-QxM5SU {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1055px;
+  overflow: hidden;
+  padding: 0 2px;
+  position: absolute;
+  top: 1581px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-3-VMr6Om {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1055px;
+  overflow: hidden;
+  padding: 0 2px;
+  position: absolute;
+  top: 1489px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-3-VkPPtx {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1055px;
+  overflow: hidden;
+  padding: 0 2px;
+  position: absolute;
+  top: 1857px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-3-a5WPlX {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1055px;
+  overflow: hidden;
+  padding: 0 2px;
+  position: absolute;
+  top: 1765px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-3-mzXdH9 {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1055px;
+  overflow: hidden;
+  padding: 0 2px;
+  position: absolute;
+  top: 1535px;
+  width: 22px;
+}
+.page-pick-the-instrument .heart-3-qr8e7q {
+  align-items: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 22px;
+  justify-content: flex-start;
+  left: 1055px;
+  overflow: hidden;
+  padding: 0 2px;
+  position: absolute;
+  top: 1673px;
+  width: 22px;
+}
+.page-pick-the-instrument .home-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 1145px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .horns-brass-zmv7IO {
+  background-color: transparent;
+  height: 22px;
+  left: -48px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  transform: rotate(-90.00deg);
+  white-space: nowrap;
+  width: 121px;
+}
+.page-pick-the-instrument .instrument-G2B5sx {
+  background-color: transparent;
+  color: var(--paradiso);
+  flex-shrink: 1;
+  font-family: 'Our Story Begins FREE-Regular', Helvetica, Arial, serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  height: 38px;
+  letter-spacing: 0.00px;
+  line-height: 38px;
+  margin-left: 87px;
+  min-height: 38px;
+  min-width: 98px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .instruments-1-RbxIY1 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 256px;
+  object-fit: cover;
+  position: relative;
+  width: 397px;
+}
+.page-pick-the-instrument .length-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 1397px;
+  white-space: nowrap;
+  width: 474px;
+}
+.page-pick-the-instrument .load-more-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 24px;
+  left: 679px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 1939px;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .load-video-here-admDNH {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 25px;
+  min-height: 25px;
+  min-width: 129px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .load-video-here-xZK00f {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 25px;
+  min-height: 25px;
+  min-width: 129px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .logo-C61RwL {
+  background-color: transparent;
+  height: 44px;
+  left: 80px;
+  object-fit: cover;
+  position: absolute;
+  top: 6px;
+  width: 36px;
+}
+.page-pick-the-instrument .logout-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 1305px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .masterbutt-nlargetext-5416h0 {
+  align-items: center;
+  background-color: var(--eerie-black);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 41px;
+  justify-content: flex-end;
+  left: 0px;
+  min-width: 282px;
+  padding: 0 59.5px;
+  position: relative;
+  top: 0px;
+  width: auto;
+}
+.page-pick-the-instrument .masterbutt-nlargetext-ByrZT3 {
+  align-items: center;
+  background-color: var(--eerie-black);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 41px;
+  justify-content: flex-end;
+  left: 0px;
+  min-width: 282px;
+  padding: 0 75.5px;
+  position: relative;
+  top: 0px;
+  width: auto;
+}
+.page-pick-the-instrument .masterbutt-nlargetext-JC31Xq {
+  align-items: center;
+  background-color: var(--fuscous-gray);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 41px;
+  justify-content: flex-end;
+  min-width: 282px;
+  padding: 0 75.5px;
+  position: relative;
+  width: auto;
+}
+.page-pick-the-instrument .masterbutt-nlargetext-Sw6AQq {
+  align-items: center;
+  background-color: var(--fuscous-gray);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 41px;
+  justify-content: flex-end;
+  min-width: 282px;
+  padding: 0 59.5px;
+  position: relative;
+  width: auto;
+}
+.page-pick-the-instrument .mood-G2B5sx {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 38px;
+  letter-spacing: 0.00px;
+  line-height: 38px;
+  margin-left: 90px;
+  min-height: 38px;
+  min-width: 54px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .music-level-C61RwL {
+  background-color: transparent;
+  height: 12px;
+  left: 79px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 1277px;
+  white-space: nowrap;
+  width: 132px;
+}
+.page-pick-the-instrument .orchestral-148-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1765px;
+  white-space: nowrap;
+  width: 372px;
+}
+.page-pick-the-instrument .percussion-9p2GBv {
+  background-color: transparent;
+  height: 22px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 36px;
+  transform: rotate(-90.00deg);
+  white-space: nowrap;
+  width: 97px;
+}
+.page-pick-the-instrument .piano-organ-esxmfg {
+  background-color: transparent;
+  height: 22px;
+  left: -2px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  transform: rotate(-90.00deg);
+  white-space: nowrap;
+  width: 121px;
+}
+.page-pick-the-instrument .pick-the-instrument-C61RwL {
+  background-color: transparent;
+  height: 64px;
+  left: 511px;
+  letter-spacing: 0.00px;
+  line-height: 64px;
+  position: absolute;
+  text-align: center;
+  top: 145px;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .profile-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 1223px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.page-pick-the-instrument .ready-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1628px;
+  white-space: nowrap;
+  width: 372px;
+}
+.page-pick-the-instrument .rectangle-1-C61RwL {
+  background-color: var(--white);
+  height: 712px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+.page-pick-the-instrument .rectangle-71-C61RwL {
+  background-color: var(--white);
+  box-shadow: 2px 0px 4px rgba(211,211,211,1.0) , 0px 2px 4px rgba(0,0,0,0.05);;
+  height: 56px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+.page-pick-the-instrument .rectangle-75-C61RwL {
+  background-color: var(--shark);
+  height: 314px;
+  left: 404px;
+  position: absolute;
+  top: 975px;
+  width: 632px;
+}
+.page-pick-the-instrument .rectangle-76-C61RwL {
+  background-color: var(--eerie-black);
+  height: 32px;
+  left: 0px;
+  position: absolute;
+  top: 2043px;
+  width: 1440px;
+}
+.page-pick-the-instrument .rectangle-76-VMr6Om {
+  background-color: transparent;
+  height: 245px;
+  left: 138px;
+  position: absolute;
+  top: 1009px;
+  width: 11px;
+}
+.page-pick-the-instrument .rectangle-76-mzXdH9 {
+  background-color: transparent;
+  height: 245px;
+  left: 277px;
+  position: absolute;
+  top: 1009px;
+  width: 11px;
+}
+.page-pick-the-instrument .rectangle-77-C61RwL {
+  background-color: transparent;
+  height: 88px;
+  left: 138px;
+  position: absolute;
+  top: 1166px;
+  width: 12px;
+}
+.page-pick-the-instrument .rectangle-77-VMr6Om {
+  background-color: transparent;
+  height: 88px;
+  left: 277px;
+  position: absolute;
+  top: 1166px;
+  width: 12px;
+}
+.page-pick-the-instrument .rectangle-79-C61RwL {
+  background-color: transparent;
+  height: 40px;
+  left: 579px;
+  position: absolute;
+  top: 1931px;
+  width: 281px;
+}
+.page-pick-the-instrument .results-200-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  height: 22px;
+  left: 88px;
+  letter-spacing: 0.00px;
+  line-height: 28px;
+  position: absolute;
+  text-align: left;
+  top: 1397px;
+  white-space: nowrap;
+  width: 546px;
+}
+.page-pick-the-instrument .rock-3-446d-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1719px;
+  white-space: nowrap;
+  width: 372px;
+}
+.page-pick-the-instrument .rock-3-456c-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1673px;
+  white-space: nowrap;
+  width: 372px;
+}
+.page-pick-the-instrument .select-a-v-ovies-here-C61RwL {
+  background-color: transparent;
+  color: var(--white);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  height: 234px;
+  left: 468px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 1015px;
+  width: 506px;
+}
+.page-pick-the-instrument .strings-zmv7IO {
+  background-color: transparent;
+  color: var(--paradiso);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  height: 22px;
+  left: -2px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  transform: rotate(-90.00deg);
+  white-space: nowrap;
+  width: 121px;
+}
+.page-pick-the-instrument .the-wrong-reason-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1535px;
+  white-space: nowrap;
+  width: 372px;
+}
+.page-pick-the-instrument .title-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 1444px;
+  white-space: nowrap;
+  width: 372px;
+}
+.page-pick-the-instrument .urban-233-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1812px;
+  white-space: nowrap;
+  width: 372px;
+}
+.page-pick-the-instrument .vector-15-C61RwL {
+  background-color: transparent;
+  height: 31px;
+  left: 1349px;
+  position: absolute;
+  top: 621px;
+  width: 4px;
+}
+.page-pick-the-instrument .vector-15-agmLXU {
+  background-color: transparent;
+  height: 4px;
+  left: -1px;
+  position: absolute;
+  top: 7px;
+  width: 83px;
+}
+.page-pick-the-instrument .vector-15-jUlmuf {
+  background-color: transparent;
+  height: 4px;
+  left: -1px;
+  position: absolute;
+  top: 7px;
+  transform: rotate(180.00deg);
+  width: 83px;
+}
+.page-pick-the-instrument .vector-16-C61RwL {
+  background-color: transparent;
+  height: 19px;
+  left: 1343px;
+  position: absolute;
+  top: 639px;
+  width: 17px;
+}
+.page-pick-the-instrument .vector-16-agmLXU {
+  background-color: transparent;
+  height: 17px;
+  left: 69px;
+  position: absolute;
+  top: -1px;
+  width: 18px;
+}
+.page-pick-the-instrument .vector-16-jUlmuf {
+  background-color: transparent;
+  height: 17px;
+  left: 69px;
+  position: absolute;
+  top: -0px;
+  transform: rotate(180.00deg);
+  width: 18px;
+}
+.page-pick-the-instrument .vector-22-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1384px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-23-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1430px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-24-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1476px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-25-C61RwL {
+  background-color: transparent;
+  height: 7px;
+  left: -1px;
+  position: absolute;
+  top: 711px;
+  width: 1442px;
+}
+.page-pick-the-instrument .vector-26-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1522px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-27-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1568px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-28-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1614px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-29-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1660px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-30-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1706px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-31-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1752px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-32-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1798px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-33-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1844px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-34-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 80px;
+  position: absolute;
+  top: 1890px;
+  width: 1278px;
+}
+.page-pick-the-instrument .vector-35-C61RwL {
+  background-color: transparent;
+  height: 23px;
+  left: 674px;
+  position: absolute;
+  top: 332px;
+  width: 87px;
+}
+.page-pick-the-instrument .vector-36-C61RwL {
+  background-color: transparent;
+  height: 23px;
+  left: 867px;
+  position: absolute;
+  top: 287px;
+  width: 87px;
+}
+.page-pick-the-instrument .vector-4jfzUB {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.page-pick-the-instrument .vector-6H6OPj {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 16px;
+}
+.page-pick-the-instrument .vector-CYQ7bl {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 16px;
+}
+.page-pick-the-instrument .vector-DyTV0E {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 20px;
+}
+.page-pick-the-instrument .vector-GnEHta {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.page-pick-the-instrument .vector-LG06OP {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 20px;
+}
+.page-pick-the-instrument .vector-MOcxBe {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 20px;
+}
+.page-pick-the-instrument .vector-Olt1FA {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 20px;
+}
+.page-pick-the-instrument .vector-Pqpd5x {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 20px;
+}
+.page-pick-the-instrument .vector-QjaiFl {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.page-pick-the-instrument .vector-RcwfUe {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 20px;
+}
+.page-pick-the-instrument .vector-TfxX1x {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 16px;
+}
+.page-pick-the-instrument .vector-UgGFTE {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.page-pick-the-instrument .vector-Upkd2T {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 16px;
+}
+.page-pick-the-instrument .vector-WLlorL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.page-pick-the-instrument .vector-XUySlj {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.page-pick-the-instrument .vector-Yv6ksh {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 16px;
+}
+.page-pick-the-instrument .vector-a9wIIA {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 16px;
+}
+.page-pick-the-instrument .vector-fLGRxx {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 20px;
+}
+.page-pick-the-instrument .vector-fTWrXo {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 16px;
+}
+.page-pick-the-instrument .vector-il8yJu {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.page-pick-the-instrument .vector-jakCyx {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.page-pick-the-instrument .vector-mj0e2y {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 16px;
+}
+.page-pick-the-instrument .vector-nkqx4q {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 20px;
+}
+.page-pick-the-instrument .vector-oFA4vZ {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 16px;
+}
+.page-pick-the-instrument .vector-svJTnJ {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 16px;
+}
+.page-pick-the-instrument .vector-tcqY3v {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.page-pick-the-instrument .vector-wiL0hc {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 20px;
+}
+.page-pick-the-instrument .vector-xE3uHn {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 20px;
+}
+.page-pick-the-instrument .vector-y17mYe {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 18px;
+  position: relative;
+  width: 18px;
+}
+.page-pick-the-instrument .video-level-C61RwL {
+  background-color: transparent;
+  height: 12px;
+  left: 218px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 1277px;
+  white-space: nowrap;
+  width: 132px;
+}
+.page-pick-the-instrument .view-results-below-C61RwL {
+  background-color: transparent;
+  height: 34px;
+  left: 1159px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 623px;
+  width: auto;
+}
+.page-pick-the-instrument .vocals-9p2GBv {
+  background-color: transparent;
+  height: 22px;
+  left: 56px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 36px;
+  transform: rotate(-90.00deg);
+  white-space: nowrap;
+  width: 97px;
+}
+.page-pick-the-instrument .wind-instruments-esxmfg {
+  background-color: transparent;
+  color: var(--paradiso);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  height: 22px;
+  left: 44px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  transform: rotate(-90.00deg);
+  white-space: nowrap;
+  width: 121px;
+}
+.page-pick-the-instrument .world-zmv7IO {
+  background-color: transparent;
+  height: 22px;
+  left: 44px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  transform: rotate(-90.00deg);
+  white-space: nowrap;
+  width: 121px;
+}
+.page-pick-the-instrument .x054-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1535px;
+  white-space: nowrap;
+  width: 236px;
+}
+.page-pick-the-instrument .x055-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1673px;
+  white-space: nowrap;
+  width: 236px;
+}
+.page-pick-the-instrument .x104-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1581px;
+  white-space: nowrap;
+  width: 236px;
+}
+.page-pick-the-instrument .x117-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1719px;
+  white-space: nowrap;
+  width: 236px;
+}
+.page-pick-the-instrument .x134-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1443px;
+  white-space: nowrap;
+  width: 236px;
+}
+.page-pick-the-instrument .x136-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1857px;
+  white-space: nowrap;
+  width: 236px;
+}
+.page-pick-the-instrument .x146-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1765px;
+  white-space: nowrap;
+  width: 236px;
+}
+.page-pick-the-instrument .x2021-copyr-s-reserved-C61RwL {
+  background-color: transparent;
+  color: var(--white);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 575px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 2051px;
+  width: auto;
+}
+.page-pick-the-instrument .x219-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1489px;
+  white-space: nowrap;
+  width: 236px;
+}
+.page-pick-the-instrument .x242-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1627px;
+  white-space: nowrap;
+  width: 236px;
+}
+.page-pick-the-instrument .x358-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 513px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1811px;
+  white-space: nowrap;
+  width: 236px;
+}
+.page-pick-the-instrument .x50s-60s-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 1858px;
+  white-space: nowrap;
+  width: 372px;
+}
+.page-pick-the-instrument .your-results-C61RwL {
+  background-color: transparent;
+  height: 66px;
+  left: 355px;
+  letter-spacing: 0.00px;
+  line-height: 64px;
+  position: absolute;
+  text-align: center;
+  top: 805px;
+  white-space: nowrap;
+  width: 733px;
+}
+:root {
+  --black: rgba(0,0,0,1.0);
+  --chicago: rgba(89,89,89,1.0);
+  --eerie-black: rgba(32,32,32,1.0);
+  --fuscous-gray: rgba(85,85,85,1.0);
+  --geraldine: rgba(255,138,138,1.0);
+  --paradiso: rgba(55,128,126,1.0);
+  --shark: rgba(38,38,38,1.0);
+  --white: rgba(255,255,255,1.0);
+}

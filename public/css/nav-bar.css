@@ -1,0 +1,105 @@
+/* screen - nav-bar */
+
+.nav-bar {
+    background-color: rgba(255, 255, 255, 1);
+    height: 80px;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    width: 1440px;
+}
+.nav-bar .barking-owl-3yjq2X {
+    background-color: transparent;
+    height: 24px;
+    left: 53px;
+    position: absolute;
+    top: 11px;
+    width: 116px;
+}
+.nav-bar .header-logo-C61RwL {
+    background-color: transparent;
+    height: 44px;
+    left: 80px;
+    position: absolute;
+    top: 6px;
+    width: 169px;
+}
+.nav-bar .home-C61RwL {
+    background-color: transparent;
+    color: var(--eerie-black);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    height: 24px;
+    left: 1146px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    position: absolute;
+    text-align: left;
+    top: 16px;
+    white-space: nowrap;
+    width: auto;
+}
+.nav-bar .logo-3yjq2X {
+    background-color: transparent;
+    height: 44px;
+    left: 0px;
+    object-fit: cover;
+    position: absolute;
+    top: 0px;
+    width: 36px;
+}
+.nav-bar .logout-C61RwL {
+    background-color: transparent;
+    color: var(--eerie-black);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    height: 24px;
+    left: 1305px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    position: absolute;
+    text-align: left;
+    top: 16px;
+    white-space: nowrap;
+    width: auto;
+}
+.nav-bar .logout-C61RwL a {
+    color: var(--eerie-black);
+}
+.nav-bar .nav-bar-C61RwL {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 2px 0px 4px rgba(211, 211, 211, 1),
+        0px 2px 4px rgba(0, 0, 0, 0.05);
+    height: 56px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 1440px;
+}
+.nav-bar .profile-C61RwL {
+    background-color: transparent;
+    color: var(--eerie-black);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    height: 24px;
+    left: 1224px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    position: absolute;
+    text-align: left;
+    top: 16px;
+    white-space: nowrap;
+    width: auto;
+}
+.nav-bar .profile-C61RwL a {
+    color: var(--eerie-black);
+}
+:root {
+    --eerie-black: rgba(32, 32, 32, 1);
+}
