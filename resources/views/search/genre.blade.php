@@ -3,6 +3,20 @@
 @section('content')
 
 <div class="page-choose-the-genre screen">
+
+<table border = "1">
+<tr>
+<td>Id</td>
+<td>Name</td>
+</tr>
+@foreach ($genres as $genre)
+<tr>
+<td>{{ $genre->id }}</td>
+<td>{{ $genre->name }}</td>
+</tr>
+@endforeach
+</table>
+
         <div class="rectangle-1-C61RwL"></div>
 
         <!-- genre search filter -->

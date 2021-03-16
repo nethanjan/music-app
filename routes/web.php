@@ -19,6 +19,7 @@ Route::get('/','App\Http\Controllers\RegisterController@home')->name('home');
 // register
 Route::get('/register','App\Http\Controllers\RegisterController@show')->name('register');
 Route::post('/register','App\Http\Controllers\RegisterController@create');
+Route::get('/test','App\Http\Controllers\RegisterController@test');
 
 // login
 Route::get('/login','App\Http\Controllers\LoginController@show')->name('login');
