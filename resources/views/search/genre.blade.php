@@ -244,7 +244,7 @@
             <img class="logo-C61RwL" src="img/logo-1@2x.png" />
             <img class="barking-owl-C61RwL" src="img/barking-owl-5@2x.svg" />
         </a>
-        <a href='/profile'>
+        <a href="{{ route('my-account') }}">
             <div class="profile-C61RwL valign-text-middle inter-normal-eerie-black-16px">
             Profile
             </div>
@@ -289,9 +289,22 @@
         </div>
         
         <div class="rectangle-75-C61RwL"></div>
-        <div class="select-a-v-ovies-here-C61RwL valign-text-middle">
+        <div class="select-a-v-ovies-here-C61RwL valign-text-middle" onclick="document.getElementById('getFile').click()">
+          <video autoplay id="mixer" controls="true" ></video>
+          <input
+                type="file"
+                id="getFile"
+                class="videoinputdrag"
+                name="getFile"
+                style="display: none;"
+                accept="video/*"
+              />
           Select a video file from your computer<br /><br />this video will not be uploaded to any<br />server or cloud
           and will only play<br />directly from your computer<br /><br />tip: you can drag and drop movies here
+        </div>
+
+        <div >
+          <input type="range" id="mixercontroller" />
         </div>
         <div class="rectangle-76-C61RwL border-1px-black"></div>
         <img class="rectangle-77-C61RwL" src="img/rectangle-77@2x.svg" />
@@ -301,6 +314,7 @@
         <img class="ellipse-1-VMr6Om" src="img/ellipse-1@2x.svg" />
         <div class="music-level-C61RwL valign-text-middle inter-bold-black-16px">Music level</div>
         <div class="video-level-C61RwL valign-text-middle inter-bold-black-16px">Video level</div>
+        
         <div class="buttonsoli-arydefault-C61RwL">
           <div class="masterbutt-nlargetext-JC31Xq">
             <div class="content-p1rkmu">
@@ -431,5 +445,54 @@
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
     <script src="js/app.js"></script>
     <script src="js/search.js"></script>
+
+<script>(function localFileVideoPlayer() {
+
+  'use strict'
+  var URL = window.URL || window.webkitURL
+  var displayMessage = function (message, isError) {
+    var element = document.querySelector('#message')
+    element.innerHTML = message
+    element.className = isError ? 'error' : 'info'
+  }
+  var playSelectedFile = function (event) {
+    var file = this.files[0]
+    var type = file.type
+    var videoNode = document.querySelector('video')
+    var canPlay = videoNode.canPlayType(type)
+    if (canPlay === '') canPlay = 'no'
+    var message = 'Can play type "' + type + '": ' + canPlay
+    var isError = canPlay === 'no'
+
+    if (isError) {
+      return
+    }
+
+    var fileURL = URL.createObjectURL(file)
+    videoNode.src = fileURL
+  }
+
+  var inputNode = document.getElementById('getFile')
+  inputNode.addEventListener('change', playSelectedFile, false)
+  var inputNodedrag = document.querySelector('.videoinputdrag')
+  inputNodedrag.addEventListener('change', playSelectedFile, false)
+  })()
+
+  //mixer controler
+  function changeVolume(elementID, volumePercentage = 100)
+  {
+    let element     = document.getElementById(elementID);
+    let volume      = volumePercentage / 100;
+
+    element.volume = volume
+  }
+
+  $(document).ready(function(){
+    $(document).on('input', '#mixercontroller', function(){
+        let volumePercentage = $(this).val();
+        changeVolume('mixer', volumePercentage);
+    });
+  })
+</script>
 
 @endsection

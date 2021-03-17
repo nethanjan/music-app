@@ -28,7 +28,9 @@ Route::post('/logout','App\Http\Controllers\LoginController@logout')->name('logo
 
 // protected routes
 Route::middleware('auth')->group(function () {
-    Route::get('/verify', 'App\Http\Controllers\MainPageController@verify')->name('verify');
+    Route::get('/verify', 'App\Http\Controllers\UserController@verify')->name('verify');
+    Route::get('/profile', 'App\Http\Controllers\UserController@account')->name('my-account');
+    Route::get('/favourites', 'App\Http\Controllers\UserController@favourites')->name('my-favourites');
     Route::get('/search-by-genre','App\Http\Controllers\MainPageController@searchGenre')->name('search-by-genre');
     Route::get('/search-by-instrument','App\Http\Controllers\MainPageController@searchInstrument')->name('search-by-instrument');
     Route::get('/search-by-energy-level','App\Http\Controllers\MainPageController@searchEnergyLevel')->name('search-by-energy-level');

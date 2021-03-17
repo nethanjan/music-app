@@ -1,0 +1,551 @@
+/* screen - account-details */
+
+.account-details {
+  align-items: center;
+  background-color: var(--white);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 705px;
+  justify-content: flex-start;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+.account-details .account-details-fhuxN3 {
+  background-color: transparent;
+  color: var(--eerie-black);
+  flex-shrink: 1;
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  min-height: 24px;
+  min-width: 127px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+.account-details .auto-flex-C61RwL {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 24px;
+  justify-content: flex-start;
+  margin-left: 3.0px;
+  margin-top: 27px;
+  min-width: 255px;
+  position: relative;
+  width: auto;
+}
+.account-details .barking-owl-4eduM0 {
+  background-color: transparent;
+  height: 24px;
+  left: 133px;
+  position: absolute;
+  top: 17px;
+  width: 116px;
+}
+.account-details .buttonsoli-arydefault-aHaED2 {
+  background-color: transparent;
+  height: 40px;
+  left: 0px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 282px;
+}
+.account-details .buttonsoli-arydefault-aHaED2:hover {
+
+opacity: 0;
+}
+.account-details .buttonsoli-arydefault-m4CVSK {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  justify-content: flex-start;
+  left: 0px;
+  min-width: 282px;
+  position: absolute;
+  top: 0px;
+  width: auto;
+}
+.account-details .change-details-guNFp4 {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  min-height: 24px;
+  min-width: 117px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.account-details .change-details-y3xGmq {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  min-height: 24px;
+  min-width: 117px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+}
+.account-details .content-TzAuFg {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 24px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  width: 117px;
+}
+.account-details .content-sBl78x {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 24px;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  width: 117px;
+}
+.account-details .email-address-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  margin-right: 64.0px;
+  margin-top: 22px;
+  min-height: 24px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 220px;
+}
+.account-details .favourites-fhuxN3 {
+  background-color: transparent;
+  color: var(--eerie-black);
+  flex-shrink: 1;
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  margin-left: 46px;
+  min-height: 24px;
+  min-width: 82px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+.account-details .first-name-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  margin-right: 64.0px;
+  margin-top: 31px;
+  min-height: 24px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 220px;
+}
+.account-details .home-4eduM0 {
+  background-color: transparent;
+  height: 24px;
+  left: 1145px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.account-details .last-name-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  margin-right: 64.0px;
+  margin-top: 22px;
+  min-height: 24px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 220px;
+}
+.account-details .logo-4eduM0 {
+  background-color: transparent;
+  height: 44px;
+  left: 80px;
+  object-fit: cover;
+  position: absolute;
+  top: 6px;
+  width: 36px;
+}
+.account-details .logout-4eduM0 {
+  background-color: transparent;
+  height: 24px;
+  left: 1305px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.account-details .masterbutt-nlargetext-RVL2w0 {
+  align-items: center;
+  background-color: var(--fuscous-gray);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: 40px;
+  justify-content: flex-end;
+  min-width: 282px;
+  padding: 0 81.5px;
+  position: relative;
+  width: auto;
+}
+.account-details .masterbutt-nlargetext-RsPfgn {
+  align-items: center;
+  background-color: var(--eerie-black);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  justify-content: flex-end;
+  left: 0px;
+  min-width: 282px;
+  padding: 0 81.5px;
+  position: relative;
+  top: 0px;
+  width: auto;
+}
+.account-details .overlap-group-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 62px;
+  position: relative;
+  width: 1440px;
+}
+.account-details .overlap-group1-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 40px;
+  margin-right: 2.0px;
+  margin-top: 4px;
+  position: relative;
+  width: 282px;
+}
+.account-details .overlap-group2-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 40px;
+  margin-right: 2.0px;
+  margin-top: 4px;
+  position: relative;
+  width: 282px;
+}
+.account-details .overlap-group3-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 40px;
+  margin-right: 2.0px;
+  margin-top: 4px;
+  position: relative;
+  width: 282px;
+}
+.account-details .overlap-group4-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 40px;
+  margin-right: 2.0px;
+  margin-top: 4px;
+  position: relative;
+  width: 282px;
+}
+.account-details .overlap-group5-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 40px;
+  margin-right: 2.0px;
+  margin-top: 46px;
+  position: relative;
+  width: 282px;
+}
+.account-details .overlap-group6-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 32px;
+  margin-top: 72px;
+  position: relative;
+  width: 1440px;
+}
+.account-details .password-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  margin-right: 64.0px;
+  margin-top: 22px;
+  min-height: 24px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 220px;
+}
+.account-details .plate-4a9k2Y {
+  background-color: var(--white);
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 282px;
+}
+.account-details .plate-RH0WJ5 {
+  background-color: var(--white);
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 282px;
+}
+.account-details .plate-cYXVq0 {
+  background-color: var(--white);
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 282px;
+}
+.account-details .plate-eSNWXa {
+  background-color: var(--white);
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 282px;
+}
+.account-details .profile-4eduM0 {
+  background-color: transparent;
+  height: 24px;
+  left: 1223px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 16px;
+  white-space: nowrap;
+  width: auto;
+}
+.account-details .rectangle-71-4eduM0 {
+  background-color: var(--white);
+  box-shadow: 2px 0px 4px rgba(211,211,211,1.0) , 0px 2px 4px rgba(0,0,0,0.05);;
+  height: 62px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+.account-details .rectangle-72-KnyYHa {
+  background-color: var(--eerie-black);
+  height: 32px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+.account-details .rectangle-78-4a9k2Y {
+  background-color: transparent;
+  border: 0;
+  height: 24px;
+  left: 16px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  top: 8px;
+  width: 250px;
+}
+.account-details .rectangle-78-RH0WJ5 {
+  background-color: transparent;
+  border: 0;
+  height: 24px;
+  left: 16px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  top: 8px;
+  width: 250px;
+}
+.account-details .rectangle-78-cYXVq0 {
+  background-color: transparent;
+  border: 0;
+  height: 24px;
+  left: 17px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  top: 8px;
+  width: 250px;
+}
+.account-details .rectangle-78-eSNWXa {
+  background-color: transparent;
+  border: 0;
+  height: 24px;
+  left: 16px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  top: 8px;
+  width: 250px;
+}
+.account-details .vector-25-C61RwL {
+  background-color: transparent;
+  flex-shrink: 1;
+  height: 7px;
+  margin-top: 26px;
+  position: relative;
+  width: 1442px;
+}
+.account-details .x2021-copyr-s-reserved-KnyYHa {
+  background-color: transparent;
+  color: var(--white);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 575px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  width: auto;
+}
+.border-1px-black {
+  border: 1px solid var(--black);
+}
+.border-1px-eerie-black {
+  border: 1px solid var(--eerie-black);
+}
+.border-2px-eerie-black {
+  border: 2px solid var(--eerie-black);
+}
+.inter-bold-black-16px {
+  color: var(--black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-bold-eerie-black-16px {
+  color: var(--eerie-black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-medium-chicago-12px {
+  color: var(--chicago);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+}
+.inter-medium-chicago-14px {
+  color: var(--chicago);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+.inter-normal-black-14px {
+  color: var(--black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-eerie-black-14px {
+  color: var(--eerie-black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-eerie-black-16px {
+  color: var(--eerie-black);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-white-16px {
+  color: var(--white);
+  font-family: 'Inter', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.ourstorybeginsfree-regular-normal-eerie-black-30px {
+  color: var(--eerie-black);
+  font-family: 'Our Story Begins FREE-Regular', Helvetica, Arial, serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+.ourstorybeginsfree-regular-normal-eerie-black-56px {
+  color: var(--eerie-black);
+  font-family: 'Our Story Begins FREE-Regular', Helvetica, Arial, serif;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 400;
+}
+:root {
+  --black: rgba(0,0,0,1.0);
+  --chicago: rgba(89,89,89,1.0);
+  --eerie-black: rgba(32,32,32,1.0);
+  --fuscous-gray: rgba(85,85,85,1.0);
+  --geraldine: rgba(255,138,138,1.0);
+  --paradiso: rgba(55,128,126,1.0);
+  --shark: rgba(38,38,38,1.0);
+  --white: rgba(255,255,255,1.0);
+}

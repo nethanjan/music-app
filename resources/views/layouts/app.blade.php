@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="css/page-pick-the-instrument.css" />
     <link rel="stylesheet" type="text/css" href="css/page-pick-the-energy-level.css" />
     <link rel="stylesheet" type="text/css" href="css/page-pick-the-mood.css" />
+    <link rel="stylesheet" type="text/css" href="css/account-details.css" />
+    <link rel="stylesheet" type="text/css" href="css/favourites.css" />
     <style>
       @import url("https://fonts.googleapis.com/css?family=Inter:600,400");
 
