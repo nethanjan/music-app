@@ -11,12 +11,12 @@ use App\Models\Genre;
 use App\Models\Instrument;  
 use App\Models\Mood;
 use App\Models\EnergyLevel;
-use App\Models\Songs;
+use App\Models\Song;
 
 class MainPageController extends Controller
 {
 
-    public function searchGenre()
+    public function search()
     {
         $genres = Genre::all();
         $instruments = Instrument::all();
@@ -26,6 +26,19 @@ class MainPageController extends Controller
         $songs = DB::table('songs')->paginate(10);
 
         return view('search.genre', ['genres' => $genres, 'instruments' => $instruments, 'moods' => $moods, 'energyLevels' => $energyLevels, 'songs' => $songs ]);
+    }
+
+    public function searchLoadMore(Request $request)
+    {
+
+        if($request->ajax()){
+            $skip = $request->skip;
+            $take = 10;
+            $songs = Song::skip($skip)->take($take)->get();
+            return response()->json($songs);
+        }else{
+            return response()->json('Direct Access Not Allowed!!');
+        }
     }
 
     public function searchInstrument()

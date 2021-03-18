@@ -545,7 +545,7 @@
 
             <!--          results table topic -->
             <div class="results-200-C61RwLL valign-text-middle" style="padding-top: 45px;padding-left: 88px;">Results:
-                200
+                {{ $songs->total() }}
             </div>
 
             <!--          results table -->
@@ -556,115 +556,35 @@
                     <th class="length-C61RwLL inter-bold-black-16px">Length</th>
                     <th class="action-C61RwLL inter-bold-black-16px">Action</th>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td class="inter-normal-black-14px title-C61RwLL">Friendship</td>
-                        <td class="length-C61RwLL inter-normal-black-14px">2:19</td>
-                        <td class="action-C61RwLL">
-                            <span style="padding: 0 0 0 1px;"><img class="playIcon" src="img/vector-4@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="downloadIcon"
-                                                                    src="img/vector-3@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="heartIcon"
-                                                                    src="img/vector-84@2x.svg"/></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="inter-normal-black-14px title-C61RwLL">The Wrong Reason</td>
-                        <td class="length-C61RwLL inter-normal-black-14px">0:54</td>
-                        <td class="action-C61RwLL">
-                            <span style="padding: 0 0 0 1px;"><img class="playIcon" src="img/vector-4@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="downloadIcon"
-                                                                    src="img/vector-3@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="heartIcon"
-                                                                    src="img/vector-84@2x.svg"/></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="inter-normal-black-14px title-C61RwLL">Drop</td>
-                        <td class="length-C61RwLL inter-normal-black-14px">1:04</td>
-                        <td class="action-C61RwLL">
-                            <span style="padding: 0 0 0 1px;"><img class="playIcon" src="img/vector-4@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="downloadIcon"
-                                                                    src="img/vector-3@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="heartIcon"
-                                                                    src="img/vector-84@2x.svg"/></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="inter-normal-black-14px title-C61RwLL">Ready</td>
-                        <td class="length-C61RwLL inter-normal-black-14px">2:42</td>
-                        <td class="action-C61RwLL">
-                            <span style="padding: 0 0 0 1px;"><img class="playIcon" src="img/vector-4@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="downloadIcon"
-                                                                    src="img/vector-3@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="heartIcon"
-                                                                    src="img/vector-84@2x.svg"/></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="inter-normal-black-14px title-C61RwLL">Rock 3 456c</td>
-                        <td class="length-C61RwLL inter-normal-black-14px">0:55</td>
-                        <td class="action-C61RwLL">
-                            <span style="padding: 0 0 0 1px;"><img class="playIcon" src="img/vector-4@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="downloadIcon"
-                                                                    src="img/vector-3@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="heartIcon"
-                                                                    src="img/vector-84@2x.svg"/></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="inter-normal-black-14px title-C61RwLL">Rock 3 446d</td>
-                        <td class="length-C61RwLL inter-normal-black-14px">1:17</td>
-                        <td class="action-C61RwLL">
-                            <span style="padding: 0 0 0 1px;"><img class="playIcon" src="img/vector-4@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="downloadIcon"
-                                                                    src="img/vector-3@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="heartIcon"
-                                                                    src="img/vector-84@2x.svg"/></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="inter-normal-black-14px title-C61RwLL">Orchestral 148</td>
-                        <td class="length-C61RwLL inter-normal-black-14px">1:46</td>
-                        <td class="action-C61RwLL">
-                            <span style="padding: 0 0 0 1px;"><img class="playIcon" src="img/vector-4@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="downloadIcon"
-                                                                    src="img/vector-3@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="heartIcon"
-                                                                    src="img/vector-84@2x.svg"/></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="inter-normal-black-14px title-C61RwLL">Urban 233</td>
-                        <td class="length-C61RwLL inter-normal-black-14px">3:58</td>
-                        <td class="action-C61RwLL">
-                            <span style="padding: 0 0 0 1px;"><img class="playIcon" src="img/vector-4@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="downloadIcon"
-                                                                    src="img/vector-3@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="heartIcon"
-                                                                    src="img/vector-84@2x.svg"/></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="inter-normal-black-14px title-C61RwLL">50’s &amp; 60’s</td>
-                        <td class="length-C61RwLL inter-normal-black-14px">1:36</td>
-                        <td class="action-C61RwLL">
-                            <span style="padding: 0 0 0 1px;"><img class="playIcon" src="img/vector-4@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="downloadIcon"
-                                                                    src="img/vector-3@2x.svg"/></span>
-                            <span style="padding: 0 0 0 32px;"><img class="heartIcon"
-                                                                    src="img/vector-84@2x.svg"/></span>
-                        </td>
-                    </tr>
+                    <tbody class="song-results">
+                        @foreach($songs AS $song)
+                            <tr id="{{ $song->id }}" class="song-list">
+                                <td class="inter-normal-black-14px title-C61RwLL">{{ $song->name }}</td>
+                                <td class="length-C61RwLL inter-normal-black-14px">{{ $song->length }}</td>
+                                <td class="action-C61RwLL">
+                                    <span style="padding: 0 0 0 1px;">
+                                        <img class="playIcon" src="img/vector-4@2x.svg"/>
+                                    </span>
+                                    <span style="padding: 0 0 0 32px;">
+                                        <img class="downloadIcon" src="img/vector-3@2x.svg"/>
+                                    </span>
+                                    <span style="padding: 0 0 0 32px;">
+                                        <img class="heartIcon" src="img/vector-84@2x.svg"/>
+                                    </span>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
 
             <!--          load more button-->
-            <div class="rectangle-79-C61RwLL load-more-C61RwLL border-2px-eerie-blackk valign-text-middle"
-                 style="margin:40px auto;">Load more
-            </div>
-
+            @if(count($songs)>0)
+                <div class="rectangle-79-C61RwLL load-more-C61RwLL border-2px-eerie-blackk valign-text-middle valign-text-middle"
+                    style="margin:40px auto;">
+                    <button class="load-more" style="border: none; background: none; height: 40px;" data-totalResult="{{ $songs->total() }}">Load more</button>
+                </div>
+            @endif
         </div>
 
     </div>
@@ -683,7 +603,9 @@
 </div>
 
     <!-- <script src="js/app.js"></script> -->
-    <script src="js/search.js"></script>
+<script src="js/search.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 <script>(function localFileVideoPlayer() {
 
@@ -732,6 +654,61 @@
         changeVolume('mixer', volumePercentage);
     });
   })
+</script>
+
+
+<script type="text/javascript">
+    const main_site="{{ url('/') }}";
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".load-more").on('click',function(){
+            let totalCurrentResult=$(".song-list").length;
+            // Ajax Reuqest
+            $.ajax({
+                url:main_site+'/search-load-more',
+                type:'get',
+                dataType:'json',
+                data:{
+                    skip:totalCurrentResult
+                },
+                beforeSend:function(){
+                    $(".load-more").html('Loading...');
+                },         
+                success:function(response){
+                    var _html='';
+                    $.each(response,function(index,value){
+                        _html+='<tr id="'+value.id+'" class="song-list">';
+                            _html+='<td class="inter-normal-black-14px title-C61RwLL">'+value.name+'</td>';
+                            _html+='<td class="length-C61RwLL inter-normal-black-14px">'+value.length+'</td>';
+                            _html+='<td class="action-C61RwLL">';
+                                _html+='<span style="padding: 0 0 0 1px;">';
+                                    _html+='<img class="playIcon" src="img/vector-4@2x.svg"/>';
+                                _html+='</span>';
+                                _html+='<span style="padding: 0 0 0 32px;">';
+                                    _html+='<img class="downloadIcon" src="img/vector-3@2x.svg"/>';
+                                _html+='</span>';
+                                _html+='<span style="padding: 0 0 0 32px;">';
+                                    _html+='<img class="heartIcon" src="img/vector-84@2x.svg"/>';
+                                _html+='</span>';
+                            _html+='</td>';
+                        _html+='</tr>';
+                    });
+                    $(".song-results").append(_html);
+                    // // Change Load More When No Further result
+                    totalCurrentResult=$(".song-list").length;
+                    const totalResult=parseInt($(".load-more").attr('data-totalResult'));
+
+                    if(totalCurrentResult == totalResult){
+                        $(".load-more").remove();
+                    }else{
+                        $(".load-more").html('Load More');
+                    }
+                }
+            });
+        });
+    });
 </script>
 
 @endsection
