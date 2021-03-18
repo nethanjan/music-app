@@ -3,14 +3,41 @@
 @section('content')
 
 <div class="favourites screen">
-        <div class="rectangle-1-C61RwL"></div>
-        <div class="rectangle-71-C61RwL"></div>
-        <img class="vector-25-C61RwL" src="img/vector-25@1x.svg" />
-        <a href="{{ route('my-account') }}"><div class="account-details-C61RwL valign-text-middle">Account Details</div></a>
-        <div class="favourites-C61RwL valign-text-middle">Favourites</div>
-        <div class="results-200-C61RwL valign-text-middle">Results: 200</div>
-        <div class="title-C61RwL valign-text-middle inter-bold-black-16px">Title</div>
-        <div class="friendship-C61RwL valign-text-middle inter-normal-black-14px">Friendship</div>
+  <div class="rectangle-1-C61RwL"></div>
+  <div class="rectangle-71-C61RwL"></div>
+  <img class="vector-25-C61RwL" src="img/vector-25@1x.svg" />
+
+   <a href="{{ route('my-account') }}">
+    <div class="account-details-C61RwL valign-text-middle">Account Details</div>
+  </a>
+  <div class="favourites-C61RwL valign-text-middle">Favourites</div>
+
+  <div class="results-200-C61RwL valign-text-middle">Results: {{ $total }}</div>
+
+  <table>
+    <thead class="thead">
+        <tr>
+          <th>
+            <div class="title-C61RwL valign-text-middle inter-bold-black-16px">Title</div> 
+          </th>
+          <th> 
+            <div class="length-C61RwL valign-text-middle inter-bold-black-16px">Length</div>
+          </th>
+            <th> <div class="action-C61RwL valign-text-middle inter-bold-black-16px">Action</div>  </th>
+        </tr>
+    </thead>
+    <tbody>
+         @foreach($user_favourites as $user_favourite)
+          <tr>
+              <td> <div class="friendship-C61RwL valign-text-middle inter-normal-black-14px">{{$user_favourite->name}}</div> </td>
+              <td> {{$user_favourite->length}} </td>
+              <td> {{$user_favourite->id}} </td>
+          </tr>
+         @endforeach
+   </tbody>
+  </table>
+        
+        <!-- <div class="friendship-C61RwL valign-text-middle inter-normal-black-14px">Friendship</div>
         <div class="the-wrong-reason-C61RwL valign-text-middle inter-normal-black-14px">The Wrong Reason</div>
         <div class="drop-C61RwL valign-text-middle inter-normal-black-14px">Drop</div>
         <div class="ready-C61RwL valign-text-middle inter-normal-black-14px">Ready</div>
@@ -29,10 +56,10 @@
         <div class="x117-C61RwL valign-text-middle inter-normal-black-14px">1:17</div>
         <div class="x146-C61RwL valign-text-middle inter-normal-black-14px">1:46</div>
         <div class="x358-C61RwL valign-text-middle inter-normal-black-14px">3:58</div>
-        <div class="x136-C61RwL valign-text-middle inter-normal-black-14px">1:36</div>
-        <div class="length-C61RwL valign-text-middle inter-bold-black-16px">Length</div>
-        <div class="action-C61RwL valign-text-middle inter-bold-black-16px">Action</div>
-        <img class="vector-22-C61RwL" src="img/vector-22-4@1x.svg" />
+        <div class="x136-C61RwL valign-text-middle inter-normal-black-14px">1:36</div> -->
+        
+        
+        <!-- <img class="vector-22-C61RwL" src="img/vector-22-4@1x.svg" />
         <img class="vector-23-C61RwL" src="img/vector-23-4@1x.svg" />
         <img class="vector-24-C61RwL" src="img/vector-23-4@1x.svg" />
         <img class="vector-26-C61RwL" src="img/vector-23-4@1x.svg" />
@@ -44,8 +71,7 @@
         <img class="vector-32-C61RwL" src="img/vector-23-4@1x.svg" />
         <img class="vector-33-C61RwL" src="img/vector-23-4@1x.svg" />
         <img class="vector-34-C61RwL" src="img/vector-23-4@1x.svg" />
-        <div class="rectangle-76-C61RwL"></div>
-        <div class="x2021-copyr-s-reserved-C61RwL">© 2021 Copyright LoseFound. All Rights Reserved.</div>
+        
         <div class="heart-1-C61RwL"><img class="vector-xE3uHn" src="img/vector-2@2x.svg" /></div>
         <div class="heart-2-C61RwL"><img class="vector-6H6OPj" src="img/vector-3@2x.svg" /></div>
         <div class="heart-3-C61RwL"><img class="vector-GnEHta" src="img/vector-4@2x.svg" /></div>
@@ -75,7 +101,9 @@
         <div class="heart-3-HlKRTo"><img class="vector-XUySlj" src="img/vector-4@2x.svg" /></div>
         <div class="heart-1-VkPPtx"><img class="vector-fLGRxx" src="img/vector-2@2x.svg" /></div>
         <div class="heart-2-VkPPtx"><img class="vector-Upkd2T" src="img/vector-3@2x.svg" /></div>
-        <div class="heart-3-VkPPtx"><img class="vector-WLlorL" src="img/vector-4@2x.svg" /></div>
+        <div class="heart-3-VkPPtx"><img class="vector-WLlorL" src="img/vector-4@2x.svg" /></div> -->
+
+
         <img class="logo-C61RwL" src="img/logo-1@2x.png" />
         <img class="barking-owl-C61RwL" src="img/barking-owl-10@2x.svg" />
         <a href="{{ route('my-account') }}">
@@ -94,6 +122,9 @@
         </form>
         <div class="rectangle-79-C61RwL border-2px-eerie-black"></div>
         <div class="load-more-C61RwL valign-text-middle">Load more</div>
+
+        <div class="rectangle-76-C61RwL"></div>
+        <div class="x2021-copyr-s-reserved-C61RwL">© 2021 Copyright LoseFound. All Rights Reserved.</div>
 </div>
 
 @endsection

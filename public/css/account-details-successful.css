@@ -1,6 +1,6 @@
-/* screen - account-details */
+/* screen - account-details-successful */
 
-.account-details {
+.account-details-successful {
     align-items: center;
     background-color: var(--white);
     box-sizing: border-box;
@@ -13,7 +13,7 @@
     position: relative;
     width: 1440px;
 }
-.account-details .account-details-fhuxN3 {
+.account-details-successful .account-details-fhuxN3 {
     background-color: transparent;
     color: var(--eerie-black);
     flex-shrink: 1;
@@ -31,7 +31,7 @@
     white-space: nowrap;
     width: auto;
 }
-.account-details .auto-flex-C61RwL {
+.account-details-successful .auto-flex-C61RwL {
     align-items: flex-start;
     background-color: transparent;
     box-sizing: border-box;
@@ -46,7 +46,7 @@
     position: relative;
     width: auto;
 }
-.account-details .barking-owl-4eduM0 {
+.account-details-successful .barking-owl-4eduM0 {
     background-color: transparent;
     height: 24px;
     left: 133px;
@@ -54,7 +54,7 @@
     top: 17px;
     width: 116px;
 }
-.account-details .buttonsoli-arydefault-aHaED2 {
+.account-details-successful .buttonsoli-arydefault-aHaED2 {
     background-color: transparent;
     height: 40px;
     left: 0px;
@@ -64,10 +64,10 @@
     transition: all 0.2s ease;
     width: 282px;
 }
-.account-details .buttonsoli-arydefault-aHaED2:hover {
+.account-details-successful .buttonsoli-arydefault-aHaED2:hover {
     opacity: 0;
 }
-.account-details .buttonsoli-arydefault-m4CVSK {
+.account-details-successful .buttonsoli-arydefault-m4CVSK {
     align-items: flex-start;
     background-color: transparent;
     box-sizing: border-box;
@@ -81,7 +81,7 @@
     top: 0px;
     width: auto;
 }
-.account-details .change-details-guNFp4 {
+.account-details-successful .change-details-guNFp4 {
     background-color: transparent;
     flex-shrink: 1;
     height: 24px;
@@ -94,7 +94,7 @@
     white-space: nowrap;
     width: auto;
 }
-.account-details .change-details-y3xGmq {
+.account-details-successful .change-details-y3xGmq {
     background-color: transparent;
     flex-shrink: 1;
     height: 24px;
@@ -107,7 +107,7 @@
     white-space: nowrap;
     width: auto;
 }
-.account-details .content-TzAuFg {
+.account-details-successful .content-TzAuFg {
     align-items: flex-start;
     background-color: transparent;
     box-sizing: border-box;
@@ -120,7 +120,7 @@
     position: relative;
     width: 117px;
 }
-.account-details .content-sBl78x {
+.account-details-successful .content-sBl78x {
     align-items: flex-start;
     background-color: transparent;
     box-sizing: border-box;
@@ -133,7 +133,7 @@
     position: relative;
     width: 117px;
 }
-.account-details .email-address-C61RwL {
+.account-details-successful .email-address-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 24px;
@@ -147,7 +147,7 @@
     white-space: nowrap;
     width: 220px;
 }
-.account-details .favourites-fhuxN3 {
+.account-details-successful .favourites-fhuxN3 {
     background-color: transparent;
     color: var(--eerie-black);
     flex-shrink: 1;
@@ -166,7 +166,7 @@
     white-space: nowrap;
     width: auto;
 }
-.account-details .first-name-C61RwL {
+.account-details-successful .first-name-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 24px;
@@ -180,7 +180,7 @@
     white-space: nowrap;
     width: 220px;
 }
-.account-details .home-4eduM0 {
+.account-details-successful .home-4eduM0 {
     background-color: transparent;
     height: 24px;
     left: 1145px;
@@ -192,7 +192,7 @@
     white-space: nowrap;
     width: auto;
 }
-.account-details .last-name-C61RwL {
+.account-details-successful .last-name-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 24px;
@@ -206,7 +206,7 @@
     white-space: nowrap;
     width: 220px;
 }
-.account-details .logo-4eduM0 {
+.account-details-successful .logo-4eduM0 {
     background-color: transparent;
     height: 44px;
     left: 80px;
@@ -215,7 +215,7 @@
     top: 6px;
     width: 36px;
 }
-.account-details .logout-4eduM0 {
+.account-details-successful .logout-4eduM0 {
     background-color: transparent;
     height: 24px;
     left: 1305px;
@@ -227,7 +227,7 @@
     white-space: nowrap;
     width: auto;
 }
-.account-details .masterbutt-nlargetext-RVL2w0 {
+.account-details-successful .masterbutt-nlargetext-RVL2w0 {
     align-items: center;
     background-color: var(--fuscous-gray);
     box-sizing: border-box;
@@ -241,7 +241,7 @@
     position: relative;
     width: auto;
 }
-.account-details .masterbutt-nlargetext-RsPfgn {
+.account-details-successful .masterbutt-nlargetext-RsPfgn {
     align-items: center;
     background-color: var(--eerie-black);
     box-sizing: border-box;
@@ -256,14 +256,14 @@
     top: 0px;
     width: auto;
 }
-.account-details .overlap-group-C61RwL {
+.account-details-successful .overlap-group-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 62px;
     position: relative;
     width: 1440px;
 }
-.account-details .overlap-group1-C61RwL {
+.account-details-successful .overlap-group1-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 40px;
@@ -272,7 +272,7 @@
     position: relative;
     width: 282px;
 }
-.account-details .overlap-group2-C61RwL {
+.account-details-successful .overlap-group2-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 40px;
@@ -281,7 +281,7 @@
     position: relative;
     width: 282px;
 }
-.account-details .overlap-group3-C61RwL {
+.account-details-successful .overlap-group3-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 40px;
@@ -290,7 +290,7 @@
     position: relative;
     width: 282px;
 }
-.account-details .overlap-group4-C61RwL {
+.account-details-successful .overlap-group4-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 40px;
@@ -299,7 +299,7 @@
     position: relative;
     width: 282px;
 }
-.account-details .overlap-group5-C61RwL {
+.account-details-successful .overlap-group5-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 40px;
@@ -308,7 +308,7 @@
     position: relative;
     width: 282px;
 }
-.account-details .overlap-group6-C61RwL {
+.account-details-successful .overlap-group6-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 32px;
@@ -316,7 +316,7 @@
     position: relative;
     width: 1440px;
 }
-.account-details .password-C61RwL {
+.account-details-successful .password-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 24px;
@@ -330,7 +330,7 @@
     white-space: nowrap;
     width: 220px;
 }
-.account-details .plate-4a9k2Y {
+.account-details-successful .plate-4a9k2Y {
     background-color: var(--white);
     height: 40px;
     left: 0px;
@@ -338,7 +338,7 @@
     top: 0px;
     width: 282px;
 }
-.account-details .plate-RH0WJ5 {
+.account-details-successful .plate-RH0WJ5 {
     background-color: var(--white);
     height: 40px;
     left: 0px;
@@ -346,7 +346,7 @@
     top: 0px;
     width: 282px;
 }
-.account-details .plate-cYXVq0 {
+.account-details-successful .plate-cYXVq0 {
     background-color: var(--white);
     height: 40px;
     left: 0px;
@@ -354,7 +354,7 @@
     top: 0px;
     width: 282px;
 }
-.account-details .plate-eSNWXa {
+.account-details-successful .plate-eSNWXa {
     background-color: var(--white);
     height: 40px;
     left: 0px;
@@ -362,7 +362,7 @@
     top: 0px;
     width: 282px;
 }
-.account-details .profile-4eduM0 {
+.account-details-successful .profile-4eduM0 {
     background-color: transparent;
     height: 24px;
     left: 1223px;
@@ -374,7 +374,7 @@
     white-space: nowrap;
     width: auto;
 }
-.account-details .rectangle-71-4eduM0 {
+.account-details-successful .rectangle-71-4eduM0 {
     background-color: var(--white);
     box-shadow: 2px 0px 4px rgba(211, 211, 211, 1),
         0px 2px 4px rgba(0, 0, 0, 0.05);
@@ -384,7 +384,7 @@
     top: 0px;
     width: 1440px;
 }
-.account-details .rectangle-72-KnyYHa {
+.account-details-successful .rectangle-72-KnyYHa {
     background-color: var(--eerie-black);
     height: 32px;
     left: 0px;
@@ -392,7 +392,7 @@
     top: 0px;
     width: 1440px;
 }
-.account-details .rectangle-78-4a9k2Y {
+.account-details-successful .rectangle-78-4a9k2Y {
     background-color: transparent;
     border: 0;
     height: 24px;
@@ -403,7 +403,7 @@
     top: 8px;
     width: 250px;
 }
-.account-details .rectangle-78-RH0WJ5 {
+.account-details-successful .rectangle-78-RH0WJ5 {
     background-color: transparent;
     border: 0;
     height: 24px;
@@ -414,7 +414,7 @@
     top: 8px;
     width: 250px;
 }
-.account-details .rectangle-78-cYXVq0 {
+.account-details-successful .rectangle-78-cYXVq0 {
     background-color: transparent;
     border: 0;
     height: 24px;
@@ -425,7 +425,7 @@
     top: 8px;
     width: 250px;
 }
-.account-details .rectangle-78-eSNWXa {
+.account-details-successful .rectangle-78-eSNWXa {
     background-color: transparent;
     border: 0;
     height: 24px;
@@ -436,7 +436,7 @@
     top: 8px;
     width: 250px;
 }
-.account-details .vector-25-C61RwL {
+.account-details-successful .vector-25-C61RwL {
     background-color: transparent;
     flex-shrink: 1;
     height: 7px;
@@ -444,7 +444,7 @@
     position: relative;
     width: 1442px;
 }
-.account-details .x2021-copyr-s-reserved-KnyYHa {
+.account-details-successful .x2021-copyr-s-reserved-KnyYHa {
     background-color: transparent;
     color: var(--white);
     font-family: "Inter", Helvetica, Arial, serif;
@@ -458,6 +458,26 @@
     position: absolute;
     text-align: center;
     top: 8px;
+    width: auto;
+}
+.account-details-successful .you-succes-ur-details-C61RwL {
+    background-color: transparent;
+    color: var(--eerie-black);
+    flex-shrink: 1;
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    height: 24px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    margin-left: 2px;
+    margin-top: 16px;
+    min-height: 24px;
+    min-width: 222px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
     width: auto;
 }
 .border-1px-black {
@@ -548,92 +568,4 @@
     --paradiso: rgba(55, 128, 126, 1);
     --shark: rgba(38, 38, 38, 1);
     --white: rgba(255, 255, 255, 1);
-}
-.account-details-error-RH0WJ5 {
-    background-color: transparent;
-    color: var(--geraldine);
-    font-family: "Inter", Helvetica, Arial, serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    height: 20px;
-    left: 180px;
-    letter-spacing: 0px;
-    line-height: 20px;
-    position: absolute;
-    text-align: right;
-    top: 40px;
-    white-space: nowrap;
-    width: auto;
-}
-.account-details-error-4a9k2Y {
-    background-color: transparent;
-    color: var(--geraldine);
-    font-family: "Inter", Helvetica, Arial, serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    height: 20px;
-    left: 180px;
-    letter-spacing: 0px;
-    line-height: 20px;
-    position: absolute;
-    text-align: right;
-    top: 40px;
-    white-space: nowrap;
-    width: auto;
-}
-.account-details-error-eSNWXa {
-    background-color: transparent;
-    color: var(--geraldine);
-    font-family: "Inter", Helvetica, Arial, serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    height: 20px;
-    left: 180px;
-    letter-spacing: 0px;
-    line-height: 20px;
-    position: absolute;
-    text-align: right;
-    top: 40px;
-    white-space: nowrap;
-    width: auto;
-}
-.account-details-error-cYXVq0 {
-    background-color: transparent;
-    color: var(--geraldine);
-    font-family: "Inter", Helvetica, Arial, serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    height: 20px;
-    left: 180px;
-    letter-spacing: 0px;
-    line-height: 20px;
-    position: absolute;
-    text-align: right;
-    top: 40px;
-    white-space: nowrap;
-    width: auto;
-}
-.account-details .you-succes-ur-details-C61RwL {
-    background-color: transparent;
-    color: var(--eerie-black);
-    flex-shrink: 1;
-    font-family: "Inter", Helvetica, Arial, serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    height: 24px;
-    letter-spacing: 0px;
-    line-height: 24px;
-    margin-left: 2px;
-    margin-top: 16px;
-    min-height: 24px;
-    min-width: 222px;
-    position: relative;
-    text-align: center;
-    white-space: nowrap;
-    width: auto;
 }

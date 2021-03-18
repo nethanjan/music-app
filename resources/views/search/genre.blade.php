@@ -443,7 +443,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
-    <script src="js/app.js"></script>
+    <!-- <script src="js/app.js"></script> -->
     <script src="js/search.js"></script>
 
 <script>(function localFileVideoPlayer() {

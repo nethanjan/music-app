@@ -14,6 +14,13 @@
     <link rel="stylesheet" type="text/css" href="css/page-pick-the-mood.css" />
     <link rel="stylesheet" type="text/css" href="css/account-details.css" />
     <link rel="stylesheet" type="text/css" href="css/favourites.css" />
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+   
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <style>
       @import url("https://fonts.googleapis.com/css?family=Inter:600,400");
 
@@ -191,11 +198,6 @@
       }
     </style>
     <meta name="author" content="AnimaApp.com - Design to code, Automated." />
-    
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css"
-    />
   </head>
   <body style="margin: 0; background: rgba(255, 255, 255, 1)">
     <div class="container-center-horizontal">
