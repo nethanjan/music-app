@@ -1295,22 +1295,22 @@
     top: 1009px;
     width: 11px;
 }
-.page-choose-the-genre .rectangle-76-VMr6Om {
-    background-color: transparent;
-    height: 245px;
-    left: 277px;
-    position: absolute;
-    top: 1009px;
-    width: 11px;
-}
-.page-choose-the-genre .rectangle-76-mzXdH9 {
-    background-color: var(--eerie-black);
-    height: 32px;
-    left: 0px;
-    position: absolute;
-    top: 2043px;
-    width: 1440px;
-}
+/*.page-choose-the-genre .rectangle-76-VMr6Om {*/
+/*    background-color: transparent;*/
+/*    height: 245px;*/
+/*    left: 277px;*/
+/*    position: absolute;*/
+/*    top: 1009px;*/
+/*    width: 11px;*/
+/*}*/
+/*.page-choose-the-genre .rectangle-76-mzXdH9 {*/
+/*    background-color: var(--eerie-black);*/
+/*    height: 32px;*/
+/*    left: 0px;*/
+/*    position: absolute;*/
+/*    top: 2043px;*/
+/*    width: 1440px;*/
+/*}*/
 .page-choose-the-genre .rectangle-77-C61RwL {
     background-color: transparent;
     height: 88px;
@@ -1509,14 +1509,14 @@
     top: 639px;
     width: 17px;
 }
-.page-choose-the-genre .vector-16-agmLXU {
-    background-color: transparent;
-    height: 17px;
-    left: 69px;
-    position: absolute;
-    top: -1px;
-    width: 18px;
-}
+/*.page-choose-the-genre .vector-16-agmLXU {*/
+/*    background-color: transparent;*/
+/*    height: 17px;*/
+/*    left: 69px;*/
+/*    position: absolute;*/
+/*    top: -1px;*/
+/*    width: 18px;*/
+/*}*/
 .page-choose-the-genre .vector-18-C61RwL {
     background-color: transparent;
     height: 23px;
@@ -2108,10 +2108,10 @@
 .page-choose-the-genre .genre-G2B5sx {
     background-color: transparent;
     flex-shrink: 1;
-    /* font-family: "Our Story Begins FREE-Regular", Helvetica, Arial, serif;
+    font-family: "Our Story Begins FREE-Regular", Helvetica, Arial, serif;
     font-size: 30px;
     font-style: normal;
-    font-weight: 400; */
+    font-weight: 400;
     height: 38px;
     letter-spacing: 0px;
     line-height: 38px;
@@ -2125,10 +2125,10 @@
 .page-choose-the-genre .genre-G2B5sx-highlight {
     background-color: transparent;
     flex-shrink: 1;
-    /* font-family: "Our Story Begins FREE-Regular", Helvetica, Arial, serif;
+    font-family: "Our Story Begins FREE-Regular", Helvetica, Arial, serif;
     font-size: 30px;
     font-style: normal;
-    font-weight: 400; */
+    font-weight: 400;
     height: 38px;
     letter-spacing: 0px;
     line-height: 38px;
