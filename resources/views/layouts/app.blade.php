@@ -15,9 +15,9 @@
     <link rel="stylesheet" type="text/css" href="css/account-details.css" />
     <link rel="stylesheet" type="text/css" href="css/favourites.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    Scripts
-    <script src="{{ asset('js/app.js') }}" defer></script>
-   
+    
+    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
+
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
 
@@ -1201,6 +1201,28 @@
           text-align: center;
           white-space: nowrap;
           width: auto;
+      }
+
+      .favourites-table {
+          top: 230px;
+          position: absolute;
+          height: 72px;
+          left: 82px;
+          padding-left: 93px;
+          padding-top: 86px;
+          border-collapse: collapse;
+          width: 94%;
+          position: absolute;
+      }
+      .favourites-table td {
+          background-color: transparent;
+          letter-spacing: 0.00px;
+          /*line-height: 22px;*/
+          text-align: left;
+          white-space: nowrap;
+          border-top: 2px solid #ddd;
+          border-bottom: 2px solid #ddd;
+          height:46px;
       }
 
     </style>

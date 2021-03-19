@@ -33,7 +33,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/profile', 'App\Http\Controllers\UserController@accountUpdate');
     Route::get('/favourites', 'App\Http\Controllers\UserController@favourites')->name('my-favourites');
     Route::get('/search-by-genre','App\Http\Controllers\MainPageController@search')->name('search-by-genre');
-    Route::get('/search-load-more','App\Http\Controllers\MainPageController@searchLoadMore')->name('search-load-more');
+    Route::get('/make-favourite','App\Http\Controllers\MainPageController@makeFavourite')->name('make-favourite');
     Route::get('/search-by-instrument','App\Http\Controllers\MainPageController@searchInstrument')->name('search-by-instrument');
     Route::get('/search-by-energy-level','App\Http\Controllers\MainPageController@searchEnergyLevel')->name('search-by-energy-level');
     Route::get('/search-by-mood','App\Http\Controllers\MainPageController@searchMood')->name('search-by-mood'); 

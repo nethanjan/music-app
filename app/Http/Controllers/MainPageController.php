@@ -12,6 +12,7 @@ use App\Models\Instrument;
 use App\Models\Mood;
 use App\Models\EnergyLevel;
 use App\Models\Song;
+use App\Models\UserFavourites;
 
 class MainPageController extends Controller
 {
@@ -36,6 +37,22 @@ class MainPageController extends Controller
             $take = 10;
             $songs = Song::skip($skip)->take($take)->get();
             return response()->json($songs);
+        }else{
+            return response()->json('Direct Access Not Allowed!!');
+        }
+    }
+
+    public function makeFavourite(Request $request)
+    {
+
+        if($request->ajax()){
+            $user = Auth::user();
+            $songId = $request->songId;
+            $userFavourites = UserFavourites::create([
+                'user_id' => $user->id,
+                'song_id' => $songId,
+            ]);
+            return response()->json($userFavourites);
         }else{
             return response()->json('Direct Access Not Allowed!!');
         }
