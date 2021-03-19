@@ -29,23 +29,15 @@
         <!--          4 tabs Genre, Instrument, Energy level, Mood-->
         <!-- TODO - add style (color: var(--paradiso);) when selecting the categories, now hardcoded to Genre       -->
         <div class="frame-21-C61RwL">
-            <!--            <a href="{{ route('search-by-genre') }}">-->
             <div id="genreMenu" class="genre-G2B5sx-highlight valign-text-middle search-menu-item" onclick="filterTypeToggle('genre')">Genre</div>
-            <!--            </a>-->
-            <!--            <a href="{{ route('search-by-instrument') }}">-->
             <div id="instrumentMenu" class="instrument-G2B5sx valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px search-menu-item" onclick="filterTypeToggle('instrument')">
                 Instrument
             </div>
-            <!--            </a>-->
-            <!--            <a href="{{ route('search-by-energy-level') }}">-->
             <div id="energy-levelMenu" class="energy-level-G2B5sx valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px search-menu-item" onclick="filterTypeToggle('energy-level')">
                 Energy level
             </div>
-            <!--            </a>-->
-            <!--            <a href="{{ route('search-by-mood') }}">-->
             <div id="moodMenu" class="mood-G2B5sx valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px search-menu-item" onclick="filterTypeToggle('mood')">Mood
             </div>
-            <!--            </a>-->
         </div>
 
         <!-- genre search filter -->
@@ -54,17 +46,15 @@
             <div class="choose-the-genre-C61RwL valign-text-middle">CHOOSE THE GENRE</div>
 
             <!--          start - previous and next tabs-->
-            <a href="{{ route('search-by-instrument') }}">
-                <div class="group-8-C61RwL">
-                    <div class="instrument-3cZhlu valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
-                        Instrument
-                    </div>
-                    <div class="group-6-3cZhlu">
-                        <img class="vector-15-agmLXU" src="img/vector-15@2x.svg"/>
-                        <img class="vector-16-agmLXU" src="img/vector-16@2x.svg"/>
-                    </div>
+            <div class="group-8-C61RwL" onclick="filterTypeToggle('instrument')">
+                <div class="instrument-3cZhlu valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+                    Instrument
                 </div>
-            </a>
+                <div class="group-6-3cZhlu">
+                    <img class="vector-15-agmLXU" src="img/vector-15@2x.svg"/>
+                    <img class="vector-16-agmLXU" src="img/vector-16@2x.svg"/>
+                </div>
+            </div>
             <!--          end - previous and next tabs-->
 
             <!--          filter options table -->
@@ -82,7 +72,7 @@
                             $x=$x+1;
                             $genre = $genres[$z];
                             if($id <= $sizeOfGenres) {
-                                echo "<td>$genre->name</td>";
+                                echo "<td class='select-genre' id='$genre->id'>$genre->name</td>";
                             }
                             $z+=1;
                             $id+=1;
@@ -133,26 +123,25 @@
             </div>
             <!--          start - previous and next tabs-->
             <!--        TODO need to add and fix styles for these two-->
-            <a href="{{ route('search-by-genre') }}">
-                <div class="group-9-C61RwL">
-                    <div class="genre-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">Genre</div>
-                    <div class="group-6-9dtg3L">
-                        <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
-                        <img class="vector-16-jUlmuf" src="img/vector-16-2@2x.svg" />
-                    </div>
+            <div class="group-9-C61RwL" onclick="filterTypeToggle('genre')">
+                <div class="genre-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">Genre</div>
+                <div class="group-6-9dtg3L">
+                    <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
+                    <img class="vector-16-jUlmuf" src="img/vector-16-2@2x.svg" />
                 </div>
-            </a>
-            <a href="{{ route('search-by-energy-level') }}">
-                <div class="group-8-C61RwL">
-                    <div class="energy-3cZhlu valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
-                        Energy
-                    </div>
-                    <div class="group-6-3cZhlu">
-                        <img class="vector-15-agmLXU" src="img/vector-15@2x.svg" />
-                        <img class="vector-16-agmLXU" src="img/vector-16-3@2x.svg" />
-                    </div>
+            </div>
+
+
+            <div class="group-8-C61RwL" onclick="filterTypeToggle('energy-level')">
+                <div class="energy-3cZhlu valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+                    Energy
                 </div>
-            </a>
+                <div class="group-6-3cZhlu">
+                    <img class="vector-15-agmLXU" src="img/vector-15@2x.svg" />
+                    <img class="vector-16-agmLXU" src="img/vector-16-3@2x.svg" />
+                </div>
+            </div>
+
             <!--          end - previous and next tabs-->
 
             <!--          filter options table -->
@@ -170,7 +159,7 @@
                             $x=$x+1;
                             $instrument = $instruments[$z];
                             if($id <= $sizeOfInstruments) {
-                                echo "<td>$instrument->name</td>";
+                                echo "<td class='select-instrument' id='$instrument->id'>$instrument->name</td>";
                             }
                             $z+=1;
                             $id+=1;
@@ -219,26 +208,26 @@
                 PICK THE ENERGY LEVEL
             </div>
             <!--          start - previous and next tabs-->
-            <a href="{{ route('search-by-instrument') }}">
-                <div class="group-9-C61RwL">
-                    <div class="instrument-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
-                        Instrument
-                    </div>
-                    <div class="group-6-9dtg3L">
-                        <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
-                        <img class="vector-16-jUlmuf" src="img/vector-16-5@2x.svg" />
-                    </div>
+
+            <div class="group-9-C61RwL" onclick="filterTypeToggle('instrument')">
+                <div class="instrument-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+                    Instrument
                 </div>
-            </a>
-            <a href="{{ route('search-by-mood') }}">
-                <div class="group-8-C61RwL">
-                    <div class="mood-3cZhlu valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">Mood</div>
-                    <div class="group-6-3cZhlu">
-                        <img class="vector-15-agmLXU" src="img/vector-15@2x.svg" />
-                        <img class="vector-16-agmLXU" src="img/vector-16-3@2x.svg" />
-                    </div>
+                <div class="group-6-9dtg3L">
+                    <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
+                    <img class="vector-16-jUlmuf" src="img/vector-16-5@2x.svg" />
                 </div>
-            </a>
+            </div>
+
+
+            <div class="group-8-C61RwL" onclick="filterTypeToggle('mood')">
+                <div class="mood-3cZhlu valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">Mood</div>
+                <div class="group-6-3cZhlu">
+                    <img class="vector-15-agmLXU" src="img/vector-15@2x.svg" />
+                    <img class="vector-16-agmLXU" src="img/vector-16-3@2x.svg" />
+                </div>
+            </div>
+
             <!--          end - previous and next tabs-->
 
             <!--          filter options table -->
@@ -256,7 +245,7 @@
                             $x=$x+1;
                             $energyLevel = $energyLevels[$z];
                             if($id <= $sizeOfEnergyLevels) {
-                                echo "<td>$energyLevel->name</td>";
+                                echo "<td class='select-energy-level' id='$energyLevel->id'>$energyLevel->name</td>";
                             }
                             $z+=1;
                             $id+=1;
@@ -306,16 +295,16 @@
             </div>
             <!--          start - previous and next tabs-->
             <!--        TODO need to add and fix styles for this-->
-            <a href="{{ route('search-by-energy-level') }}">
-                <div class="group-9-C61RwL">
-                    <div class="energy-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
-                        Energy
-                    </div>
-                    <div class="group-6-9dtg3L">
-                        <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
-                        <img class="vector-16-jUlmuf" src="img/vector-16-5@2x.svg" />
-                    </div></div
-                ></a>
+
+            <div class="group-9-C61RwL" onclick="filterTypeToggle('energy-level')">
+                <div class="energy-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+                    Energy
+                </div>
+                <div class="group-6-9dtg3L">
+                    <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
+                    <img class="vector-16-jUlmuf" src="img/vector-16-5@2x.svg" />
+                </div>
+            </div>
             <!--          end - previous and next tabs-->
 
             <!--          filter options table -->
@@ -333,7 +322,7 @@
                             $x=$x+1;
                             $mood = $moods[$z];
                             if($id <= $sizeOfMoods) {
-                                echo "<td>$mood->name</td>";
+                                echo "<td class='select-mood' id='$mood->id'>$mood->name</td>";
                             }
                             $z+=1;
                             $id+=1;
@@ -583,6 +572,12 @@
 
 <script type="text/javascript">
     var main_site="{{ url('/') }}";
+    var filters = {
+        'genre': [],
+        'instrument': [],
+        'energy': [],
+        'mood': []
+    };
 </script>
 
 @endsection
