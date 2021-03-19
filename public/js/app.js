@@ -71,13 +71,21 @@ $(document).on("click", ".make-favourite", function () {
 $(document).on("click", ".select-genre", function () {
     //do something
     const genreId = this.id;
-    filters.genre.push(genreId);
-    console.log(filters);
-    // show selecting circle and change selected text colour classes
-    $(this).removeClass("filter-options-table-td");
-    $(this).addClass("filter-options-table-td-selected");
-    $(this).addClass("filter-options-table-td-selected");
-    $(this).children("div").addClass("td-background");
+    if (filters.genre.includes(genreId)) {
+        const arr = filters.genre;
+        filters.genre = arr.filter(function (item) {
+            return item !== genreId;
+        });
+        $(this).addClass("filter-options-table-td");
+        $(this).removeClass("filter-options-table-td-selected");
+        $(this).children("div").removeClass("td-background");
+    } else {
+        filters.genre.push(genreId);
+        // show selecting circle and change selected text colour classes
+        $(this).removeClass("filter-options-table-td");
+        $(this).addClass("filter-options-table-td-selected");
+        $(this).children("div").addClass("td-background");
+    }
 
     // // Ajax Reuqest
     $.ajax({
@@ -132,13 +140,23 @@ $(document).on("click", ".select-genre", function () {
 $(document).on("click", ".select-instrument", function () {
     //do something
     const instrumentId = this.id;
-    filters.instrument.push(instrumentId);
-    console.log(filters);
-    // show selecting circle and change selected text colour classes
-    $(this).removeClass("filter-options-table-td");
-    $(this).addClass("filter-options-table-td-selected");
-    $(this).addClass("filter-options-table-td-selected");
-    $(this).children("div").addClass("td-background");
+
+    if (filters.instrument.includes(instrumentId)) {
+        const arr = filters.instrument;
+        filters.instrument = arr.filter(function (item) {
+            return item !== instrumentId;
+        });
+        $(this).addClass("filter-options-table-td");
+        $(this).removeClass("filter-options-table-td-selected");
+        $(this).children("div").removeClass("td-background");
+    } else {
+        filters.instrument.push(instrumentId);
+        // show selecting circle and change selected text colour classes
+        $(this).removeClass("filter-options-table-td");
+        $(this).addClass("filter-options-table-td-selected");
+        $(this).children("div").addClass("td-background");
+    }
+
     // // Ajax Reuqest
     $.ajax({
         url: main_site + "/filter",
@@ -192,12 +210,23 @@ $(document).on("click", ".select-instrument", function () {
 $(document).on("click", ".select-energy-level", function () {
     //do something
     const energyLevelId = this.id;
-    filters.energy.push(energyLevelId);
-    // show selecting circle and change selected text colour classes
-    $(this).removeClass("filter-options-table-td");
-    $(this).addClass("filter-options-table-td-selected");
-    $(this).addClass("filter-options-table-td-selected");
-    $(this).children("div").addClass("td-background");
+
+    if (filters.energy.includes(energyLevelId)) {
+        const arr = filters.energy;
+        filters.energy = arr.filter(function (item) {
+            return item !== energyLevelId;
+        });
+        $(this).addClass("filter-options-table-td");
+        $(this).removeClass("filter-options-table-td-selected");
+        $(this).children("div").removeClass("td-background");
+    } else {
+        filters.energy.push(energyLevelId);
+        // show selecting circle and change selected text colour classes
+        $(this).removeClass("filter-options-table-td");
+        $(this).addClass("filter-options-table-td-selected");
+        $(this).children("div").addClass("td-background");
+    }
+
     // // Ajax Reuqest
     $.ajax({
         url: main_site + "/filter",
@@ -251,12 +280,23 @@ $(document).on("click", ".select-energy-level", function () {
 $(document).on("click", ".select-mood", function () {
     //do something
     const moodId = this.id;
-    filters.mood.push(moodId);
-    // show selecting circle and change selected text colour classes
-    $(this).removeClass("filter-options-table-td");
-    $(this).addClass("filter-options-table-td-selected");
-    $(this).addClass("filter-options-table-td-selected");
-    $(this).children("div").addClass("td-background");
+
+    if (filters.mood.includes(moodId)) {
+        const arr = filters.mood;
+        filters.mood = arr.filter(function (item) {
+            return item !== moodId;
+        });
+        $(this).addClass("filter-options-table-td");
+        $(this).removeClass("filter-options-table-td-selected");
+        $(this).children("div").removeClass("td-background");
+    } else {
+        filters.mood.push(moodId);
+        // show selecting circle and change selected text colour classes
+        $(this).removeClass("filter-options-table-td");
+        $(this).addClass("filter-options-table-td-selected");
+        $(this).children("div").addClass("td-background");
+    }
+
     // // Ajax Reuqest
     $.ajax({
         url: main_site + "/filter",
