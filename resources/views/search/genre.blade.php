@@ -383,24 +383,21 @@
 
             <!--            music and video results -->
             <div style="height: 400px;">
-                <!-- Music and video level adjusters (TODO need to style the below span adding necessary padding) -->
-                <span>
-                    <span>
-                    <div class="music-level-C61RwL valign-text-middle inter-bold-black-16px">Music level</div>
-                    <div class="rectangle-76-VMr6Om border-1px-black"></div>
-                    <img class="rectangle-77-C61RwL" src="img/rectangle-77@2x.svg"/>
-                    <img class="ellipse-1-C61RwL" src="img/ellipse-1@2x.svg"/>
-                    </span>
-                    <span>
-                    <div class="video-level-C61RwL valign-text-middle inter-bold-black-16px">Video level</div>
-                    <div class="rectangle-76-mzXdH9 border-1px-black"></div>
-                    <img class="rectangle-77-VMr6Om" src="img/rectangle-77-1@2x.svg"/>
-                    <img class="ellipse-1-VMr6Om" src="img/ellipse-1@2x.svg"/>
-                    </span>
+                <!-- Music and video level sliders -->
+                <span style="position: absolute;padding-top: 9px;">
+                        <span style="transform: rotate(-90.00deg);position: absolute;padding-top: 171px;">
+                            <div><input type="range" id="mixercontroller" class="slider"/></div>
+                            <div style="padding-top: 120px;"><input type="range" id="mixercontroller"
+                                                                    class="slider"/></div>
+                        </span>
+                        <div style="padding-top: 300px;padding-left: 100px;">
+                            <span class="music-level-C61RwLL inter-bold-black-16px">Music level</span>
+                            <span class="video-level-C61RwLL inter-bold-black-16px" style="padding-left: 40px;">Video level</span>
+                        </div>
                 </span>
 
                 <!--        upload video box-->
-                <span style="position: absolute;padding-left: 404px;padding-top: 12px;">
+                <span style="position: absolute;margin-left: 404px;padding-top: 12px;">
                     <div class="rectangle-75-C61RwLL">
                         <div class="select-a-v-ovies-here-C61RwLL valign-text-middle" style="top:40px; left:64px;" onclick="document.getElementById('getFile').click()">
                             <video autoplay id="mixer" controls="true"></video>
@@ -416,13 +413,12 @@
                         style="display: none;"
                         accept="video/*"
                     />
-                    <input type="range" id="mixercontroller" orient="vertical"/>
                     </div>
                     </div>
                 </span>
 
                 <!--        load and search buttons-->
-                <span style="position: absolute;padding-left: 1076px;padding-top: 66px;">
+                <span style="position: absolute;margin-left: 1076px;padding-top: 66px;">
                     <div class="buttonsoli-arydefault-C61RwLL">
                         <div class="masterbutt-nlargetext-JC31Xq">
                             <div class="content-p1rkmu">

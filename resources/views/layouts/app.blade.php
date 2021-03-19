@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/account-details.css" />
     <link rel="stylesheet" type="text/css" href="css/favourites.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    
+
     <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
     <!-- Styles -->
@@ -1122,7 +1122,6 @@
           white-space: nowrap;
           width: auto;
       }
-
       /*category */
       .genre-G2B5sx-highlight {
           background-color: transparent;
@@ -1142,7 +1141,7 @@
           white-space: nowrap;
           width: auto;
       }
-
+      /*category */
       .instrument-G2B5sx-highlight {
           background-color: transparent;
           color: var(--paradiso);
@@ -1162,7 +1161,7 @@
           white-space: nowrap;
           width: auto;
       }
-
+      /*category */
       .energy-level-G2B5sx-highlight {
           background-color: transparent;
           color: var(--paradiso);
@@ -1182,7 +1181,7 @@
           white-space: nowrap;
           width: auto;
       }
-
+      /*category */
       .mood-G2B5sx-highlight {
           background-color: transparent;
           color: var(--paradiso);
@@ -1203,6 +1202,7 @@
           width: auto;
       }
 
+      /*favourite table */
       .favourites-table {
           top: 230px;
           position: absolute;
@@ -1214,6 +1214,7 @@
           width: 94%;
           position: absolute;
       }
+      /*favourite table */
       .favourites-table td {
           background-color: transparent;
           letter-spacing: 0.00px;
@@ -1223,6 +1224,62 @@
           border-top: 2px solid #ddd;
           border-bottom: 2px solid #ddd;
           height:46px;
+      }
+
+      /*music and video level sliders*/
+      .slider{
+          /*transform: rotate(-90.00deg);*/
+          height:11px;
+          width:245px;
+      }
+      /*music and video level sliders*/
+      .slider::-moz-range-progress {
+          -webkit-appearance: none;
+          /*width: 245px;*/
+          height: 11px;
+          background: var(--eerie-black);
+      }
+      /*music and video level sliders*/
+      .slider::-moz-range-track {
+          -webkit-appearance: none;
+          /*width: 245px;*/
+          height: 11px;
+          background: var(--white);
+          border: 0.1px solid var(--eerie-black);
+      }
+      /*music and video level sliders*/
+      .slider::-moz-range-thumb {
+          background-color: transparent;
+          width: 22px;
+          height: 22px;
+          outline: none;
+          border: 0px;
+          background: url("img/ellipse-1@2x.svg");
+          cursor: pointer;
+      }
+      /*music and video level sliders*/
+      .music-level-C61RwLL {
+          background-color: transparent;
+          height: 12px;
+          left: 79px;
+          letter-spacing: 0px;
+          line-height: 24px;
+          text-align: center;
+          top: 1277px;
+          white-space: nowrap;
+          width: 132px;
+      }
+      /*music and video level sliders*/
+      .video-level-C61RwLL {
+          background-color: transparent;
+          height: 12px;
+          left: 218px;
+          letter-spacing: 0px;
+          line-height: 24px;
+          text-align: center;
+          top: 1277px;
+          white-space: nowrap;
+          width: 132px;
       }
 
     </style>
