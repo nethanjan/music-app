@@ -483,21 +483,21 @@
                 <span style="position: absolute;padding-left: 404px;padding-top: 12px;">
                     <div class="rectangle-75-C61RwLL">
                         <div class="select-a-v-ovies-here-C61RwLL valign-text-middle" style="top:40px; left:64px;" onclick="document.getElementById('getFile').click()">
-                            <video autoplay id="mixer" controls="true" ></video>
-                              <input
-                                  type="file"
-                                  id="getFile"
-                                  class="videoinputdrag"
-                                  name="getFile"
-                                  style="display: none;"
-                                  accept="video/*"
-                              />
+                            <video autoplay id="mixer" controls="true"></video>
                             Select a video file from your computer<br/><br/>this video will not be uploaded to any<br/>server or cloud
                             and will only play<br/>directly from your computer<br/><br/>tip: you can drag and drop movies here
                         </div>
-                                        <div >
-                          <input type="range" id="mixercontroller" />
-                        </div>
+                    <div >
+                    <input
+                        type="file"
+                        id="getFile"
+                        class="videoinputdrag"
+                        name="getFile"
+                        style="display: none;"
+                        accept="video/*"
+                    />
+                    <input type="range" id="mixercontroller" orient="vertical"/>
+                    </div>
                     </div>
                 </span>
 
@@ -568,7 +568,7 @@
                                     <span style="padding: 0 0 0 32px;">
                                         <img class="downloadIcon" src="img/vector-3@2x.svg"/>
                                     </span>
-                                    <span style="padding: 0 0 0 32px;">
+                                    <span style="padding: 0 0 0 32px;" class="make-favourite" id="{{ $song->id }}">
                                         <img class="heartIcon" src="img/vector-84@2x.svg"/>
                                     </span>
                                 </td>
@@ -602,10 +602,14 @@
 
 </div>
 
-    <!-- <script src="js/app.js"></script> -->
+<script src="js/app.js"></script>
 <script src="js/search.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $('#video-open').on('click', function() {
+        $('#getFile').trigger('click');
+    });
+</script>
 
 <script>(function localFileVideoPlayer() {
 
@@ -617,6 +621,7 @@
     element.className = isError ? 'error' : 'info'
   }
   var playSelectedFile = function (event) {
+      console.log(event);
     var file = this.files[0]
     var type = file.type
     var videoNode = document.querySelector('video')
@@ -656,59 +661,8 @@
   })
 </script>
 
-
 <script type="text/javascript">
-    const main_site="{{ url('/') }}";
-</script>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $(".load-more").on('click',function(){
-            let totalCurrentResult=$(".song-list").length;
-            // Ajax Reuqest
-            $.ajax({
-                url:main_site+'/search-load-more',
-                type:'get',
-                dataType:'json',
-                data:{
-                    skip:totalCurrentResult
-                },
-                beforeSend:function(){
-                    $(".load-more").html('Loading...');
-                },         
-                success:function(response){
-                    var _html='';
-                    $.each(response,function(index,value){
-                        _html+='<tr id="'+value.id+'" class="song-list">';
-                            _html+='<td class="inter-normal-black-14px title-C61RwLL">'+value.name+'</td>';
-                            _html+='<td class="length-C61RwLL inter-normal-black-14px">'+value.length+'</td>';
-                            _html+='<td class="action-C61RwLL">';
-                                _html+='<span style="padding: 0 0 0 1px;">';
-                                    _html+='<img class="playIcon" src="img/vector-4@2x.svg"/>';
-                                _html+='</span>';
-                                _html+='<span style="padding: 0 0 0 32px;">';
-                                    _html+='<img class="downloadIcon" src="img/vector-3@2x.svg"/>';
-                                _html+='</span>';
-                                _html+='<span style="padding: 0 0 0 32px;">';
-                                    _html+='<img class="heartIcon" src="img/vector-84@2x.svg"/>';
-                                _html+='</span>';
-                            _html+='</td>';
-                        _html+='</tr>';
-                    });
-                    $(".song-results").append(_html);
-                    // // Change Load More When No Further result
-                    totalCurrentResult=$(".song-list").length;
-                    const totalResult=parseInt($(".load-more").attr('data-totalResult'));
-
-                    if(totalCurrentResult == totalResult){
-                        $(".load-more").remove();
-                    }else{
-                        $(".load-more").html('Load More');
-                    }
-                }
-            });
-        });
-    });
+    var main_site="{{ url('/') }}";
 </script>
 
 @endsection

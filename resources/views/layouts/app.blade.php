@@ -14,8 +14,8 @@
     <link rel="stylesheet" type="text/css" href="css/page-pick-the-mood.css" />
     <link rel="stylesheet" type="text/css" href="css/account-details.css" />
     <link rel="stylesheet" type="text/css" href="css/favourites.css" />
-
-    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    Scripts
     <script src="{{ asset('js/app.js') }}" defer></script>
    
     <!-- Styles -->
