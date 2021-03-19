@@ -72,6 +72,13 @@ $(document).on("click", ".select-genre", function () {
     //do something
     const genreId = this.id;
     filters.genre.push(genreId);
+    console.log(filters);
+    // show selecting circle and change selected text colour classes
+    $(this).removeClass("filter-options-table-td");
+    $(this).addClass("filter-options-table-td-selected");
+    $(this).addClass("filter-options-table-td-selected");
+    $(this).children("div").addClass("td-background");
+
     // // Ajax Reuqest
     $.ajax({
         url: main_site + "/filter",
@@ -126,6 +133,12 @@ $(document).on("click", ".select-instrument", function () {
     //do something
     const instrumentId = this.id;
     filters.instrument.push(instrumentId);
+    console.log(filters);
+    // show selecting circle and change selected text colour classes
+    $(this).removeClass("filter-options-table-td");
+    $(this).addClass("filter-options-table-td-selected");
+    $(this).addClass("filter-options-table-td-selected");
+    $(this).children("div").addClass("td-background");
     // // Ajax Reuqest
     $.ajax({
         url: main_site + "/filter",
@@ -180,7 +193,11 @@ $(document).on("click", ".select-energy-level", function () {
     //do something
     const energyLevelId = this.id;
     filters.energy.push(energyLevelId);
-
+    // show selecting circle and change selected text colour classes
+    $(this).removeClass("filter-options-table-td");
+    $(this).addClass("filter-options-table-td-selected");
+    $(this).addClass("filter-options-table-td-selected");
+    $(this).children("div").addClass("td-background");
     // // Ajax Reuqest
     $.ajax({
         url: main_site + "/filter",
@@ -235,7 +252,11 @@ $(document).on("click", ".select-mood", function () {
     //do something
     const moodId = this.id;
     filters.mood.push(moodId);
-
+    // show selecting circle and change selected text colour classes
+    $(this).removeClass("filter-options-table-td");
+    $(this).addClass("filter-options-table-td-selected");
+    $(this).addClass("filter-options-table-td-selected");
+    $(this).children("div").addClass("td-background");
     // // Ajax Reuqest
     $.ajax({
         url: main_site + "/filter",

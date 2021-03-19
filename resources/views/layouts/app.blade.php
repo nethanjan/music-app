@@ -873,7 +873,7 @@
           padding-top: 155px;
       }
       /*filter options table*/
-      .filter-options-table td {
+      .filter-options-table-td {
           width : 138px;
           height: 36px;
           text-align: center;
@@ -882,6 +882,21 @@
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
+      }
+
+      .filter-options-table-td-selected {
+          width : 138px;
+          height: 36px;
+          text-align: center;
+          color: var(--paradiso);
+          font-family: 'Inter', Helvetica, Arial, serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+      }
+
+      .filter-options-table td:hover {
+          color: var(--paradiso);
       }
 
       /*previous and next tabs*/
@@ -1281,6 +1296,50 @@
           white-space: nowrap;
           width: 132px;
       }
+
+      .selectorCircle {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+          width: 138px;
+          height: 23px;
+      }
+
+      .selectorCircle svg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          padding-left: 25px;
+      }
+
+      .selectorCircle path {
+          stroke: #37807E;
+          stroke-width: 1.5px;
+          stroke-dasharray: 0 1500;
+      }
+
+      .selectorCircle:hover path {
+          animation: draw 1s forwards;
+      }
+
+      @keyframes draw {
+          from {
+              stroke-dasharray: 0 1500;
+          }
+
+          to {
+              stroke-dasharray: 1500 1500;
+          }
+      }
+
+      .td-background {
+          background-image: url("img/vector-18@2x.svg");
+      }
+
+
 
     </style>
     <meta name="author" content="AnimaApp.com - Design to code, Automated." />
