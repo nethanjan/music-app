@@ -158,45 +158,25 @@
             <!--          filter options table -->
             <div style="display: flex; justify-content: center;">
                 <table class="filter-options-table">
-                    <!--                TODO filling the table-->
-                    <!--                @foreach ($genres as $genre)-->
-                    <!--                <tr>-->
-                    <!--                    <td>{{ $genre->id }}</td>-->
-                    <!--                    <td>{{ $genre->name }}</td>-->
-                    <!--                </tr>-->
-                    <!--                @endforeach-->
-                    <tr>
-                        <td>40’s</td>
-                        <td>50’s</td>
-                        <td>60's</td>
-                        <td>70's</td>
-                        <td>80's</td>
-                        <td>Ambient</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
+                    <?php   $numberOfColumns = 3;
+                    $sizeOfInstruments = sizeof($instruments);
+                    $numberOfRows = ceil($sizeOfInstruments/$numberOfColumns);
+                    $id = 1;
+                    $z = 0;                                                ?>
+                    <?php for ($y = 1; $y <= $numberOfRows; $y++){
+                        echo "<tr>";
+                        $x = 0;
+                        do {
+                            $x=$x+1;
+                            $instrument = $instruments[$z];
+                            if($id <= $sizeOfInstruments) {
+                                echo "<td>$instrument->name</td>";
+                            }
+                            $z+=1;
+                            $id+=1;
+                        } while ($x <= $numberOfColumns-1 && $z < $sizeOfInstruments);
+                        echo "</tr>";
+                    }?>
                 </table>
             </div>
 
@@ -264,45 +244,25 @@
             <!--          filter options table -->
             <div style="display: flex; justify-content: center;">
                 <table class="filter-options-table">
-                    <!--                TODO filling the table-->
-                    <!--                @foreach ($genres as $genre)-->
-                    <!--                <tr>-->
-                    <!--                    <td>{{ $genre->id }}</td>-->
-                    <!--                    <td>{{ $genre->name }}</td>-->
-                    <!--                </tr>-->
-                    <!--                @endforeach-->
-                    <tr>
-                        <td>40’s</td>
-                        <td>50’s</td>
-                        <td>60's</td>
-                        <td>70's</td>
-                        <td>80's</td>
-                        <td>Ambient</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
+                    <?php   $numberOfColumns = 1;
+                    $sizeOfEnergyLevels = sizeof($energyLevels);
+                    $numberOfRows = ceil($sizeOfEnergyLevels/$numberOfColumns);
+                    $id = 1;
+                    $z = 0;                                                ?>
+                    <?php for ($y = 1; $y <= $numberOfRows; $y++){
+                        echo "<tr>";
+                        $x = 0;
+                        do {
+                            $x=$x+1;
+                            $energyLevel = $energyLevels[$z];
+                            if($id <= $sizeOfEnergyLevels) {
+                                echo "<td>$energyLevel->name</td>";
+                            }
+                            $z+=1;
+                            $id+=1;
+                        } while ($x <= $numberOfColumns-1 && $z < $sizeOfEnergyLevels);
+                        echo "</tr>";
+                    }?>
                 </table>
             </div>
 
@@ -361,46 +321,25 @@
             <!--          filter options table -->
             <div style="display: flex; justify-content: center;">
                 <table class="filter-options-table">
-                    <!--                TODO filling the table-->
-                    <!--                @foreach ($genres as $genre)-->
-                    <!--                <tr>-->
-                    <!--                    <td>{{ $genre->id }}</td>-->
-                    <!--                    <td>{{ $genre->name }}</td>-->
-                    <!--                </tr>-->
-                    <!--                @endforeach-->
-                    <tr>
-                        <td>40’s</td>
-                        <td>50’s</td>
-                        <td>60's</td>
-                        <td>70's</td>
-                        <td>80's</td>
-                        <td>Ambient</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
-
+                    <?php   $numberOfColumns = 6;
+                    $sizeOfMoods = sizeof($moods);
+                    $numberOfRows = ceil($sizeOfMoods/$numberOfColumns);
+                    $id = 1;
+                    $z = 0;                                                ?>
+                    <?php for ($y = 1; $y <= $numberOfRows; $y++){
+                        echo "<tr>";
+                        $x = 0;
+                        do {
+                            $x=$x+1;
+                            $mood = $moods[$z];
+                            if($id <= $sizeOfMoods) {
+                                echo "<td>$mood->name</td>";
+                            }
+                            $z+=1;
+                            $id+=1;
+                        } while ($x <= $numberOfColumns-1 && $z < $sizeOfMoods);
+                        echo "</tr>";
+                    }?>
                 </table>
             </div>
 
@@ -656,7 +595,7 @@
                 },
                 beforeSend:function(){
                     $(".load-more").html('Loading...');
-                },         
+                },
                 success:function(response){
                     var _html='';
                     $.each(response,function(index,value){
