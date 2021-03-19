@@ -98,15 +98,15 @@
                 </span>
 
                 <!--            view results below arrow-->
-                <span style="position: absolute;padding-left: 1159px;padding-top: 258px;">
-                <div
-                    class="view-results-below-C61RwLL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
-                    View results below
-                </div>
-                    <!--          View results below arrow-->
-                <img class="vector-15-C61RwLL" src="img/vector-15-1@2x.svg"/>
-                <img class="vector-16-C61RwLL" src="img/vector-16-7@2x.svg"/>
-            </span>
+                <span class="viewResults" style="position: absolute;padding-left: 1159px;padding-top: 258px;">
+                    <div
+                        class="view-results-below-C61RwLL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
+                        View results below
+                    </div>
+                        <!--          View results below arrow-->
+                    <img class="vector-15-C61RwLL" src="img/vector-15-1@2x.svg"/>
+                    <img class="vector-16-C61RwLL" src="img/vector-16-7@2x.svg"/>
+                </span>
 
                 <!--          separator above Your Results section-->
                 <div style="padding: 338px;position: absolute;padding-left: 0px;">
@@ -187,7 +187,7 @@
                 </span>
 
                 <!--            view results below arrow-->
-                <span style="position: absolute;padding-left: 1159px;padding-top: 258px;">
+                <span class="viewResults" style="position: absolute;padding-left: 1159px;padding-top: 258px;">
                 <div
                     class="view-results-below-C61RwLL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
                     View results below
@@ -276,7 +276,7 @@
                 </span>
 
                 <!--            view results below arrow-->
-                <span style="position: absolute;padding-left: 1159px;padding-top: 258px;">
+                <span class="viewResults" style="position: absolute;padding-left: 1159px;padding-top: 258px;">
                 <div
                     class="view-results-below-C61RwLL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
                     View results below
@@ -356,7 +356,7 @@
                 </span>
 
                 <!--            view results below arrow-->
-                <span style="position: absolute;padding-left: 1159px;padding-top: 258px;">
+                <span class="viewResults" style="position: absolute;padding-left: 1159px;padding-top: 258px;">
                 <div
                     class="view-results-below-C61RwLL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
                     View results below
@@ -378,7 +378,7 @@
 
         <!--          music level video level section-->
         <div style="height: 700px;">
-            <div class="your-results-C61RwLL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-56px">
+            <div id="yourResults" class="your-results-C61RwLL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-56px">
                 YOUR RESULTS
             </div>
 
@@ -480,13 +480,15 @@
                                 <td class="inter-normal-black-14px title-C61RwLL">{{ $song->name }}</td>
                                 <td class="length-C61RwLL inter-normal-black-14px">{{ $song->length }}</td>
                                 <td class="action-C61RwLL">
-                                    <span style="padding: 0 0 0 1px;" onclick="play('audio-{{ $song->id }}')">
-                                        <audio id="audio-{{ $song->id }}" src="{{ $song->path }}"></audio>
+                                    <span style="padding: 0 0 0 1px;" onclick="play('{{ $song->id }}')">
+                                        <audio class="audio-player" id="audio-{{ $song->id }}" src="{{ $song->path }}"></audio>
                                         <img class="playIcon" src="img/vector-4@2x.svg"/>
                                     </span>
-                                    <span style="padding: 0 0 0 32px;">
-                                        <img class="downloadIcon" src="img/vector-3@2x.svg"/>
-                                    </span>
+                                    <a href="{{ $song->path }}" download="{{ $song->name }}" rel="nofollow">
+                                        <span style="padding: 0 0 0 32px;">
+                                            <img class="downloadIcon" src="img/vector-3@2x.svg"/>
+                                        </span>
+                                    </a>
                                     <span style="padding: 0 0 0 32px;" class="make-favourite" id="{{ $song->id }}">
                                         <img class="heartIcon" src="img/vector-84@2x.svg"/>
                                     </span>

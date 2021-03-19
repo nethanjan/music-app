@@ -22,7 +22,16 @@ $("#load-more").on("click", function () {
                     value.length +
                     "</td>";
                 _html += '<td class="action-C61RwLL">';
-                _html += '<span style="padding: 0 0 0 1px;">';
+                _html +=
+                    '<span style="padding: 0 0 0 1px;" onclick="play(' +
+                    value.id +
+                    ')">';
+                _html +=
+                    '<audio class="audio-player" id="audio-' +
+                    value.id +
+                    '" src="' +
+                    value.path +
+                    '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
                 _html += '<span style="padding: 0 0 0 32px;">';
@@ -109,7 +118,16 @@ $(document).on("click", ".select-genre", function () {
                     value.length +
                     "</td>";
                 _html += '<td class="action-C61RwLL">';
-                _html += '<span style="padding: 0 0 0 1px;">';
+                _html +=
+                    '<span style="padding: 0 0 0 1px;" onclick="play(' +
+                    value.id +
+                    ')">';
+                _html +=
+                    '<audio class="audio-player" id="audio-' +
+                    value.id +
+                    '" src="' +
+                    value.path +
+                    '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
                 _html += '<span style="padding: 0 0 0 32px;">';
@@ -179,7 +197,16 @@ $(document).on("click", ".select-instrument", function () {
                     value.length +
                     "</td>";
                 _html += '<td class="action-C61RwLL">';
-                _html += '<span style="padding: 0 0 0 1px;">';
+                _html +=
+                    '<span style="padding: 0 0 0 1px;" onclick="play(' +
+                    value.id +
+                    ')">';
+                _html +=
+                    '<audio class="audio-player" id="audio-' +
+                    value.id +
+                    '" src="' +
+                    value.path +
+                    '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
                 _html += '<span style="padding: 0 0 0 32px;">';
@@ -249,7 +276,16 @@ $(document).on("click", ".select-energy-level", function () {
                     value.length +
                     "</td>";
                 _html += '<td class="action-C61RwLL">';
-                _html += '<span style="padding: 0 0 0 1px;">';
+                _html +=
+                    '<span style="padding: 0 0 0 1px;" onclick="play(' +
+                    value.id +
+                    ')">';
+                _html +=
+                    '<audio class="audio-player" id="audio-' +
+                    value.id +
+                    '" src="' +
+                    value.path +
+                    '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
                 _html += '<span style="padding: 0 0 0 32px;">';
@@ -319,7 +355,16 @@ $(document).on("click", ".select-mood", function () {
                     value.length +
                     "</td>";
                 _html += '<td class="action-C61RwLL">';
-                _html += '<span style="padding: 0 0 0 1px;">';
+                _html +=
+                    '<span style="padding: 0 0 0 1px;" onclick="play(' +
+                    value.id +
+                    ')">';
+                _html +=
+                    '<audio class="audio-player" id="audio-' +
+                    value.id +
+                    '" src="' +
+                    value.path +
+                    '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
                 _html += '<span style="padding: 0 0 0 32px;">';
@@ -350,9 +395,16 @@ $(document).on("click", ".select-mood", function () {
 var currenntAudioTrack = null;
 
 function play(id) {
-    const audio = document.getElementById(id);
+    console.log(id);
+    const audio = document.getElementById("audio-" + id);
+
+    const playersToStop = document.getElementsByClassName("audio-player");
+    for (let i = 0; i < playersToStop.length; i++) {
+        playersToStop[i].pause();
+    }
+
     audio.play();
-    currenntAudioTrack = id;
+    currenntAudioTrack = "audio-" + id;
     const volumeSlider = document.getElementById("audioController");
 
     volumeSlider.addEventListener("input", (e) => {
@@ -374,4 +426,13 @@ $(document).ready(function () {
         let volumePercentage = $(this).val();
         changeAudioVolume(currenntAudioTrack, volumePercentage);
     });
+});
+
+$(".viewResults").click(function () {
+    $("html, body").animate(
+        {
+            scrollTop: $("#yourResults").offset().top,
+        },
+        1000
+    );
 });

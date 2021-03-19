@@ -361,6 +361,12 @@
           padding-top: 6px;
       }
 
+      /*results table*/
+      .pauseIcon {
+          height: 18px;
+          width: 18px;
+      }
+
       /*load and search buttons*/
       .buttonsoli-arydefault-C61RwLL {
           align-items: flex-start;
@@ -848,9 +854,9 @@
           background-color: transparent;
           height: 7px;
           left: -1px;
-          /*position: absolute;*/
+          position: absolute;
           /*top: 711px;*/
-          top: 790px;
+          top: 338px;
           width: 1442px;
       }
       /*selecting circle*/
