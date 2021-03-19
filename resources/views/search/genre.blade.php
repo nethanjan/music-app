@@ -52,7 +52,7 @@
                 </div>
                 <div class="group-6-3cZhlu">
                     <img class="vector-15-agmLXU" src="img/vector-15@2x.svg"/>
-                    <img class="vector-16-agmLXU" src="img/vector-16@2x.svg"/>
+                    <img class="vector-16-agmLXU" src="img/vector-16-3@2x.svg"/>
                 </div>
             </div>
             <!--          end - previous and next tabs-->
@@ -128,9 +128,9 @@
             <!--        TODO need to add and fix styles for these two-->
             <div class="group-9-C61RwL" onclick="filterTypeToggle('genre')">
                 <div class="genre-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">Genre</div>
-                <div class="group-6-9dtg3L">
+                <div class="group-6-3cZhluU">
                     <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
-                    <img class="vector-16-jUlmuf" src="img/vector-16-2@2x.svg" />
+                    <img class="vector-16-jUlmuf" src="img/vector-16-5@2x.svg" />
                 </div>
             </div>
 
@@ -139,7 +139,7 @@
                 <div class="energy-3cZhlu valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
                     Energy
                 </div>
-                <div class="group-6-3cZhlu">
+                <div class="group-6-3cZhluu">
                     <img class="vector-15-agmLXU" src="img/vector-15@2x.svg" />
                     <img class="vector-16-agmLXU" src="img/vector-16-3@2x.svg" />
                 </div>
@@ -309,7 +309,7 @@
                 <div class="energy-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
                     Energy
                 </div>
-                <div class="group-6-9dtg3L">
+                <div class="group-6-9dtg3LL">
                     <img class="vector-15-jUlmuf" src="img/vector-15-2@2x.svg" />
                     <img class="vector-16-jUlmuf" src="img/vector-16-5@2x.svg" />
                 </div>
@@ -543,7 +543,7 @@
       console.log(event);
       document.getElementById('mixer').style.display = 'block';
       document.getElementById('video-section').style.display = 'none';
-      
+
     var file = this.files[0]
     var type = file.type
     var videoNode = document.querySelector('video')
