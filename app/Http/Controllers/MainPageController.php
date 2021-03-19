@@ -36,9 +36,9 @@ class MainPageController extends Controller
 
             $query = DB::table('songs as s')->select('s.*');
 
-            // if(isset($request->filter['genre']) && count($request->filter['genre'])){
-            //     $query->join('song_genre_mapping as g', 'g.song_id', '=', 's.id');
-            // }
+            if(isset($request->filter['genre']) && count($request->filter['genre'])){
+                $query->join('song_genre_mapping as g', 'g.song_id', '=', 's.id');
+            }
             if(isset($request->filter['instrument']) && count($request->filter['instrument'])){
                 $query->join('song_instrument_mapping as i', 'i.song_id', '=', 's.id');
             }
@@ -49,9 +49,9 @@ class MainPageController extends Controller
                 $query->join('song_mood_mapping as m', 'm.song_id', '=', 's.id');
             }
 
-            // if(isset($request->filter['genre']) && count($request->filter['genre'])){
-            //     $query->whereIn('g.genre_id', $request->filter['genre']);
-            // }
+            if(isset($request->filter['genre']) && count($request->filter['genre'])){
+                $query->whereIn('g.genre_id', $request->filter['genre']);
+            }
             if(isset($request->filter['instrument']) && count($request->filter['instrument'])){
                 $query->whereIn('i.instrument_id', $request->filter['instrument']);
             }
@@ -95,10 +95,10 @@ class MainPageController extends Controller
             $user = Auth::user(); // fetch user favourites
 
             $query = DB::table('songs as s')->select('s.*');
-            // dd($request->filter);
-            // if(isset($request->filter['genre']) && count($request->filter['genre'])){
-            //     $query->join('song_genre_mapping as g', 'g.song_id', '=', 's.id');
-            // }
+            
+            if(isset($request->filter['genre']) && count($request->filter['genre'])){
+                $query->join('song_genre_mapping as g', 'g.song_id', '=', 's.id');
+            }
             if(isset($request->filter['instrument']) && count($request->filter['instrument'])){
                 $query->join('song_instrument_mapping as i', 'i.song_id', '=', 's.id');
             }
@@ -109,9 +109,9 @@ class MainPageController extends Controller
                 $query->join('song_mood_mapping as m', 'm.song_id', '=', 's.id');
             }
 
-            // if(isset($request->filter['genre']) && count($request->filter['genre'])){
-            //     $query->whereIn('g.genre_id', $request->filter['genre']);
-            // }
+            if(isset($request->filter['genre']) && count($request->filter['genre'])){
+                $query->whereIn('g.genre_id', $request->filter['genre']);
+            }
             if(isset($request->filter['instrument']) && count($request->filter['instrument'])){
                 $query->whereIn('i.instrument_id', $request->filter['instrument']);
             }

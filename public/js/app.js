@@ -82,7 +82,47 @@ $(document).on("click", ".select-genre", function () {
         data: {
             filter: filters,
         },
-        success: function (response) {},
+        success: function (response) {
+            let _html = "";
+            $(".song-results").html("");
+            $.each(response.data, function (index, value) {
+                _html += '<tr id="' + value.id + '" class="song-list">';
+                _html +=
+                    '<td class="inter-normal-black-14px title-C61RwLL">' +
+                    value.name +
+                    "</td>";
+                _html +=
+                    '<td class="length-C61RwLL inter-normal-black-14px">' +
+                    value.length +
+                    "</td>";
+                _html += '<td class="action-C61RwLL">';
+                _html += '<span style="padding: 0 0 0 1px;">';
+                _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
+                _html += "</span>";
+                _html += '<span style="padding: 0 0 0 32px;">';
+                _html +=
+                    '<img class="downloadIcon" src="img/vector-3@2x.svg"/>';
+                _html += "</span>";
+                _html +=
+                    '<span style="padding: 0 0 0 32px;" class="make-favourite" id="' +
+                    value.id +
+                    '">';
+                _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
+                _html += "</span>";
+                _html += "</td>";
+                _html += "</tr>";
+            });
+            $(".song-results").append(_html);
+            $(".results-200-C61RwLL").text("Results : " + response.total);
+
+            $("#load-more").data("totalResult", response.total);
+            totalCurrentResult = $(".song-list").length;
+            console.log(totalCurrentResult);
+            console.log(response.total);
+            if (totalCurrentResult == response.total) {
+                $(".load-more-C61RwLL").remove();
+            }
+        },
     });
 });
 
@@ -100,7 +140,6 @@ $(document).on("click", ".select-instrument", function () {
             filter: filters,
         },
         success: function (response) {
-            console.log(response);
             let _html = "";
             $(".song-results").html("");
             $.each(response.data, function (index, value) {
