@@ -72,7 +72,13 @@
                             $x=$x+1;
                             $genre = $genres[$z];
                             if($id <= $sizeOfGenres) {
-                                echo "<td class='select-genre' id='$genre->id'>$genre->name</td>";
+                                echo "<td class='select-genre filter-options-table-td' id='$genre->id'>
+                                        <div class='selectorCircle'>$genre->name
+                                            <svg width=\"1000\" height=\"23\" viewBox\"-25 0 1000 23\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                                                <path d=\"M83.4872 2.52518C84.8036 8.77821 90.0287 21.4678 62.4978 21.9225C28.084 22.491 -1.13405 20.0224 1.12258 11.4955C3.37922 2.96866 12.9673 4.23055 30.4562 1.95672C47.9451 -0.317108 76.1531 1.95672 81.7947 3.66209C86.308 5.02639 86.308 6.50441 85.7438 7.07289\" stroke=\"#37807E\"/>
+                                            </svg>
+                                        </div>
+                                      </td>";
                             }
                             $z+=1;
                             $id+=1;
@@ -82,9 +88,6 @@
 
                 </table>
             </div>
-
-            <!--          TODO selecting circle-->
-            <!--        <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />-->
 
             <!--          main category gif-->
             <div class="gif-frame-C61RwLL">
@@ -159,7 +162,13 @@
                             $x=$x+1;
                             $instrument = $instruments[$z];
                             if($id <= $sizeOfInstruments) {
-                                echo "<td class='select-instrument' id='$instrument->id'>$instrument->name</td>";
+                                echo "<td class='select-instrument filter-options-table-td' id='$instrument->id'>
+                                        <div class='selectorCircle'>$instrument->name
+                                            <svg width=\"1000\" height=\"23\" viewBox\"-25 0 1000 23\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                                                <path d=\"M83.4872 2.52518C84.8036 8.77821 90.0287 21.4678 62.4978 21.9225C28.084 22.491 -1.13405 20.0224 1.12258 11.4955C3.37922 2.96866 12.9673 4.23055 30.4562 1.95672C47.9451 -0.317108 76.1531 1.95672 81.7947 3.66209C86.308 5.02639 86.308 6.50441 85.7438 7.07289\" stroke=\"#37807E\"/>
+                                            </svg>
+                                        </div>
+                                      </td>";
                             }
                             $z+=1;
                             $id+=1;
@@ -168,9 +177,6 @@
                     }?>
                 </table>
             </div>
-
-            <!--          TODO selecting circle-->
-            <!--        <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />-->
 
             <!--          main category gif-->
             <div class="gif-frame-C61RwLL">
@@ -245,7 +251,13 @@
                             $x=$x+1;
                             $energyLevel = $energyLevels[$z];
                             if($id <= $sizeOfEnergyLevels) {
-                                echo "<td class='select-energy-level' id='$energyLevel->id'>$energyLevel->name</td>";
+                                echo "<td class='select-energy-level filter-options-table-td' id='$energyLevel->id'>
+                                        <div class='selectorCircle'>$energyLevel->name
+                                            <svg width=\"1000\" height=\"23\" viewBox\"-25 0 1000 23\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                                                <path d=\"M83.4872 2.52518C84.8036 8.77821 90.0287 21.4678 62.4978 21.9225C28.084 22.491 -1.13405 20.0224 1.12258 11.4955C3.37922 2.96866 12.9673 4.23055 30.4562 1.95672C47.9451 -0.317108 76.1531 1.95672 81.7947 3.66209C86.308 5.02639 86.308 6.50441 85.7438 7.07289\" stroke=\"#37807E\"/>
+                                            </svg>
+                                        </div>
+                                      </td>";
                             }
                             $z+=1;
                             $id+=1;
@@ -254,9 +266,6 @@
                     }?>
                 </table>
             </div>
-
-            <!--          TODO selecting circle-->
-            <!--        <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />-->
 
             <!--          main category gif-->
             <div class="gif-frame-C61RwLL">
@@ -322,7 +331,13 @@
                             $x=$x+1;
                             $mood = $moods[$z];
                             if($id <= $sizeOfMoods) {
-                                echo "<td class='select-mood' id='$mood->id'>$mood->name</td>";
+                                echo "<td class='select-mood filter-options-table-td' id='$mood->id'>
+                                        <div class='selectorCircle'>$mood->name
+                                            <svg width=\"1000\" height=\"23\" viewBox\"-25 0 1000 23\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+                                                <path d=\"M83.4872 2.52518C84.8036 8.77821 90.0287 21.4678 62.4978 21.9225C28.084 22.491 -1.13405 20.0224 1.12258 11.4955C3.37922 2.96866 12.9673 4.23055 30.4562 1.95672C47.9451 -0.317108 76.1531 1.95672 81.7947 3.66209C86.308 5.02639 86.308 6.50441 85.7438 7.07289\" stroke=\"#37807E\"/>
+                                            </svg>
+                                        </div>
+                                      </td>";
                             }
                             $z+=1;
                             $id+=1;
@@ -331,9 +346,6 @@
                     }?>
                 </table>
             </div>
-
-            <!--          TODO selecting circle-->
-            <!--        <img class="vector-35-C61RwL" src="img/vector-18@2x.svg" />-->
 
             <!--          main category gif-->
             <div class="gif-frame-C61RwLL">
