@@ -70,45 +70,26 @@
             <!--          filter options table -->
             <div style="display: flex; justify-content: center;">
                 <table class="filter-options-table">
-                    <!--                TODO filling the table-->
-                    <!--                @foreach ($genres as $genre)-->
-                    <!--                <tr>-->
-                    <!--                    <td>{{ $genre->id }}</td>-->
-                    <!--                    <td>{{ $genre->name }}</td>-->
-                    <!--                </tr>-->
-                    <!--                @endforeach-->
-                    <tr>
-                        <td>40’s</td>
-                        <td>50’s</td>
-                        <td>60's</td>
-                        <td>70's</td>
-                        <td>80's</td>
-                        <td>Ambient</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
-                    <tr>
-                        <td>aaaaaa</td>
-                        <td>bbbbbb</td>
-                        <td>cccccc</td>
-                        <td>dddddd</td>
-                        <td>eeeeee</td>
-                        <td>ffffff</td>
-                    </tr>
+                    <?php   $numberOfColumns = 6;
+                    $numberOfRows = ceil(sizeof($genres)/$numberOfColumns);
+                    $sizeOfGenres = sizeof($genres);
+                    $id = 1;
+                    $z = 0;                                                ?>
+                    <?php for ($y = 1; $y <= $numberOfRows; $y++){
+                        echo "<tr>";
+                        $x = 0;
+                        do {
+                            $x=$x+1;
+                            $genre = $genres[$z];
+                            if($id <= $sizeOfGenres) {
+                                echo "<td>$genre->name</td>";
+                            }
+                            $z+=1;
+                            $id+=1;
+                        } while ($x <= $numberOfColumns-1 && $z < sizeof($genres));
+                        echo "</tr>";
+                    }?>
+
                 </table>
             </div>
 
