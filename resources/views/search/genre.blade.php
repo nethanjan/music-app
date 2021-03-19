@@ -388,11 +388,11 @@
                 <!--        upload video box-->
                 <span style="position: absolute;margin-left: 404px;padding-top: 12px;">
                     <div class="rectangle-75-C61RwLL">
-                        <div class="select-a-v-ovies-here-C61RwLL valign-text-middle" style="top:40px; left:64px;" onclick="document.getElementById('getFile').click()">
-                            <video autoplay id="mixer" controls="true"></video>
-                            Select a video file from your computer<br/><br/>this video will not be uploaded to any<br/>server or cloud
-                            and will only play<br/>directly from your computer<br/><br/>tip: you can drag and drop movies here
-                        </div>
+                    <video class="select-a-v-ovies-here-C61RwLL" autoplay id="mixer" controls="true" style="display: none" onclick="document.getElementById('getFile').click()"></video>
+                    <div id="video-section" class="select-a-v-ovies-here-C61RwLL valign-text-middle" style="top:40px; left:64px;" onclick="document.getElementById('getFile').click()">
+                        Select a video file from your computer<br/><br/>this video will not be uploaded to any<br/>server or cloud
+                        and will only play<br/>directly from your computer<br/><br/>tip: you can drag and drop movies here
+                    </div>
                     <div >
                     <input
                         type="file"
@@ -527,6 +527,9 @@
   }
   var playSelectedFile = function (event) {
       console.log(event);
+      document.getElementById('mixer').style.display = 'block';
+      document.getElementById('video-section').style.display = 'none';
+      
     var file = this.files[0]
     var type = file.type
     var videoNode = document.querySelector('video')
