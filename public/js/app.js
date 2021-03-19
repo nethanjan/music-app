@@ -55,7 +55,6 @@ $("#load-more").on("click", function () {
 $(document).on("click", ".make-favourite", function () {
     //do something
     const songId = this.id;
-    console.log(songId);
 
     // Ajax Reuqest
     $.ajax({
@@ -73,7 +72,6 @@ $(document).on("click", ".select-genre", function () {
     //do something
     const genreId = this.id;
     filters.genre.push(genreId);
-    console.log(filters);
     // // Ajax Reuqest
     $.ajax({
         url: main_site + "/filter",
@@ -117,8 +115,6 @@ $(document).on("click", ".select-genre", function () {
 
             $("#load-more").data("totalResult", response.total);
             totalCurrentResult = $(".song-list").length;
-            console.log(totalCurrentResult);
-            console.log(response.total);
             if (totalCurrentResult == response.total) {
                 $(".load-more-C61RwLL").remove();
             }
@@ -130,7 +126,6 @@ $(document).on("click", ".select-instrument", function () {
     //do something
     const instrumentId = this.id;
     filters.instrument.push(instrumentId);
-    console.log(filters);
     // // Ajax Reuqest
     $.ajax({
         url: main_site + "/filter",
@@ -174,8 +169,6 @@ $(document).on("click", ".select-instrument", function () {
 
             $("#load-more").data("totalResult", response.total);
             totalCurrentResult = $(".song-list").length;
-            console.log(totalCurrentResult);
-            console.log(response.total);
             if (totalCurrentResult == response.total) {
                 $(".load-more-C61RwLL").remove();
             }
@@ -197,7 +190,6 @@ $(document).on("click", ".select-energy-level", function () {
             filter: filters,
         },
         success: function (response) {
-            console.log(response);
             let _html = "";
             $(".song-results").html("");
             $.each(response.data, function (index, value) {
@@ -232,8 +224,6 @@ $(document).on("click", ".select-energy-level", function () {
 
             $("#load-more").data("totalResult", response.total);
             totalCurrentResult = $(".song-list").length;
-            console.log(totalCurrentResult);
-            console.log(response.total);
             if (totalCurrentResult == response.total) {
                 $(".load-more-C61RwLL").remove();
             }
@@ -289,11 +279,38 @@ $(document).on("click", ".select-mood", function () {
 
             $("#load-more").data("totalResult", response.total);
             totalCurrentResult = $(".song-list").length;
-            console.log(totalCurrentResult);
-            console.log(response.total);
             if (totalCurrentResult == response.total) {
                 $(".load-more-C61RwLL").remove();
             }
         },
+    });
+});
+
+var currenntAudioTrack = null;
+
+function play(id) {
+    const audio = document.getElementById(id);
+    audio.play();
+    currenntAudioTrack = id;
+    const volumeSlider = document.getElementById("audioController");
+
+    volumeSlider.addEventListener("input", (e) => {
+        const value = e.target.value;
+        audio.volume = value / 100;
+    });
+}
+
+//mixer controler
+function changeAudioVolume(elementID, volumePercentage = 100) {
+    let element = document.getElementById(elementID);
+    let volume = volumePercentage / 100;
+
+    element.volume = volume;
+}
+
+$(document).ready(function () {
+    $(document).on("input", "#audioController", function () {
+        let volumePercentage = $(this).val();
+        changeAudioVolume(currenntAudioTrack, volumePercentage);
     });
 });

@@ -375,9 +375,10 @@
                 <!-- Music and video level sliders -->
                 <span style="position: absolute;padding-top: 9px;">
                         <span style="transform: rotate(-90.00deg);position: absolute;padding-top: 171px;">
-                            <div><input type="range" id="mixercontroller" class="slider"/></div>
-                            <div style="padding-top: 120px;"><input type="range" id="mixercontroller"
-                                                                    class="slider"/></div>
+                            <div><input type="range" id="audioController" class="slider"/></div>
+                            <div style="padding-top: 120px;">
+                                <input type="range" id="mixercontroller" class="slider"/>
+                            </div>
                         </span>
                         <div style="padding-top: 300px;padding-left: 100px;">
                             <span class="music-level-C61RwLL inter-bold-black-16px">Music level</span>
@@ -467,7 +468,8 @@
                                 <td class="inter-normal-black-14px title-C61RwLL">{{ $song->name }}</td>
                                 <td class="length-C61RwLL inter-normal-black-14px">{{ $song->length }}</td>
                                 <td class="action-C61RwLL">
-                                    <span style="padding: 0 0 0 1px;">
+                                    <span style="padding: 0 0 0 1px;" onclick="play('audio-{{ $song->id }}')">
+                                        <audio id="audio-{{ $song->id }}" src="{{ $song->path }}"></audio>
                                         <img class="playIcon" src="img/vector-4@2x.svg"/>
                                     </span>
                                     <span style="padding: 0 0 0 32px;">
@@ -567,6 +569,7 @@
         changeVolume('mixer', volumePercentage);
     });
   })
+
 </script>
 
 <script type="text/javascript">
