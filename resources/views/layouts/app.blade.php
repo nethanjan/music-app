@@ -356,7 +356,7 @@
       }
 
       /*results table*/
-      .playIcon .downloadIcon .heartIcon {
+      .playIcon .downloadIcon .heartIcon .pauseIcon .heartFilledIcon{
           vertical-align: middle;
           padding-top: 6px;
       }

@@ -34,15 +34,25 @@ $("#load-more").on("click", function () {
                     '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
-                _html += '<span style="padding: 0 0 0 32px;">';
+                _html += '<span style="padding: 0 0 0 0px;">';
+                _html +=
+                    '<img class="pauseIcon" src="img/pause-icon.svg"/>';
+                _html += "</span>";
+                _html += '<a href="' + value.path + '" download="' + value.name + '" rel="nofollow">';
+                _html += '<span style="padding: 0 0 0 37px;">';
                 _html +=
                     '<img class="downloadIcon" src="img/vector-3@2x.svg"/>';
                 _html += "</span>";
+                _html += "</a>";
                 _html +=
-                    '<span style="padding: 0 0 0 32px;" class="make-favourite" id="' +
+                    '<span style="padding: 0 0 0 37px;" class="make-favourite" id="' +
                     value.id +
                     '">';
                 _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
+                _html += "</span>";
+                _html += '<span style="padding: 0 0 0 0px;">';
+                _html +=
+                    '<img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>';
                 _html += "</span>";
                 _html += "</td>";
                 _html += "</tr>";
@@ -130,15 +140,25 @@ $(document).on("click", ".select-genre", function () {
                     '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
-                _html += '<span style="padding: 0 0 0 32px;">';
+                _html += '<span style="padding: 0 0 0 0px;">';
+                _html +=
+                    '<img class="pauseIcon" src="img/pause-icon.svg"/>';
+                _html += "</span>";
+                _html += '<a href="' + value.path + '" download="' + value.name + '" rel="nofollow">';
+                _html += '<span style="padding: 0 0 0 37px;">';
                 _html +=
                     '<img class="downloadIcon" src="img/vector-3@2x.svg"/>';
                 _html += "</span>";
+                _html += "</a>";
                 _html +=
-                    '<span style="padding: 0 0 0 32px;" class="make-favourite" id="' +
+                    '<span style="padding: 0 0 0 37px;" class="make-favourite" id="' +
                     value.id +
                     '">';
                 _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
+                _html += "</span>";
+                _html += '<span style="padding: 0 0 0 0px;">';
+                _html +=
+                    '<img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>';
                 _html += "</span>";
                 _html += "</td>";
                 _html += "</tr>";
@@ -209,15 +229,25 @@ $(document).on("click", ".select-instrument", function () {
                     '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
-                _html += '<span style="padding: 0 0 0 32px;">';
+                _html += '<span style="padding: 0 0 0 0px;">';
+                _html +=
+                    '<img class="pauseIcon" src="img/pause-icon.svg"/>';
+                _html += "</span>";
+                _html += '<a href="' + value.path + '" download="' + value.name + '" rel="nofollow">';
+                _html += '<span style="padding: 0 0 0 37px;">';
                 _html +=
                     '<img class="downloadIcon" src="img/vector-3@2x.svg"/>';
                 _html += "</span>";
+                _html += "</a>";
                 _html +=
-                    '<span style="padding: 0 0 0 32px;" class="make-favourite" id="' +
+                    '<span style="padding: 0 0 0 37px;" class="make-favourite" id="' +
                     value.id +
                     '">';
                 _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
+                _html += "</span>";
+                _html += '<span style="padding: 0 0 0 0px;">';
+                _html +=
+                    '<img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>';
                 _html += "</span>";
                 _html += "</td>";
                 _html += "</tr>";
@@ -288,15 +318,25 @@ $(document).on("click", ".select-energy-level", function () {
                     '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
-                _html += '<span style="padding: 0 0 0 32px;">';
+                _html += '<span style="padding: 0 0 0 0px;">';
+                _html +=
+                    '<img class="pauseIcon" src="img/pause-icon.svg"/>';
+                _html += "</span>";
+                _html += '<a href="' + value.path + '" download="' + value.name + '" rel="nofollow">';
+                _html += '<span style="padding: 0 0 0 37px;">';
                 _html +=
                     '<img class="downloadIcon" src="img/vector-3@2x.svg"/>';
                 _html += "</span>";
+                _html += "</a>";
                 _html +=
-                    '<span style="padding: 0 0 0 32px;" class="make-favourite" id="' +
+                    '<span style="padding: 0 0 0 37px;" class="make-favourite" id="' +
                     value.id +
                     '">';
                 _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
+                _html += "</span>";
+                _html += '<span style="padding: 0 0 0 0px;">';
+                _html +=
+                    '<img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>';
                 _html += "</span>";
                 _html += "</td>";
                 _html += "</tr>";
@@ -367,15 +407,21 @@ $(document).on("click", ".select-mood", function () {
                     '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
-                _html += '<span style="padding: 0 0 0 32px;">';
+                _html += '<a href="' + value.path + '" download="' + value.name + '" rel="nofollow">';
+                _html += '<span style="padding: 0 0 0 37px;">';
                 _html +=
                     '<img class="downloadIcon" src="img/vector-3@2x.svg"/>';
                 _html += "</span>";
+                _html += "</a>";
                 _html +=
-                    '<span style="padding: 0 0 0 32px;" class="make-favourite" id="' +
+                    '<span style="padding: 0 0 0 37px;" class="make-favourite" id="' +
                     value.id +
                     '">';
                 _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
+                _html += "</span>";
+                _html += '<span style="padding: 0 0 0 0px;">';
+                _html +=
+                    '<img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>';
                 _html += "</span>";
                 _html += "</td>";
                 _html += "</tr>";
