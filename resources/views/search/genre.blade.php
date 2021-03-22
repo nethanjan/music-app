@@ -615,6 +615,7 @@
         'energy': [],
         'mood': []
     };
+    var globalAudioVolume = 0.5;
 </script>
 
 @endsection

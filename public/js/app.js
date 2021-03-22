@@ -402,7 +402,7 @@ function play(id) {
     for (let i = 0; i < playersToStop.length; i++) {
         playersToStop[i].pause();
     }
-
+    audio.volume = globalAudioVolume;
     audio.play();
     currenntAudioTrack = "audio-" + id;
     const volumeSlider = document.getElementById("audioController");
@@ -419,6 +419,7 @@ function changeAudioVolume(elementID, volumePercentage = 100) {
     let volume = volumePercentage / 100;
 
     element.volume = volume;
+    globalAudioVolume = volume;
 }
 
 $(document).ready(function () {
