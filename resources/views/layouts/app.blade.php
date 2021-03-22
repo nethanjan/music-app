@@ -644,6 +644,7 @@
           text-align: center;
           top: 1015px;
           width: 100%;
+          cursor: pointer;
       }
 
       /*Music and video level adjusters*/
@@ -919,6 +920,7 @@
           position: absolute;
           top: 190px;
           width: 126px;
+          cursor: pointer;
       }
       /*previous and next tabs*/
       .instrument-9dtg3L {
@@ -970,6 +972,7 @@
           position: absolute;
           top: 190px;
           width: 126px;
+          cursor: pointer;
       }
       /*previous and next tabs*/
       .mood-3cZhlu {
@@ -1046,21 +1049,6 @@
           width: 83px;
       }
       /*previous and next tabs*/
-      .group-8-C61RwL {
-          align-items: center;
-          background-color: transparent;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          height: auto;
-          justify-content: flex-start;
-          left: 1236px;
-          min-height: 52px;
-          position: absolute;
-          top: 190px;
-          width: 126px;
-      }
-      /*previous and next tabs*/
       .instrument-3cZhlu {
           background-color: transparent;
           flex-shrink: 1;
@@ -1092,22 +1080,6 @@
           top: -1px;
           width: 18px;
       }
-      /*previous and next tabs*/
-      .group-9-C61RwL {
-          align-items: center;
-          background-color: transparent;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          height: auto;
-          justify-content: flex-start;
-          left: 80px;
-          min-height: 52px;
-          position: absolute;
-          top: 190px;
-          width: 110px;
-      }
-
       /*topic*/
       .pick-the-e-ergy-level-C61RwL {
           background-color: transparent;
@@ -1367,7 +1339,16 @@
           background-image: url("img/vector-18@2x.svg");
       }
 
+      .search-menu-item {
+          cursor: pointer;
+      }
 
+      .viewResults {
+          position: absolute;
+          padding-left: 1159px;
+          padding-top: 258px;
+          cursor: pointer;
+      }
 
     </style>
     <meta name="author" content="AnimaApp.com - Design to code, Automated." />
