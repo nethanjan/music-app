@@ -502,14 +502,22 @@
                                                src="{{ $song->path }}"></audio>
                                         <img class="playIcon" src="img/vector-4@2x.svg"/>
                                     </span>
+                            <span style="padding: 0 0 0 0px; cursor: pointer;"
+                                  id="{{ $song->id }}">
+                                        <img class="pauseIcon" src="img/pause-icon.svg"/>
+                                    </span>
                             <a href="{{ $song->path }}" download="{{ $song->name }}" rel="nofollow">
-                                        <span style="padding: 0 0 0 32px;">
+                                        <span style="margin: 0 0 0 32px;">
                                             <img class="downloadIcon" src="img/vector-3@2x.svg"/>
                                         </span>
                             </a>
-                            <span style="padding: 0 0 0 32px; cursor: pointer;" class="make-favourite"
+                            <span style="margin: 0 0 0 32px; cursor: pointer;" class="make-favourite"
                                   id="{{ $song->id }}">
                                         <img class="heartIcon" src="img/vector-84@2x.svg"/>
+                                    </span>
+                            <span style="padding: 0 0 0 0px; cursor: pointer;"
+                                  id="{{ $song->id }}">
+                                        <img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>
                                     </span>
                         </td>
                     </tr>
