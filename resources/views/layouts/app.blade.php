@@ -7,11 +7,8 @@
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
     <!-- <link rel="stylesheet" type="text/css" href="css/nav-bar.css" /> -->
-    <link rel="stylesheet" type="text/css" href="css/footer.css" />
-    <link rel="stylesheet" type="text/css" href="css/page-choose-the-genre.css" />
-    <link rel="stylesheet" type="text/css" href="css/page-pick-the-instrument.css" />
-    <link rel="stylesheet" type="text/css" href="css/page-pick-the-energy-level.css" />
-    <link rel="stylesheet" type="text/css" href="css/page-pick-the-mood.css" />
+<!--    <link rel="stylesheet" type="text/css" href="css/footer.css" />-->
+<!--    <link rel="stylesheet" type="text/css" href="css/page-choose-the-genre.css" />-->
     <link rel="stylesheet" type="text/css" href="css/account-details.css" />
     <link rel="stylesheet" type="text/css" href="css/favourites.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -648,19 +645,6 @@
       }
 
       /*Music and video level adjusters*/
-      .music-level-C61RwL {
-          background-color: transparent;
-          height: 12px;
-          left: 79px;
-          letter-spacing: 0.00px;
-          line-height: 24px;
-          position: absolute;
-          text-align: center;
-          top: 1277px;
-          white-space: nowrap;
-          width: 132px;
-      }
-      /*Music and video level adjusters*/
       .rectangle-76-VMr6Om {
           background-color: transparent;
           height: 245px;
@@ -690,19 +674,6 @@
           position: absolute;
           top: 1149px;
           width: 22px;
-      }
-      /*Music and video level adjusters*/
-      .video-level-C61RwL {
-          background-color: transparent;
-          height: 12px;
-          left: 218px;
-          letter-spacing: 0.00px;
-          line-height: 24px;
-          position: absolute;
-          text-align: center;
-          top: 1277px;
-          white-space: nowrap;
-          width: 132px;
       }
       /*Music and video level adjusters*/
       .rectangle-76-mzXdH9 {
@@ -1063,15 +1034,6 @@
           width: 126px;
       }
       /*previous and next tabs*/
-      .vector-15-agmLXU {
-          background-color: transparent;
-          height: 4px;
-          left: -1px;
-          position: absolute;
-          top: 7px;
-          width: 83px;
-      }
-      /*previous and next tabs*/
       .vector-16-agmLXU {
           background-color: transparent;
           height: 17px;
@@ -1348,6 +1310,189 @@
           padding-left: 1159px;
           padding-top: 258px;
           cursor: pointer;
+      }
+
+      /* other styles from page-choose-the-genre.css */
+      .inter-normal-eerie-black-16px {
+          color: var(--eerie-black);
+          font-family: "Inter", Helvetica, Arial, serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+      }
+      .inter-bold-eerie-black-16px {
+          color: var(--eerie-black);
+          font-family: "Inter", Helvetica, Arial, serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+      }
+      .page-choose-the-genre {
+          background-color: var(--white);
+          height: 2075px;
+          overflow-x: hidden;
+          position: relative;
+          width: 1440px;
+      }
+      .barking-owl-C61RwL {
+          background-color: transparent;
+          height: 24px;
+          left: 133px;
+          position: absolute;
+          top: 17px;
+          width: 116px;
+      }
+      .frame-21-C61RwL {
+          align-items: flex-start;
+          background-color: transparent;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: row;
+          height: 38px;
+          justify-content: flex-end;
+          left: 413px;
+          min-width: 615px;
+          padding: 0 9px;
+          position: absolute;
+          top: 83px;
+          width: auto;
+      }
+      .home-C61RwL {
+          background-color: transparent;
+          height: 24px;
+          left: 1145px;
+          letter-spacing: 0px;
+          line-height: 24px;
+          position: absolute;
+          text-align: left;
+          top: 16px;
+          white-space: nowrap;
+          width: auto;
+      }
+      .logo-C61RwL {
+          background-color: transparent;
+          height: 44px;
+          left: 80px;
+          object-fit: cover;
+          position: absolute;
+          top: 6px;
+          width: 36px;
+      }
+      .logout-C61RwL {
+          background-color: transparent;
+          height: 24px;
+          left: 1305px;
+          letter-spacing: 0px;
+          line-height: 24px;
+          position: absolute;
+          text-align: left;
+          top: 16px;
+          white-space: nowrap;
+          width: auto;
+      }
+      .profile-C61RwL {
+          background-color: transparent;
+          height: 24px;
+          left: 1223px;
+          letter-spacing: 0px;
+          line-height: 24px;
+          position: absolute;
+          text-align: left;
+          top: 16px;
+          white-space: nowrap;
+          width: auto;
+      }
+      .x2021-copyr-s-reserved-C61RwL {
+          background-color: transparent;
+          color: var(--white);
+          font-family: "Inter", Helvetica, Arial, serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 500;
+          height: auto;
+          left: 575px;
+          letter-spacing: 0px;
+          line-height: normal;
+          position: absolute;
+          text-align: center;
+          top: 2051px;
+          width: auto;
+      }
+      :root {
+          --black: rgba(0, 0, 0, 1);
+          --chicago: rgba(89, 89, 89, 1);
+          --eerie-black: rgba(32, 32, 32, 1);
+          --fuscous-gray: rgba(85, 85, 85, 1);
+          --geraldine: rgba(255, 138, 138, 1);
+          --paradiso: rgba(55, 128, 126, 1);
+          --shark: rgba(38, 38, 38, 1);
+          --white: rgba(255, 255, 255, 1);
+      }
+      .genre-G2B5sx {
+          background-color: transparent;
+          flex-shrink: 1;
+          font-family: "Our Story Begins FREE-Regular", Helvetica, Arial, serif;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 400;
+          height: 38px;
+          letter-spacing: 0px;
+          line-height: 38px;
+          min-height: 38px;
+          min-width: 57px;
+          position: relative;
+          text-align: center;
+          white-space: nowrap;
+          width: auto;
+      }
+      .instrument-G2B5sx {
+          background-color: transparent;
+          flex-shrink: 1;
+          height: 38px;
+          letter-spacing: 0px;
+          line-height: 38px;
+          margin-left: 87px;
+          min-height: 38px;
+          min-width: 98px;
+          position: relative;
+          text-align: center;
+          white-space: nowrap;
+          width: auto;
+      }
+      .energy-level-G2B5sx {
+          background-color: transparent;
+          flex-shrink: 1;
+          height: 38px;
+          letter-spacing: 0px;
+          line-height: 38px;
+          margin-left: 94px;
+          min-height: 38px;
+          min-width: 115px;
+          position: relative;
+          text-align: center;
+          white-space: nowrap;
+          width: auto;
+      }
+      .mood-G2B5sx {
+          background-color: transparent;
+          flex-shrink: 1;
+          height: 38px;
+          letter-spacing: 0px;
+          line-height: 38px;
+          margin-left: 90px;
+          min-height: 38px;
+          min-width: 54px;
+          position: relative;
+          text-align: center;
+          white-space: nowrap;
+          width: auto;
+      }
+      input[type="range"][orient="vertical"] {
+          writing-mode: bt-lr; /* IE */
+          -webkit-appearance: slider-vertical; /* WebKit */
+          width: 8px;
+          height: 245px;
+          padding: 0 5px;
       }
 
     </style>
