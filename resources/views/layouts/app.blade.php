@@ -362,10 +362,10 @@
       }
 
       /*results table*/
-      .pauseIcon {
+      /* .pauseIcon {
           height: 18px;
           width: 18px;
-      }
+      } */
 
       /*load and search buttons*/
       .buttonsoli-arydefault-C61RwLL {

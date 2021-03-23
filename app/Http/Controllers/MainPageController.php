@@ -19,12 +19,23 @@ class MainPageController extends Controller
 
     public function search()
     {
+        $user = Auth::user();
         $genres = Genre::all();
         $instruments = Instrument::all();
         $moods = Mood::all();
         $energyLevels = EnergyLevel::all();
 
-        $songs = DB::table('songs')->paginate(10);
+        $songs = DB::table('songs')
+            ->select('songs.*', 'user_favourites.user_id')
+            ->leftJoin('user_favourites', function($join) use ($user)
+            {
+                $join->on('songs.id', '=', 'user_favourites.song_id')
+                ->where('user_favourites.user_id', '=', $user->id);
+            })
+            ->orderBy('songs.id', 'asc')
+            ->paginate(10);
+
+            // dd($songs);
 
         return view('search.genre', ['genres' => $genres, 'instruments' => $instruments, 'moods' => $moods, 'energyLevels' => $energyLevels, 'songs' => $songs ]);
     }
@@ -34,7 +45,15 @@ class MainPageController extends Controller
 
         if($request->ajax()){
 
-            $query = DB::table('songs as s')->select('s.*');
+            $user = Auth::user();
+
+            $query = DB::table('songs as s')->select('s.*', 'uf.user_id');
+
+            $query->leftJoin('user_favourites as uf', function($join) use ($user)
+            {
+                $join->on('s.id', '=', 'uf.song_id')
+                ->where('uf.user_id', '=', $user->id);
+            });
 
             if(isset($request->filter['genre']) && count($request->filter['genre'])){
                 $query->join('song_genre_mapping as g', 'g.song_id', '=', 's.id');
@@ -62,8 +81,10 @@ class MainPageController extends Controller
                 $query->whereIn('m.mood_id', $request->filter['mood']);
             }
 
+            $query->orderBy('s.id', 'asc');
+
             $skip = $request->skip;
-            $query->groupBy('s.id');
+            $query->groupBy('s.id', 'uf.user_id');
 
             $songs = $query->skip($skip)->take(10)->get();
             return response()->json($songs);
@@ -88,13 +109,36 @@ class MainPageController extends Controller
         }
     }
 
+    public function removeFavourite(Request $request)
+    {
+
+        if($request->ajax()){
+            $user = Auth::user();
+            $songId = $request->songId;
+
+            $userFavourites = UserFavourites::where('user_id', '=', $user->id)
+                ->where('song_id', '=', $songId)
+                ->delete();
+
+            return response()->json($userFavourites);
+        }else{
+            return response()->json('Direct Access Not Allowed!!');
+        }
+    }
+
     public function filter(Request $request)
     {
 
         if($request->ajax()){
             $user = Auth::user(); // fetch user favourites
 
-            $query = DB::table('songs as s')->select('s.*');
+            $query = DB::table('songs as s')->select('s.*', 'uf.user_id');
+
+            $query->leftJoin('user_favourites as uf', function($join) use ($user)
+            {
+                $join->on('s.id', '=', 'uf.song_id')
+                ->where('uf.user_id', '=', $user->id);
+            });
             
             // Join
             if(isset($request->filter['genre']) && count($request->filter['genre'])){
@@ -124,7 +168,7 @@ class MainPageController extends Controller
                 $query->whereIn('m.mood_id', $request->filter['mood']);
             }
 
-            $query->groupBy('s.id');
+            $query->groupBy('s.id', 'uf.user_id');
 
             $results = $query->paginate(10);
 

@@ -77,7 +77,7 @@
                         <img class="playIcon" src="img/vector-4@2x.svg"/>
                     </span>
                 <span style="padding: 0 0 0 0px; cursor: pointer;">
-                    <img class="pauseIcon" src="img/pause-icon.svg"/>
+                    <img class="pauseIcon" src="img/pause-circle-line.svg"/>
                 </span>
                 <span style="padding: 0 0 0 32px; cursor: pointer;">
                         <img class="downloadIcon" src="img/vector-3@2x.svg"/>
@@ -86,7 +86,7 @@
                         <img class="heartIcon" src="img/vector-84@2x.svg"/>
                     </span>
                 <span style="padding: 0 0 0 0px; cursor: pointer;">
-                        <img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>
+                        <img class="heartFilledIcon" src="img/heart-solid.svg"/>
                 </span>
             </td>
         </tr>

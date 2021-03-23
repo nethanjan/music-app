@@ -444,14 +444,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="buttonsoli-arydefault-VMr6Omm smart-layers-pointers">
+                    <div class="buttonsoli-arydefault-VMr6Omm smart-layers-pointers" onclick="document.getElementById('getFile').click()" style="cursor: pointer;">
                         <div class="masterbutt-nlargetext-ByrZT3">
                             <div class="content-QVVfMl">
                                 <div class="load-video-here-xZK00f valign-text-middle inter-normal-white-16px">Load Video Here</div>
                             </div>
                         </div>
                     </div>
-                    <div class="buttonsoli-arydefault-mzXdH99">
+                    <div class="buttonsoli-arydefault-mzXdH99" >
                         <div class="masterbutt-nlargetext-Sw6AQq">
                             <div class="content-yNlhqY">
                                 <div class="forget-it--ets-search-qNCdGS valign-text-middle inter-normal-white-16px">
@@ -460,7 +460,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="buttonsoli-arydefault-QxM5SUU smart-layers-pointers">
+                    <div class="buttonsoli-arydefault-QxM5SUU smart-layers-pointers" onclick="window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth',
+                        });">
                         <div class="masterbutt-nlargetext-5416h0">
                             <div class="content-VQyg8I">
                                 <div class="forget-it--ets-search-Irc3DO valign-text-middle inter-normal-white-16px">
@@ -496,29 +499,30 @@
                         <td class="inter-normal-black-14px title-C61RwLL">{{ $song->name }}</td>
                         <td class="length-C61RwLL inter-normal-black-14px">{{ $song->length }}</td>
                         <td class="action-C61RwLL">
-                                    <span style="padding: 0 0 0 1px; cursor: pointer;"
-                                          onclick="play('{{ $song->id }}')">
-                                        <audio class="audio-player" id="audio-{{ $song->id }}"
-                                               src="{{ $song->path }}"></audio>
-                                        <img class="playIcon" src="img/vector-4@2x.svg"/>
-                                    </span>
-                            <span style="padding: 0 0 0 0px; cursor: pointer;"
-                                  id="{{ $song->id }}">
-                                        <img class="pauseIcon" src="img/pause-icon.svg"/>
-                                    </span>
+                            <span style="padding: 0 0 0 1px; cursor: pointer;" >
+                                <audio class="audio-player" id="audio-{{ $song->id }}"src="{{ $song->path }}">
+                                </audio>
+                                <img id="play-{{ $song->id }}" class="playIcon" src="img/vector-4@2x.svg" onclick="play('{{ $song->id }}')"/>
+                                <img id="pause-{{ $song->id }}" style="display: none" class="pauseIcon" src="img/pause-circle-line.svg" onclick="pause('{{ $song->id }}')"/>
+                            </span>
                             <a href="{{ $song->path }}" download="{{ $song->name }}" rel="nofollow">
                                         <span style="margin: 0 0 0 32px;">
                                             <img class="downloadIcon" src="img/vector-3@2x.svg"/>
                                         </span>
                             </a>
-                            <span style="margin: 0 0 0 32px; cursor: pointer;" class="make-favourite"
-                                  id="{{ $song->id }}">
-                                        <img class="heartIcon" src="img/vector-84@2x.svg"/>
-                                    </span>
-                            <span style="padding: 0 0 0 0px; cursor: pointer;"
-                                  id="{{ $song->id }}">
-                                        <img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>
-                                    </span>
+                                <span style="{{ !empty($song->user_id) ? 'display: inline' : 'display: none' }}; padding: 0 0 0 32px; cursor: pointer;" 
+                                    class="remove-favourite" 
+                                    id="favoured-{{ $song->id }}" 
+                                >
+                                    <img class="heartFilledIcon" src="img/heart-solid.svg"/>
+                                </span>
+                                <span style="{{ !empty($song->user_id) ? 'display: none' : 'display: inline' }}; margin: 0 0 0 32px; cursor: pointer;" 
+                                    class="make-favourite" 
+                                    id="make-favourite-{{ $song->id }}"
+                                >
+                                    <img class="heartIcon" src="img/vector-84@2x.svg"/>
+                                </span>
+                                 
                         </td>
                     </tr>
                     @endforeach

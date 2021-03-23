@@ -12,6 +12,14 @@ $("#load-more").on("click", function () {
         success: function (response) {
             let _html = "";
             $.each(response, function (index, value) {
+                let favouriteSpanDisplay = "display: none;";
+                let makeFavouriteSpanDisplay = "display: none;";
+                if (value.user_id) {
+                    favouriteSpanDisplay = "";
+                } else {
+                    makeFavouriteSpanDisplay = "";
+                }
+
                 _html += '<tr id="' + value.id + '" class="song-list">';
                 _html +=
                     '<td class="inter-normal-black-14px title-C61RwLL">' +
@@ -22,20 +30,25 @@ $("#load-more").on("click", function () {
                     value.length +
                     "</td>";
                 _html += '<td class="action-C61RwLL">';
-                _html +=
-                    '<span style="padding: 0 0 0 1px; cursor: pointer;" onclick="play(' +
-                    value.id +
-                    ')">';
+                _html += '<span style="padding: 0 0 0 1px; cursor: pointer;">';
                 _html +=
                     '<audio class="audio-player" id="audio-' +
                     value.id +
                     '" src="' +
                     value.path +
                     '"></audio>';
-                _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
-                _html += "</span>";
-                _html += '<span style="padding: 0 0 0 0px; cursor: pointer;">';
-                _html += '<img class="pauseIcon" src="img/pause-icon.svg"/>';
+                _html +=
+                    '<img id="play-' +
+                    value.id +
+                    '" class="playIcon" src="img/vector-4@2x.svg" onclick="play(' +
+                    value.id +
+                    ')"/>';
+                _html +=
+                    '<img id="pause-' +
+                    value.id +
+                    '" class="pauseIcon" style="display: none" src="img/pause-circle-line.svg" onclick="pause(' +
+                    value.id +
+                    ')"/>';
                 _html += "</span>";
                 _html +=
                     '<a href="' +
@@ -49,14 +62,21 @@ $("#load-more").on("click", function () {
                 _html += "</span>";
                 _html += "</a>";
                 _html +=
-                    '<span style="margin: 0 0 0 37px; cursor: pointer;" class="make-favourite" id="' +
+                    '<span style="' +
+                    makeFavouriteSpanDisplay +
+                    'margin: 0 0 0 37px; cursor: pointer;"  class="make-favourite" id="make-favourite-' +
                     value.id +
                     '">';
                 _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
                 _html += "</span>";
-                _html += '<span style="padding: 0 0 0 0px; cursor: pointer;">';
                 _html +=
-                    '<img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>';
+                    '<span style="' +
+                    favouriteSpanDisplay +
+                    'padding: 0 0 0 37px; cursor: pointer;" class="remove-favourite" id="favoured-' +
+                    value.id +
+                    '">';
+                _html +=
+                    '<img class="heartFilledIcon" src="img/heart-solid.svg"/>';
                 _html += "</span>";
                 _html += "</td>";
                 _html += "</tr>";
@@ -77,7 +97,8 @@ $("#load-more").on("click", function () {
 
 $(document).on("click", ".make-favourite", function () {
     //do something
-    const songId = this.id;
+    const elementId = this.id;
+    const songId = elementId.replace("make-favourite-", "");
 
     // Ajax Reuqest
     $.ajax({
@@ -87,7 +108,30 @@ $(document).on("click", ".make-favourite", function () {
         data: {
             songId: songId,
         },
-        success: function (response) {},
+        success: function () {
+            $("#" + elementId).hide();
+            $("#favoured-" + songId).show();
+        },
+    });
+});
+
+$(document).on("click", ".remove-favourite", function () {
+    //do something
+    const elementId = this.id;
+    const songId = elementId.replace("favoured-", "");
+
+    // Ajax Reuqest
+    $.ajax({
+        url: main_site + "/remove-favourite",
+        type: "get",
+        dataType: "json",
+        data: {
+            songId: songId,
+        },
+        success: function (response) {
+            $("#" + elementId).hide();
+            $("#make-favourite-" + songId).show();
+        },
     });
 });
 
@@ -122,6 +166,14 @@ $(document).on("click", ".select-genre", function () {
             let _html = "";
             $(".song-results").html("");
             $.each(response.data, function (index, value) {
+                let favouriteSpanDisplay = "display: none;";
+                let makeFavouriteSpanDisplay = "display: none;";
+                if (value.user_id) {
+                    favouriteSpanDisplay = "";
+                } else {
+                    makeFavouriteSpanDisplay = "";
+                }
+
                 _html += '<tr id="' + value.id + '" class="song-list">';
                 _html +=
                     '<td class="inter-normal-black-14px title-C61RwLL">' +
@@ -132,20 +184,25 @@ $(document).on("click", ".select-genre", function () {
                     value.length +
                     "</td>";
                 _html += '<td class="action-C61RwLL">';
-                _html +=
-                    '<span style="padding: 0 0 0 1px; cursor: pointer;" onclick="play(' +
-                    value.id +
-                    ')">';
+                _html += '<span style="padding: 0 0 0 1px; cursor: pointer;">';
                 _html +=
                     '<audio class="audio-player" id="audio-' +
                     value.id +
                     '" src="' +
                     value.path +
                     '"></audio>';
-                _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
-                _html += "</span>";
-                _html += '<span style="padding: 0 0 0 0px; cursor: pointer;">';
-                _html += '<img class="pauseIcon" src="img/pause-icon.svg"/>';
+                _html +=
+                    '<img id="play-' +
+                    value.id +
+                    '" class="playIcon" src="img/vector-4@2x.svg" onclick="play(' +
+                    value.id +
+                    ')"/>';
+                _html +=
+                    '<img id="pause-' +
+                    value.id +
+                    '" class="pauseIcon" style="display: none" src="img/pause-circle-line.svg" onclick="pause(' +
+                    value.id +
+                    ')"/>';
                 _html += "</span>";
                 _html +=
                     '<a href="' +
@@ -159,14 +216,21 @@ $(document).on("click", ".select-genre", function () {
                 _html += "</span>";
                 _html += "</a>";
                 _html +=
-                    '<span style="margin: 0 0 0 37px; cursor: pointer;" class="make-favourite" id="' +
+                    '<span style="' +
+                    makeFavouriteSpanDisplay +
+                    'margin: 0 0 0 37px; cursor: pointer;" class="make-favourite" id="make-favourite-' +
                     value.id +
                     '">';
                 _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
                 _html += "</span>";
-                _html += '<span style="padding: 0 0 0 0px; cursor: pointer;">';
                 _html +=
-                    '<img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>';
+                    '<span style="' +
+                    favouriteSpanDisplay +
+                    ' padding: 0 0 0 37px; cursor: pointer;" class="remove-favourite" id="favoured-' +
+                    value.id +
+                    '">';
+                _html +=
+                    '<img class="heartFilledIcon" src="img/heart-solid.svg"/>';
                 _html += "</span>";
                 _html += "</td>";
                 _html += "</tr>";
@@ -215,6 +279,13 @@ $(document).on("click", ".select-instrument", function () {
             let _html = "";
             $(".song-results").html("");
             $.each(response.data, function (index, value) {
+                let favouriteSpanDisplay = "display: none;";
+                let makeFavouriteSpanDisplay = "display: none;";
+                if (value.user_id) {
+                    favouriteSpanDisplay = "";
+                } else {
+                    makeFavouriteSpanDisplay = "";
+                }
                 _html += '<tr id="' + value.id + '" class="song-list">';
                 _html +=
                     '<td class="inter-normal-black-14px title-C61RwLL">' +
@@ -225,20 +296,25 @@ $(document).on("click", ".select-instrument", function () {
                     value.length +
                     "</td>";
                 _html += '<td class="action-C61RwLL">';
-                _html +=
-                    '<span style="padding: 0 0 0 1px; cursor: pointer;" onclick="play(' +
-                    value.id +
-                    ')">';
+                _html += '<span style="padding: 0 0 0 1px; cursor: pointer;">';
                 _html +=
                     '<audio class="audio-player" id="audio-' +
                     value.id +
                     '" src="' +
                     value.path +
                     '"></audio>';
-                _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
-                _html += "</span>";
-                _html += '<span style="padding: 0 0 0 0px; cursor: pointer;">';
-                _html += '<img class="pauseIcon" src="img/pause-icon.svg"/>';
+                _html +=
+                    '<img id="play-' +
+                    value.id +
+                    '" class="playIcon" src="img/vector-4@2x.svg" onclick="play(' +
+                    value.id +
+                    ')"/>';
+                _html +=
+                    '<img id="pause-' +
+                    value.id +
+                    '" class="pauseIcon" style="display: none" src="img/pause-circle-line.svg" onclick="pause(' +
+                    value.id +
+                    ')"/>';
                 _html += "</span>";
                 _html +=
                     '<a href="' +
@@ -252,14 +328,21 @@ $(document).on("click", ".select-instrument", function () {
                 _html += "</span>";
                 _html += "</a>";
                 _html +=
-                    '<span style="margin: 0 0 0 37px; cursor: pointer;" class="make-favourite" id="' +
+                    '<span style="' +
+                    makeFavouriteSpanDisplay +
+                    'margin: 0 0 0 37px; cursor: pointer;" class="make-favourite" id="make-favourite-' +
                     value.id +
                     '">';
                 _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
                 _html += "</span>";
-                _html += '<span style="padding: 0 0 0 0px; cursor: pointer;">';
                 _html +=
-                    '<img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>';
+                    '<span style="' +
+                    favouriteSpanDisplay +
+                    'padding: 0 0 0 37px; cursor: pointer;" class="remove-favourite" id="favoured-' +
+                    value.id +
+                    '">';
+                _html +=
+                    '<img class="heartFilledIcon" src="img/heart-solid.svg"/>';
                 _html += "</span>";
                 _html += "</td>";
                 _html += "</tr>";
@@ -308,6 +391,13 @@ $(document).on("click", ".select-energy-level", function () {
             let _html = "";
             $(".song-results").html("");
             $.each(response.data, function (index, value) {
+                let favouriteSpanDisplay = "display: none;";
+                let makeFavouriteSpanDisplay = "display: none;";
+                if (value.user_id) {
+                    favouriteSpanDisplay = "";
+                } else {
+                    makeFavouriteSpanDisplay = "";
+                }
                 _html += '<tr id="' + value.id + '" class="song-list">';
                 _html +=
                     '<td class="inter-normal-black-14px title-C61RwLL">' +
@@ -318,20 +408,25 @@ $(document).on("click", ".select-energy-level", function () {
                     value.length +
                     "</td>";
                 _html += '<td class="action-C61RwLL">';
-                _html +=
-                    '<span style="padding: 0 0 0 1px; cursor: pointer;" onclick="play(' +
-                    value.id +
-                    ')">';
+                _html += '<span style="padding: 0 0 0 1px; cursor: pointer;">';
                 _html +=
                     '<audio class="audio-player" id="audio-' +
                     value.id +
                     '" src="' +
                     value.path +
                     '"></audio>';
-                _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
-                _html += "</span>";
-                _html += '<span style="padding: 0 0 0 0px; cursor: pointer;">';
-                _html += '<img class="pauseIcon" src="img/pause-icon.svg"/>';
+                _html +=
+                    '<img id="play-' +
+                    value.id +
+                    '" class="playIcon" src="img/vector-4@2x.svg" onclick="play(' +
+                    value.id +
+                    ')"/>';
+                _html +=
+                    '<img id="pause-' +
+                    value.id +
+                    '" class="pauseIcon" style="display: none" src="img/pause-circle-line.svg" onclick="pause(' +
+                    value.id +
+                    ')"/>';
                 _html += "</span>";
                 _html +=
                     '<a href="' +
@@ -345,14 +440,21 @@ $(document).on("click", ".select-energy-level", function () {
                 _html += "</span>";
                 _html += "</a>";
                 _html +=
-                    '<span style="margin: 0 0 0 37px; cursor: pointer;" class="make-favourite" id="' +
+                    '<span style="' +
+                    makeFavouriteSpanDisplay +
+                    'margin: 0 0 0 37px; cursor: pointer;" class="make-favourite" id="make-favourite-' +
                     value.id +
                     '">';
                 _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
                 _html += "</span>";
-                _html += '<span style="padding: 0 0 0 0px; cursor: pointer;">';
                 _html +=
-                    '<img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>';
+                    '<span style="' +
+                    favouriteSpanDisplay +
+                    'padding: 0 0 0 37px; cursor: pointer;" class="remove-favourite" id="favoured-' +
+                    value.id +
+                    '">';
+                _html +=
+                    '<img class="heartFilledIcon" src="img/heart-solid.svg"/>';
                 _html += "</span>";
                 _html += "</td>";
                 _html += "</tr>";
@@ -401,6 +503,13 @@ $(document).on("click", ".select-mood", function () {
             let _html = "";
             $(".song-results").html("");
             $.each(response.data, function (index, value) {
+                let favouriteSpanDisplay = "display: none;";
+                let makeFavouriteSpanDisplay = "display: none;";
+                if (value.user_id) {
+                    favouriteSpanDisplay = "";
+                } else {
+                    makeFavouriteSpanDisplay = "";
+                }
                 _html += '<tr id="' + value.id + '" class="song-list">';
                 _html +=
                     '<td class="inter-normal-black-14px title-C61RwLL">' +
@@ -411,20 +520,25 @@ $(document).on("click", ".select-mood", function () {
                     value.length +
                     "</td>";
                 _html += '<td class="action-C61RwLL">';
-                _html +=
-                    '<span style="padding: 0 0 0 1px; cursor: pointer;" onclick="play(' +
-                    value.id +
-                    ')">';
+                _html += '<span style="padding: 0 0 0 1px; cursor: pointer;">';
                 _html +=
                     '<audio class="audio-player" id="audio-' +
                     value.id +
                     '" src="' +
                     value.path +
                     '"></audio>';
-                _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
-                _html += "</span>";
-                _html += '<span style="padding: 0 0 0 0px; cursor: pointer;">';
-                _html += '<img class="pauseIcon" src="img/pause-icon.svg"/>';
+                _html +=
+                    '<img id="play-' +
+                    value.id +
+                    '" class="playIcon" src="img/vector-4@2x.svg" onclick="play(' +
+                    value.id +
+                    ')"/>';
+                _html +=
+                    '<img id="pause-' +
+                    value.id +
+                    '" class="pauseIcon" style="display: none" src="img/pause-circle-line.svg" onclick="pause(' +
+                    value.id +
+                    ')"/>';
                 _html += "</span>";
                 _html +=
                     '<a href="' +
@@ -438,14 +552,21 @@ $(document).on("click", ".select-mood", function () {
                 _html += "</span>";
                 _html += "</a>";
                 _html +=
-                    '<span style="margin: 0 0 0 37px; cursor: pointer;" class="make-favourite" id="' +
+                    '<span style="' +
+                    makeFavouriteSpanDisplay +
+                    'margin: 0 0 0 37px; cursor: pointer;" class="make-favourite" id="make-favourite-' +
                     value.id +
                     '">';
                 _html += '<img class="heartIcon" src="img/vector-84@2x.svg"/>';
                 _html += "</span>";
-                _html += '<span style="padding: 0 0 0 0px; cursor: pointer;">';
                 _html +=
-                    '<img class="heartFilledIcon" src="img/heart-filled-icon.svg"/>';
+                    '<span style="' +
+                    favouriteSpanDisplay +
+                    'padding: 0 0 0 37px; cursor: pointer;" class="remove-favourite" id="favoured-' +
+                    value.id +
+                    '">';
+                _html +=
+                    '<img class="heartFilledIcon" src="img/heart-solid.svg"/>';
                 _html += "</span>";
                 _html += "</td>";
                 _html += "</tr>";
@@ -468,11 +589,15 @@ function play(id) {
     console.log(id);
     const audio = document.getElementById("audio-" + id);
 
+    $("#play-" + id).hide();
+    $("#pause-" + id).show();
+
     const playersToStop = document.getElementsByClassName("audio-player");
     for (let i = 0; i < playersToStop.length; i++) {
         playersToStop[i].pause();
     }
     audio.volume = globalAudioVolume;
+    audio.currentTime = 0;
     audio.play();
     currenntAudioTrack = "audio-" + id;
     const volumeSlider = document.getElementById("audioController");
@@ -481,6 +606,14 @@ function play(id) {
         const value = e.target.value;
         audio.volume = value / 100;
     });
+}
+
+function pause(id) {
+    const audio = document.getElementById("audio-" + id);
+    audio.pause();
+
+    $("#pause-" + id).hide();
+    $("#play-" + id).show();
 }
 
 //mixer controler

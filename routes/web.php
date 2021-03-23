@@ -34,6 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/favourites', 'App\Http\Controllers\UserController@favourites')->name('my-favourites');
     Route::get('/search-by-genre','App\Http\Controllers\MainPageController@search')->name('search-by-genre');
     Route::get('/make-favourite','App\Http\Controllers\MainPageController@makeFavourite')->name('make-favourite');
+    Route::get('/remove-favourite','App\Http\Controllers\MainPageController@removeFavourite')->name('remove-favourite');
     Route::get('/search-load-more','App\Http\Controllers\MainPageController@searchLoadMore')->name('search-load-more');
     Route::get('/filter','App\Http\Controllers\MainPageController@filter')->name('search-filter');
     // Route::get('/search-by-instrument','App\Http\Controllers\MainPageController@searchInstrument')->name('search-by-instrument');
