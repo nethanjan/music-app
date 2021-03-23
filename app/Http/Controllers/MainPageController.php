@@ -96,6 +96,7 @@ class MainPageController extends Controller
 
             $query = DB::table('songs as s')->select('s.*');
             
+            // Join
             if(isset($request->filter['genre']) && count($request->filter['genre'])){
                 $query->join('song_genre_mapping as g', 'g.song_id', '=', 's.id');
             }
@@ -109,6 +110,7 @@ class MainPageController extends Controller
                 $query->join('song_mood_mapping as m', 'm.song_id', '=', 's.id');
             }
 
+            // Where
             if(isset($request->filter['genre']) && count($request->filter['genre'])){
                 $query->whereIn('g.genre_id', $request->filter['genre']);
             }

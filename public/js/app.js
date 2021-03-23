@@ -367,10 +367,17 @@ $(document).on("click", ".select-mood", function () {
                     '"></audio>';
                 _html += '<img class="playIcon" src="img/vector-4@2x.svg"/>';
                 _html += "</span>";
+                _html +=
+                    "<a href='" +
+                    value.path +
+                    "' download='" +
+                    value.name +
+                    "' rel='nofollow'>";
                 _html += '<span style="padding: 0 0 0 32px;">';
                 _html +=
                     '<img class="downloadIcon" src="img/vector-3@2x.svg"/>';
                 _html += "</span>";
+                _html += "</</a>>";
                 _html +=
                     '<span style="padding: 0 0 0 32px;" class="make-favourite" id="' +
                     value.id +
