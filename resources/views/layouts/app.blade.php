@@ -1238,6 +1238,33 @@
           background: url("img/ellipse-1@2x.svg");
           cursor: pointer;
       }
+
+      /*!*Styling the track in Chrome*!*/
+      input[type="range"]{
+          -webkit-appearance: none;
+          -moz-apperance: none;
+          background: var(--white);
+          border: 0.1px solid var(--eerie-black);
+          height: 11px;
+          /*background-image: -webkit-gradient(*/
+          /*    linear,*/
+          /*    left top,*/
+          /*    right top,*/
+          /*    color-stop(0.15, #94A14E),*/
+          /*    color-stop(0.15, #C5C5C5)*/
+          /*);*/
+      }
+
+      input[type='range']::-webkit-slider-thumb {
+          -webkit-appearance: none !important;
+          background-color: transparent;
+          background: url("img/ellipse-1@2x.svg");
+          height: 22px;
+          width: 22px;
+          outline: none;
+          border: 0px;
+      }
+
       /*music and video level sliders*/
       .music-level-C61RwLL {
           background-color: transparent;
