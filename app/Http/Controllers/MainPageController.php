@@ -33,6 +33,7 @@ class MainPageController extends Controller
                 ->where('user_favourites.user_id', '=', $user->id);
             })
             ->orderBy('songs.id', 'asc')
+            ->groupBy('songs.id', 'user_favourites.user_id')
             ->paginate(10);
 
             // dd($songs);
