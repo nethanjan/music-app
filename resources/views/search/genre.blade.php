@@ -460,7 +460,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="buttonsoli-arydefault-QxM5SUU smart-layers-pointers" onclick="window.scrollTo({
+                    <div class="buttonsoli-arydefault-QxM5SUU smart-layers-pointers" style="cursor: pointer;" onclick="window.scrollTo({
                             top: 0,
                             behavior: 'smooth',
                         });">
@@ -510,19 +510,19 @@
                                             <img class="downloadIcon" src="img/vector-3@2x.svg"/>
                                         </span>
                             </a>
-                                <span style="{{ !empty($song->user_id) ? 'display: inline' : 'display: none' }}; padding: 0 0 0 32px; cursor: pointer;" 
-                                    class="remove-favourite" 
-                                    id="favoured-{{ $song->id }}" 
+                                <span style="{{ !empty($song->user_id) ? 'display: inline' : 'display: none' }}; padding: 0 0 0 32px; cursor: pointer;"
+                                    class="remove-favourite"
+                                    id="favoured-{{ $song->id }}"
                                 >
                                     <img class="heartFilledIcon" src="img/heart-solid.svg"/>
                                 </span>
-                                <span style="{{ !empty($song->user_id) ? 'display: none' : 'display: inline' }}; margin: 0 0 0 32px; cursor: pointer;" 
-                                    class="make-favourite" 
+                                <span style="{{ !empty($song->user_id) ? 'display: none' : 'display: inline' }}; margin: 0 0 0 32px; cursor: pointer;"
+                                    class="make-favourite"
                                     id="make-favourite-{{ $song->id }}"
                                 >
                                     <img class="heartIcon" src="img/vector-84@2x.svg"/>
                                 </span>
-                                 
+
                         </td>
                     </tr>
                     @endforeach
