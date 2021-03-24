@@ -589,6 +589,16 @@ function play(id) {
     console.log(id);
     const audio = document.getElementById("audio-" + id);
 
+    const divsToHide = document.getElementsByClassName("pauseIcon");
+    for (let i = 0; i < divsToHide.length; i++) {
+        divsToHide[i].style.display = "none";
+    }
+
+    const divsToShow = document.getElementsByClassName("playIcon");
+    for (let i = 0; i < divsToHide.length; i++) {
+        divsToShow[i].style.display = "inline";
+    }
+
     $("#play-" + id).hide();
     $("#pause-" + id).show();
 

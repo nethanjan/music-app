@@ -30,7 +30,7 @@
     </form>
 
     <!--    RESULTS section-->
-    <div class="results-200-C61RwL valign-text-middle">Results: {{ $total }}</div>
+    <div class="results-200-C61RwL valign-text-middle">Results: {{ $user_favourites->total() }}</div>
 
     <!--    <table>-->
     <!--        <thead class="thead">-->
@@ -74,19 +74,21 @@
             <td class="action-C61RwLL">
                 <div style="display: none;">{{$user_favourite->id}}</div>
                 <span style="padding: 0 0 0 1px; cursor: pointer;">
-                        <img class="playIcon" src="img/vector-4@2x.svg"/>
-                    </span>
-                <span style="padding: 0 0 0 0px; cursor: pointer;">
-                    <img class="pauseIcon" src="img/pause-circle-line.svg"/>
+                    <audio class="audio-player" id="audio-{{ $user_favourite->id }}"src="{{ $user_favourite->path }}">
+                    </audio>
+                    <img id="play-{{ $user_favourite->id }}" class="playIcon" src="img/vector-4@2x.svg" onclick="play('{{ $user_favourite->id }}')"/>
+                    <img id="pause-{{ $user_favourite->id }}" style="display: none" class="pauseIcon" src="img/pause-circle-line.svg" onclick="pause('{{ $user_favourite->id }}')"/>
                 </span>
-                <span style="padding: 0 0 0 32px; cursor: pointer;">
+                <a href="{{ $user_favourite->path }}" download="{{ $user_favourite->name }}" rel="nofollow">
+                    <span style="padding: 0 0 0 32px; cursor: pointer;">
                         <img class="downloadIcon" src="img/vector-3@2x.svg"/>
                     </span>
-                <span style="padding: 0 0 0 32px; cursor: pointer;">
-                        <img class="heartIcon" src="img/vector-84@2x.svg"/>
-                    </span>
-                <span style="padding: 0 0 0 0px; cursor: pointer;">
-                        <img class="heartFilledIcon" src="img/heart-solid.svg"/>
+                </a>
+                
+                <span style="padding: 0 0 0 32px; cursor: pointer;" class="remove-favourite"
+                    id="favoured-{{ $user_favourite->id }}"
+                >
+                    <img class="heartFilledIcon" src="img/heart-solid.svg"/>
                 </span>
             </td>
         </tr>
@@ -95,12 +97,24 @@
     </table>
 
     <!--    RESULTS section-->
-
-    <div class="rectangle-79-C61RwL border-2px-eerie-black"></div>
-    <div class="load-more-C61RwL valign-text-middle">Load more</div>
+    @if($user_favourites->total() > count($user_favourites) )
+        <div id="load-more-section" class="rectangle-79-C61RwL border-2px-eerie-black">
+            <button class="load-more-C61RwLL valign-text-middle" 
+                id="load-more" 
+                style="border: none; background: none; height: 40px; cursor:pointer;">
+                Load more
+            </button>
+        </div>
+    @endif
+    <!-- <div class="load-more-C61RwL valign-text-middle">Load more</div> -->
 
     <div class="rectangle-76-C61RwL"></div>
     <div class="x2021-copyr-s-reserved-C61RwL">© 2021 Copyright LoseFound. All Rights Reserved.</div>
 </div>
+
+<script src="js/user.js"></script>
+<script type="text/javascript">
+    var main_site = "{{ url('/') }}";
+</script>
 
 @endsection

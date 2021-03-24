@@ -61,9 +61,31 @@ class UserController extends Controller
             ->join('users as u', 'uf.user_id', '=', 'u.id')
             ->where('u.id', $user->id)
             ->select('s.*')
-            ->get();
+            ->paginate(10);
+            // dd($user_favourites);
 
         return view('user.favourites', ['user_favourites' => $user_favourites, 'total' => count($user_favourites) ]);
+    }
+
+    public function favouritesLoadMore(Request $request)
+    {
+
+        if($request->ajax()){
+
+            $user = Auth::user();
+            $skip = $request->skip;
+
+            $user_favourites = DB::table('songs as s')
+            ->join('user_favourites as uf', 's.id', '=', 'uf.song_id')
+            ->join('users as u', 'uf.user_id', '=', 'u.id')
+            ->where('u.id', $user->id)
+            ->select('s.*')
+            ->skip($skip)->take(10)->get();
+
+            return response()->json($user_favourites);
+        }else{
+            return response()->json('Direct Access Not Allowed!!');
+        }
     }
 
     public function verify()

@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', 'App\Http\Controllers\UserController@account')->name('my-account');
     Route::post('/profile', 'App\Http\Controllers\UserController@accountUpdate');
     Route::get('/favourites', 'App\Http\Controllers\UserController@favourites')->name('my-favourites');
+    Route::get('/favourites-load-more', 'App\Http\Controllers\UserController@favouritesLoadMore')->name('favourites-load-more');
     Route::get('/search-by-genre','App\Http\Controllers\MainPageController@search')->name('search-by-genre');
     Route::get('/make-favourite','App\Http\Controllers\MainPageController@makeFavourite')->name('make-favourite');
     Route::get('/remove-favourite','App\Http\Controllers\MainPageController@removeFavourite')->name('remove-favourite');
