@@ -546,7 +546,7 @@
     <!-- CONTENT -->
 
     <!-- FOOTER -->
-    <div style="padding-top: 30px;">
+    <div>
         <div class="rectangle-76-C61RwLL">
             <div class="x2021-copyr-s-reserved-C61RwL">© 2021 Copyright LoseFound. All Rights
                 Reserved.

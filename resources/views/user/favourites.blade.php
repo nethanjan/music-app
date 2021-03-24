@@ -108,8 +108,18 @@
     @endif
     <!-- <div class="load-more-C61RwL valign-text-middle">Load more</div> -->
 
+    <!-- FOOTER -->
+    <div style="padding-top: 30px;">
+        <div class="rectangle-76-C61RwL">
+            <div class="x2021-copyr-s-reserved-C61RwL">© 2021 Copyright LoseFound. All Rights
+                Reserved.
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+<!-- 
     <div class="rectangle-76-C61RwL"></div>
-    <div class="x2021-copyr-s-reserved-C61RwL">© 2021 Copyright LoseFound. All Rights Reserved.</div>
+    <div class="x2021-copyr-s-reserved-C61RwL">© 2021 Copyright LoseFound. All Rights Reserved.</div> -->
 </div>
 
 <script src="js/user.js"></script>

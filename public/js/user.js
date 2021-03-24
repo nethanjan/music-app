@@ -65,7 +65,7 @@ $("#load-more").on("click", function () {
         },
         success: function (response) {
             let _html = "";
-            $.each(response, function (index, value) {
+            $.each(response.results, function (index, value) {
                 _html += '<tr id="' + value.id + '" class="song-list">';
                 _html +=
                     '<td class="inter-normal-black-14px title-C61RwLL">' +
@@ -120,12 +120,13 @@ $("#load-more").on("click", function () {
             $(".song-results").append(_html);
             // // Change Load More When No Further result
             totalCurrentResult = $(".song-list").length;
+
             const totalResult = parseInt(
                 $("#load-more").attr("data-totalResult")
             );
 
-            if (totalCurrentResult == totalResult) {
-                $(".load-more-C61RwLL").remove();
+            if (response.total <= totalCurrentResult) {
+                $("#load-more-section").hide();
             }
         },
     });

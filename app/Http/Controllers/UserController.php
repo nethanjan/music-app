@@ -82,7 +82,15 @@ class UserController extends Controller
             ->select('s.*')
             ->skip($skip)->take(10)->get();
 
-            return response()->json($user_favourites);
+            $results = DB::table('songs as s')
+            ->join('user_favourites as uf', 's.id', '=', 'uf.song_id')
+            ->join('users as u', 'uf.user_id', '=', 'u.id')
+            ->where('u.id', $user->id)
+            ->select('s.*')
+            ->get();
+            $total = count($results);
+            
+            return response()->json([ 'results' => $user_favourites, 'total' => $total]);
         }else{
             return response()->json('Direct Access Not Allowed!!');
         }
