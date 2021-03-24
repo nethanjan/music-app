@@ -390,7 +390,7 @@
         <!-- end mood search filter -->
 
         <!--          music level video level section-->
-        <div style="height: 700px;">
+        <div>
             <div id="yourResults"
                  class="your-results-C61RwLL valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-56px">
                 YOUR RESULTS
@@ -535,7 +535,7 @@
             <div
                 class="rectangle-79-C61RwLL load-more-C61RwLL border-2px-eerie-blackk valign-text-middle valign-text-middle"
                 style="margin:40px auto;">
-                <button id="load-more" style="border: none; background: none; height: 40px; cursor:pointer;"
+                <button class="load-more-C61RwLL border-2px-eerie-blackk" id="load-more" style="border: none; background: none; height: 40px; cursor:pointer;"
                         data-totalResult="{{ $songs->total() }}">Load more
                 </button>
             </div>
@@ -546,9 +546,9 @@
     <!-- CONTENT -->
 
     <!-- FOOTER -->
-    <div style="padding-top: 630px;">
+    <div style="padding-top: 30px;">
         <div class="rectangle-76-C61RwLL">
-            <div class="x2021-copyr-s-reserved-C61RwL" style="top:8px;">© 2021 Copyright LoseFound. All Rights
+            <div class="x2021-copyr-s-reserved-C61RwL">© 2021 Copyright LoseFound. All Rights
                 Reserved.
             </div>
         </div>

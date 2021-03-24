@@ -214,9 +214,9 @@
           background-color: var(--eerie-black);
           height: 32px;
           left: 0px;
-          position: absolute;
+          /* position: absolute; */
           /*top: 2043px;*/
-          width: 1440px;
+          width: 100%;
       }
       /*footer*/
 
@@ -1329,10 +1329,10 @@
       }
       .page-choose-the-genre {
           background-color: var(--white);
-          height: 2075px;
+          height: 100%;
           overflow-x: hidden;
           position: relative;
-          width: 1440px;
+          /* width: 1440px; */
       }
       .barking-owl-C61RwL {
           background-color: transparent;
@@ -1410,12 +1410,12 @@
           font-style: normal;
           font-weight: 500;
           height: auto;
-          left: 575px;
+          left: 0px;
           letter-spacing: 0px;
           line-height: normal;
-          position: absolute;
+          position: relative;
           text-align: center;
-          top: 2051px;
+          top: 10px;
           width: auto;
       }
       :root {

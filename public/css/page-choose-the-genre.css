@@ -74,10 +74,10 @@
 }
 .page-choose-the-genre {
     background-color: var(--white);
-    height: 2075px;
+    height: 100%;
     overflow-x: hidden;
     position: relative;
-    width: 1440px;
+    /* width: 1440px; */
 }
 .page-choose-the-genre .action-C61RwL {
     background-color: transparent;
