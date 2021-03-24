@@ -805,21 +805,25 @@
       .vector-15-C61RwLL {
           background-color: transparent;
           height: 31px;
-          left: 1349px;
+          /*left: 1349px;*/
           position: absolute;
           /*top: 262px;*/
-          top: 256px;
+          /*top: 256px;*/
           width: 4px;
+          margin-left: 191px;
+          margin-top: -38px;
       }
       /*view results below arrow*/
       .vector-16-C61RwLL {
           background-color: transparent;
           height: 19px;
-          left: 1343px;
+          /*left: 1343px;*/
           position: absolute;
           /*top: 285px;*/
-          top: 274px;
+          /*top: 274px;*/
           width: 17px;
+          margin-top: -17px;
+          margin-left: 185px;
       }
       /*separator above Your Results section*/
       .vector-25-C61RwLL {
@@ -1234,6 +1238,33 @@
           background: url("img/ellipse-1@2x.svg");
           cursor: pointer;
       }
+
+      /*!*Styling the track in Chrome*!*/
+      input[type="range"]{
+          -webkit-appearance: none;
+          -moz-apperance: none;
+          background: var(--white);
+          border: 0.1px solid var(--eerie-black);
+          height: 11px;
+          /*background-image: -webkit-gradient(*/
+          /*    linear,*/
+          /*    left top,*/
+          /*    right top,*/
+          /*    color-stop(0.15, #94A14E),*/
+          /*    color-stop(0.15, #C5C5C5)*/
+          /*);*/
+      }
+
+      input[type='range']::-webkit-slider-thumb {
+          -webkit-appearance: none !important;
+          background-color: transparent;
+          background: url("img/ellipse-1@2x.svg");
+          height: 22px;
+          width: 22px;
+          outline: none;
+          border: 0px;
+      }
+
       /*music and video level sliders*/
       .music-level-C61RwLL {
           background-color: transparent;
@@ -1307,8 +1338,8 @@
 
       .viewResults {
           position: absolute;
-          padding-left: 1159px;
-          padding-top: 258px;
+          margin-left: 1159px;
+          margin-top: 258px;
           cursor: pointer;
       }
 
