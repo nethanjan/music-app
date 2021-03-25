@@ -401,9 +401,9 @@
                 <!-- Music and video level sliders -->
                 <span style="position: absolute;padding-top: 9px;">
                         <span style="transform: rotate(-90.00deg);position: absolute;padding-top: 171px;">
-                            <div><input type="range" id="audioController" class="slider"/></div>
+                            <div><input type="range" id="audioController" class="slider" min="1" max="100"/></div>
                             <div style="padding-top: 120px;">
-                                <input type="range" id="mixercontroller" class="slider"/>
+                                <input type="range" id="mixercontroller" class="slider" min="1" max="100"/>
                             </div>
                         </span>
                         <div style="padding-top: 300px;padding-left: 100px;">
@@ -628,6 +628,19 @@
         'mood': []
     };
     var globalAudioVolume = 0.5;
+
+    //handle progress bar styles of slider in Chrome
+    $('input[type="range"]').change(function () {
+        var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
+
+        $(this).css('background-image',
+            '-webkit-gradient(linear, left top, right top, '
+            + 'color-stop(' + val + ', var(--eerie-black)), '
+            + 'color-stop(' + val + ', var(--white))'
+            + ')'
+        );
+    });
+
 </script>
 
 @endsection
