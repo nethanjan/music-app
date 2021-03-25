@@ -5,27 +5,37 @@
 <div class="page-choose-the-genre screen">
     <!-- HEADER -->
     <div class="rectangle-71-C61RwLL" style="z-index: 1;">
-        <a href='/'>
-            <img class="logo-C61RwL" src="img/logo-1@2x.png"/>
-            <img class="barking-owl-C61RwL" src="img/barking-owl-5@2x.svg"/></a>
-        <a href="{{ route('my-account') }}">
-            <div class="profile-C61RwL valign-text-middle inter-normal-eerie-black-16px">Profile</div>
-        </a>
-        <a href='/'>
-            <div class="home-C61RwL valign-text-middle inter-bold-eerie-black-16px">Home</div>
-        </a>
-        <a href="{{ route('logout') }}"
-           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-            <div class="logout-C61RwL valign-text-middle inter-normal-eerie-black-16px">Logout</div>
-        </a>
-        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-        </form>
+        <div class="navigation">
+            <a href='/'>
+                <img class="logo-C61RwL" src="img/logo-1@2x.png"/>
+                <img class="barking-owl-C61RwL" src="img/barking-owl-5@2x.svg"/>
+            </a>
+            <div class="page-links-container">
+                <a href='/'>
+                    <div class="home-C61RwL valign-text-middle inter-bold-eerie-black-16px">Home</div>
+                </a>
+                <a href="{{ route('my-account') }}">
+                    <div class="profile-C61RwL valign-text-middle inter-normal-eerie-black-16px">Profile</div>
+                </a>
+                <a href="{{ route('logout') }}"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <div class="logout-C61RwL valign-text-middle inter-normal-eerie-black-16px">Logout</div>
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+            </div>
+        </div>
     </div>
     <!-- HEADER -->
 
     <!-- CONTENT -->
-    <div>
+    <div style="
+    width: 1440px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+">
 
         <!--          4 tabs Genre, Instrument, Energy level, Mood-->
         <!-- TODO - add style (color: var(--paradiso);) when selecting the categories, now hardcoded to Genre       -->

@@ -205,7 +205,23 @@
           left: 0px;
           /*position: absolute;*/
           top: 0px;
-          width: 1440px;
+          max-width: 1960px;
+          margin: 0 auto;
+          padding: 0px 20px;
+          position: relative;
+      }
+      .navigation {
+        width: 1440px;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        padding-left: 80px;
+        padding-right: 80px;
+        display:table;
+      }
+      .page-links-container {
+        vertical-align:middle; 
+        display:table-cell;
       }
       /*  header*/
 
@@ -945,7 +961,7 @@
           left: 1236px;
           min-height: 52px;
           position: absolute;
-          top: 190px;
+          top: 134px;
           width: 126px;
           cursor: pointer;
       }
@@ -1073,7 +1089,7 @@
           line-height: 54px;
           position: absolute;
           text-align: center;
-          top: 145px;
+          top: 89px;
           white-space: nowrap;
           width: 401px;
       }
@@ -1363,14 +1379,14 @@
           height: 100%;
           overflow-x: hidden;
           position: relative;
-          /* width: 1440px; */
+          width: 100%;
       }
       .barking-owl-C61RwL {
           background-color: transparent;
           height: 24px;
-          left: 133px;
-          position: absolute;
-          top: 17px;
+          left: 17px;
+          position: relative;
+          top: -3px;
           width: 116px;
       }
       .frame-21-C61RwL {
@@ -1385,7 +1401,7 @@
           min-width: 615px;
           padding: 0 9px;
           position: absolute;
-          top: 83px;
+          top: 27px;
           width: auto;
       }
       .home-C61RwL {
@@ -1403,9 +1419,9 @@
       .logo-C61RwL {
           background-color: transparent;
           height: 44px;
-          left: 80px;
+          left: 0px;
           object-fit: cover;
-          position: absolute;
+          position: relative;
           top: 6px;
           width: 36px;
       }
