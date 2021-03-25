@@ -11,11 +11,10 @@
 }
 .favourites {
     background-color: var(--white);
-    height: 927px;
-    overflow: hidden;
-    overflow-x: hidden;
+    height: 100%;
+    /* overflow-x: hidden; */
     position: relative;
-    width: 1440px;
+    width: 100%;
 }
 .favourites .account-details-C61RwL {
     background-color: transparent;
@@ -678,9 +677,9 @@
     background-color: var(--eerie-black);
     height: 32px;
     left: 0px;
-    position: absolute;
+    position: relative;
     top: 895px;
-    width: 1440px;
+    width: 100%;
 }
 .favourites .rectangle-79-C61RwL {
     background-color: transparent;
@@ -1308,4 +1307,17 @@
     --paradiso: rgba(55, 128, 126, 1);
     --shark: rgba(38, 38, 38, 1);
     --white: rgba(255, 255, 255, 1);
+}
+.favourites .overlap-group-fav {
+    background-color: var(--white);
+    box-shadow: 2px 0px 4px rgba(211, 211, 211, 1),
+        0px 2px 4px rgba(0, 0, 0, 0.05);
+    height: 56px;
+    left: 0px;
+    /*position: absolute;*/
+    top: 0px;
+    max-width: 1960px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    position: relative;
 }

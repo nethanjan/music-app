@@ -1,17 +1,22 @@
 /* screen - account-details */
 
 .account-details {
-    align-items: center;
+    background-color: var(--white);
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    /* align-items: center;
     background-color: var(--white);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 705px;
+    height: 100%;
     justify-content: flex-start;
     overflow: hidden;
     overflow-x: hidden;
     position: relative;
-    width: 1440px;
+    width: 100%; */
 }
 .account-details .account-details-fhuxN3 {
     background-color: transparent;
@@ -39,7 +44,7 @@
     flex-direction: row;
     flex-shrink: 1;
     height: 24px;
-    justify-content: flex-start;
+    justify-content: center;
     margin-left: 3px;
     margin-top: 27px;
     min-width: 255px;
@@ -49,9 +54,9 @@
 .account-details .barking-owl-4eduM0 {
     background-color: transparent;
     height: 24px;
-    left: 133px;
-    position: absolute;
-    top: 17px;
+    left: 17px;
+    position: relative;
+    top: -3px;
     width: 116px;
 }
 .account-details .buttonsoli-arydefault-aHaED2 {
@@ -209,9 +214,9 @@
 .account-details .logo-4eduM0 {
     background-color: transparent;
     height: 44px;
-    left: 80px;
+    left: 0px;
     object-fit: cover;
-    position: absolute;
+    position: relative;
     top: 6px;
     width: 36px;
 }
@@ -256,13 +261,20 @@
     top: 0px;
     width: auto;
     cursor: pointer;
+    border: none;
 }
 .account-details .overlap-group-C61RwL {
-    background-color: transparent;
-    flex-shrink: 1;
-    height: 62px;
+    background-color: var(--white);
+    box-shadow: 2px 0px 4px rgba(211, 211, 211, 1),
+        0px 2px 4px rgba(0, 0, 0, 0.05);
+    height: 56px;
+    left: 0px;
+    /*position: absolute;*/
+    top: 0px;
+    max-width: 1960px;
+    margin: 0 auto;
+    padding: 0px 20px;
     position: relative;
-    width: 1440px;
 }
 .account-details .overlap-group1-C61RwL {
     background-color: transparent;
@@ -315,7 +327,7 @@
     height: 32px;
     margin-top: 32px;
     position: relative;
-    width: 1440px;
+    width: 100%;
 }
 .account-details .password-C61RwL {
     background-color: transparent;
@@ -391,7 +403,7 @@
     left: 0px;
     position: absolute;
     top: 0px;
-    width: 1440px;
+    width: 100%;
 }
 .account-details .rectangle-78-4a9k2Y {
     background-color: transparent;
@@ -453,10 +465,10 @@
     font-style: normal;
     font-weight: 500;
     height: auto;
-    left: 575px;
+    /* left: 575px; */
     letter-spacing: 0px;
     line-height: normal;
-    position: absolute;
+    position: relative;
     text-align: center;
     top: 8px;
     width: auto;
@@ -636,5 +648,20 @@
     position: relative;
     text-align: center;
     white-space: nowrap;
+    width: auto;
+}
+.account-details .my-account-form-wrapper {
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 100%;
+    justify-content: center;
+    margin-left: 3px;
+    margin-top: 27px;
+    min-width: 255px;
+    position: relative;
     width: auto;
 }

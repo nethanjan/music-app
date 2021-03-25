@@ -13,11 +13,6 @@
     <link rel="stylesheet" type="text/css" href="css/favourites.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
-
-    <!-- Styles -->
-    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
-
     <style>
       @import url("https://fonts.googleapis.com/css?family=Inter:600,400");
 
@@ -212,7 +207,7 @@
       }
       .navigation {
         width: 1440px;
-        height: auto;
+        height: 48px;
         margin: 0 auto;
         position: relative;
         padding-left: 80px;
@@ -1548,12 +1543,9 @@
     </style>
     <meta name="author" content="AnimaApp.com - Design to code, Automated." />
   </head>
-  <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+  <body style="margin: 0; background: rgba(255, 255, 255, 1);">
     <div class="container-center-horizontal">
-        <!-- @include('partials.header') -->
-
         @yield('content')
-        <!-- @include('partials.footer') -->
     </div>
   </body>
 </html>

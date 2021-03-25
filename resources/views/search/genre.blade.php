@@ -30,12 +30,7 @@
     <!-- HEADER -->
 
     <!-- CONTENT -->
-    <div style="
-    width: 1440px;
-    height: auto;
-    margin: 0 auto;
-    position: relative;
-">
+    <div style="width: 1440px; height: auto; margin: 0 auto; position: relative;">
 
         <!--          4 tabs Genre, Instrument, Energy level, Mood-->
         <!-- TODO - add style (color: var(--paradiso);) when selecting the categories, now hardcoded to Genre       -->
