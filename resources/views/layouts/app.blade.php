@@ -1255,30 +1255,33 @@
           cursor: pointer;
       }
 
-      /*!*Styling the track in Chrome*!*/
-      input[type="range"]{
-          -webkit-appearance: none;
-          -moz-apperance: none;
-          background: var(--white);
-          border: 0.1px solid var(--eerie-black);
-          height: 11px;
-          /*background-image: -webkit-gradient(*/
-          /*    linear,*/
-          /*    left top,*/
-          /*    right top,*/
-          /*    color-stop(0.15, #94A14E),*/
-          /*    color-stop(0.15, #C5C5C5)*/
-          /*);*/
-      }
+      /*!*Styling the slider in Chrome*!*/
+      @supports (-webkit-appearance:none) and (not (overflow:-webkit-marquee))
+        and (not (-ms-ime-align:auto)) and (not (-moz-appearance:none)) {
+          input[type="range"]{
+              -webkit-appearance: none;
+              -moz-apperance: none;
+              height: 11px;
+              border: 0.1px solid var(--eerie-black);
+              background-image: -webkit-gradient(
+                  linear,
+                  left top,
+                  right top,
+                  color-stop(0.5, var(--eerie-black)),
+                  color-stop(0.5, var(--white))
+              );
+          }
 
-      input[type='range']::-webkit-slider-thumb {
-          -webkit-appearance: none !important;
-          background-color: transparent;
-          background: url("img/ellipse-1@2x.svg");
-          height: 22px;
-          width: 22px;
-          outline: none;
-          border: 0px;
+          input[type='range']::-webkit-slider-thumb {
+              -webkit-appearance: none !important;
+              background-color: transparent;
+              background: url("img/ellipse-1@2x.svg");
+              width: 22px;
+              height: 22px;
+              outline: none;
+              border: 0px;
+              cursor: pointer;
+          }
       }
 
       /*music and video level sliders*/
