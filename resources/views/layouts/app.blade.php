@@ -901,10 +901,10 @@
           flex-direction: column;
           height: auto;
           justify-content: flex-start;
-          left: 80px;
+          left: 74px;
           min-height: 52px;
           position: absolute;
-          top: 190px;
+          top: 127px;
           width: 126px;
           cursor: pointer;
       }
@@ -956,7 +956,7 @@
           left: 1236px;
           min-height: 52px;
           position: absolute;
-          top: 134px;
+          top: 130px;
           width: 126px;
           cursor: pointer;
       }
@@ -1066,7 +1066,7 @@
           line-height: 64px;
           position: absolute;
           text-align: center;
-          top: 145px;
+          top: 89px;
           white-space: nowrap;
           width: auto;
       }
@@ -1097,7 +1097,7 @@
           line-height: 64px;
           position: absolute;
           text-align: center;
-          top: 145px;
+          top: 89px;
           white-space: nowrap;
           width: auto;
       }
@@ -1110,7 +1110,7 @@
           line-height: 64px;
           position: absolute;
           text-align: center;
-          top: 145px;
+          top: 89px;
           white-space: nowrap;
           width: auto;
       }

@@ -11,7 +11,7 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-    protected $redirectTo = '/search-by-genre';
+    protected $redirectTo = '/search';
 
     public function __construct()
     {
@@ -35,7 +35,7 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($validator)) {
-            return redirect()->route('search-by-genre');
+            return redirect()->route('search');
         } else {
             return back()->with('error', 'Incorrect Email or Password')->withInput();
         }

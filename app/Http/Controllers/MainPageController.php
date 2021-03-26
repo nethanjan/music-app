@@ -11,12 +11,17 @@ use App\Models\Genre;
 use App\Models\Instrument;  
 use App\Models\Mood;
 use App\Models\EnergyLevel;
-use App\Models\Song;
+// use App\Models\Song;
 use App\Models\UserFavourites;
+use Aws\Sns\Message;
+use Aws\Sns\MessageValidator;
 
 class MainPageController extends Controller
 {
 
+    /**
+     * Load default search page
+     */
     public function search()
     {
         $user = Auth::user();
@@ -36,11 +41,13 @@ class MainPageController extends Controller
             ->groupBy('songs.id', 'user_favourites.user_id')
             ->paginate(10);
 
-            // dd($songs);
-
         return view('search.genre', ['genres' => $genres, 'instruments' => $instruments, 'moods' => $moods, 'energyLevels' => $energyLevels, 'songs' => $songs ]);
     }
 
+    /**
+     * Load results on load more click
+     * @params $request - current showing items & filters
+     */
     public function searchLoadMore(Request $request)
     {
 
@@ -94,6 +101,9 @@ class MainPageController extends Controller
         }
     }
 
+    /**
+     * Mark audio favourite for a user
+     */
     public function makeFavourite(Request $request)
     {
 
@@ -110,6 +120,9 @@ class MainPageController extends Controller
         }
     }
 
+    /**
+     * Remove audio from favourite list
+     */
     public function removeFavourite(Request $request)
     {
 
@@ -127,6 +140,9 @@ class MainPageController extends Controller
         }
     }
 
+    /**
+     * Filter results
+     */
     public function filter(Request $request)
     {
 
@@ -179,24 +195,40 @@ class MainPageController extends Controller
         }
     }
 
-    // public function searchInstrument()
-    // {
-    //     return view('search.instrument');
-    // }
-
-    // public function searchEnergyLevel()
-    // {
-    //     return view('search.energy');
-    // }
-
-    // public function searchMood()
-    // {
-    //     return view('search.mood');
-    // }
-
     public function verify()
     {
         return view('verify');
+    }
+
+    public function transcodeSns()
+    {
+        try {
+            if (isset($_SERVER['HTTP_X_AMZ_SNS_MESSAGE_TYPE'])) {
+                // Retrieve the message
+                $message = Message::fromRawPostData();
+            
+                // make validator instance
+                $validator = new MessageValidator();
+            
+                // Validate the message
+                if ($validator->isValid($message)) {
+                    if ($message['Type'] == 'SubscriptionConfirmation') {
+                        // if it's subscription or unsubscribe event then call SubscribeURL
+                        file_get_contents($message['SubscribeURL']);
+                        error_log(json_decode($message['SubscribeURL']));
+                    } elseif ($message['Type'] === 'Notification') {
+                        $subject = $message['Subject'];
+                        $messageData = json_decode($message['Message']);
+                        error_log(json_decode($messageData));
+                        // use $subject and $messageData and take relevant action
+                    }
+                }
+            } else {
+                return response('SNS message type header not provided', 400);
+            }
+        } catch (Exception $e) {
+            return response('Error', 400);
+        }
     }
 
 }

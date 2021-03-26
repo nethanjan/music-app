@@ -89,7 +89,7 @@
         
         <!-- instrument search filter -->
         <div id="instrument-options" class="filter-options page-pick-the-instrument" style="display: none">
-          <a href="{{ route('search-by-genre') }}">
+          <a href="{{ route('search') }}">
               <div class="group-9-C61RwL">
                   <div class="genre-9dtg3L valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">Genre</div>
                   <div class="group-6-9dtg3L">
@@ -266,7 +266,7 @@
         <img class="vector-25-C61RwL" src="img/vector-25@1x.svg" />
 
         <div class="frame-21-C61RwL">
-            <!-- <a href="{{ route('search-by-genre') }}"> -->
+            <!-- <a href="{{ route('search-by') }}"> -->
                 <div id="genreMenu" class="genre-G2B5sx-highlight valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px search-menu-item" onclick="filterTypeToggle('genre')">
                     Genre
                 </div>

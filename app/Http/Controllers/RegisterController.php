@@ -13,7 +13,7 @@ class RegisterController extends Controller
 {
     use AuthenticatesUsers;
 
-    protected $redirectTo = '/search-by-genre';
+    protected $redirectTo = '/search';
 
     
 

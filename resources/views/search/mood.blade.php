@@ -26,7 +26,7 @@
     </form>
 
     <div class="frame-21-C61RwL">
-        <a href="{{ route('search-by-genre') }}">
+        <a href="{{ route('search') }}">
             <div class="genre-G2B5sx valign-text-middle ourstorybeginsfree-regular-normal-eerie-black-30px">
               Genre
             </div>
