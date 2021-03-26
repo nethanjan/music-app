@@ -267,12 +267,12 @@
     background-color: var(--white);
     box-shadow: 2px 0px 4px rgba(211, 211, 211, 1),
         0px 2px 4px rgba(0, 0, 0, 0.05);
-    height: 56px;
+    height: 62px;
     left: 0px;
     /*position: absolute;*/
     top: 0px;
     max-width: 1960px;
-    margin: 0 auto;
+    margin-left: -12px;
     padding: 0px 20px;
     position: relative;
 }
@@ -664,4 +664,22 @@
     min-width: 255px;
     position: relative;
     width: auto;
+}
+
+.results-200-C61RwL {
+    background-color: transparent;
+    color: var(--black);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    height: 22px;
+    left: 88px;
+    letter-spacing: 0px;
+    line-height: 28px;
+    /*position: absolute;*/
+    text-align: left;
+    top: 201px;
+    white-space: nowrap;
+    width: 546px;
 }

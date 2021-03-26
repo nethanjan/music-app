@@ -10,7 +10,7 @@
 <!--    <link rel="stylesheet" type="text/css" href="css/footer.css" />-->
 <!--    <link rel="stylesheet" type="text/css" href="css/page-choose-the-genre.css" />-->
     <link rel="stylesheet" type="text/css" href="css/account-details.css" />
-    <link rel="stylesheet" type="text/css" href="css/favourites.css" />
+<!--    <link rel="stylesheet" type="text/css" href="css/favourites.css" />-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <style>
@@ -196,7 +196,7 @@
       .rectangle-71-C61RwLL {
           background-color: var(--white);
           box-shadow: 2px 0px 4px rgba(211,211,211,1.0) , 0px 2px 4px rgba(0,0,0,0.05);;
-          height: 56px;
+          height: 62px;
           left: 0px;
           /*position: absolute;*/
           top: 0px;
@@ -215,7 +215,7 @@
         display:table;
       }
       .page-links-container {
-        vertical-align:middle; 
+        vertical-align:middle;
         display:table-cell;
       }
       /*  header*/
@@ -1197,14 +1197,14 @@
       /*favourite table */
       .favourites-table {
           top: 230px;
-          position: absolute;
+          /*position: absolute;*/
           height: 72px;
           left: 82px;
           padding-left: 93px;
           padding-top: 86px;
           border-collapse: collapse;
-          width: 94%;
-          position: absolute;
+          width: 90%;
+          /*position: absolute;*/
       }
       /*favourite table */
       .favourites-table td {
