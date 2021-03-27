@@ -505,12 +505,12 @@
                         <td class="length-C61RwLL inter-normal-black-14px">{{ $song->length }}</td>
                         <td class="action-C61RwLL">
                             <span style="padding: 0 0 0 1px; cursor: pointer;" >
-                                <audio class="audio-player" id="audio-{{ $song->id }}"src="{{ $song->path }}">
+                                <audio class="audio-player" id="audio-{{ $song->id }}"src="{{ env('AUDIO_S3_PATH') . $song->path }}">
                                 </audio>
                                 <img id="play-{{ $song->id }}" class="playIcon" src="img/vector-4@2x.svg" onclick="play('{{ $song->id }}')"/>
                                 <img id="pause-{{ $song->id }}" style="display: none" class="pauseIcon" src="img/pause-circle-line.svg" onclick="pause('{{ $song->id }}')"/>
                             </span>
-                            <a href="{{ $song->path }}" download="{{ $song->name }}" rel="nofollow">
+                            <a href="{{ env('AUDIO_S3_PATH') . $song->path }}" download="{{ $song->name }}" rel="nofollow">
                                         <span style="margin: 0 0 0 32px;">
                                             <img class="downloadIcon" src="img/vector-3@2x.svg"/>
                                         </span>

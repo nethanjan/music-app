@@ -209,19 +209,38 @@ class MainPageController extends Controller
             
                 // make validator instance
                 $validator = new MessageValidator();
-            
-                // Validate the message
-                if ($validator->isValid($message)) {
-                    if ($message['Type'] == 'SubscriptionConfirmation') {
-                        // if it's subscription or unsubscribe event then call SubscribeURL
-                        file_get_contents($message['SubscribeURL']);
-                        error_log(json_decode($message['SubscribeURL']));
-                    } elseif ($message['Type'] === 'Notification') {
-                        $subject = $message['Subject'];
-                        $messageData = json_decode($message['Message']);
-                        error_log(json_decode($messageData));
-                        // use $subject and $messageData and take relevant action
+                try {
+                    $validator->validate($message);
+                } catch (InvalidSnsMessageException $e) {
+                    http_response_code(404);
+                    error_log('SNS Message Validation Error: ' . $e->getMessage());
+                    die();
+                }
+                try {
+                    if ($validator->isValid($message)) {
+                            error_log('valid message');
+
+                            if ($message['Type'] === 'Notification') {
+                                    $message = json_decode($message['Message']);
+
+                                    $file_name_array = explode("/",$message->input->key);
+                                    $file_name = $file_name_array[count($file_name_array) - 1];
+
+                                    $new_file_name = explode(".",$file_name);
+                                    $new_file_path = $message->outputKeyPrefix . $new_file_name[0] . '.mp3';
+
+                                    $query = DB::table('songs as s')
+                                        ->where('s.name', '=', $file_name)
+                                        ->update(['path' => $new_file_path]);
+                                    return response()->json(['success' => 'success'], 200);
+                            }
+                    
+
+                    } else {                                
+                            error_log('invalid_message');
                     }
+                } catch (Exception $e) {
+                    error_log('Something went wrong');
                 }
             } else {
                 return response('SNS message type header not provided', 400);

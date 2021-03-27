@@ -26,6 +26,9 @@ Route::get('/login','App\Http\Controllers\LoginController@show')->name('login');
 Route::post('/login','App\Http\Controllers\LoginController@authenticate')->name('login');
 Route::post('/logout','App\Http\Controllers\LoginController@logout')->name('logout');
 
+// Sns
+Route::any('/audio-transcode/sns','App\Http\Controllers\MainPageController@transcodeSns')->name('audio-transcode/sns');
+
 // protected routes
 Route::middleware('auth')->group(function () {
     Route::get('/verify', 'App\Http\Controllers\UserController@verify')->name('verify');
@@ -38,7 +41,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/remove-favourite','App\Http\Controllers\MainPageController@removeFavourite')->name('remove-favourite');
     Route::get('/search-load-more','App\Http\Controllers\MainPageController@searchLoadMore')->name('search-load-more');
     Route::get('/filter','App\Http\Controllers\MainPageController@filter')->name('search-filter');
-
-    // Sns
-    Route::any('/audio-transcode/sns','App\Http\Controllers\MainPageController@transcodeSns')->name('audio-transcode/sns');
 });
