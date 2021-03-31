@@ -105,11 +105,15 @@ class UserController extends Controller
     public function resendVerify()
     {
         $user = Auth::user();
+        $token = md5(rand(1, 10) . microtime());
+
+        $user->verification_token = $token;
+        $user->save();
 
         $to_name = $user->fname;
         $to_email = $user->email;
         $full_name = $user->fname.' '. $user->lname;
-        $data = array('name'=> $full_name, 'body' => "Welcome mail");
+        $data = array('name'=> $full_name, 'body' => "Welcome mail", 'token' => $token);
         Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
             ->subject('Welcome to Barking Owl');

@@ -63,18 +63,20 @@ class RegisterController extends Controller
             'password.required' => 'Password is required',
             'password.min' => 'Password must be at least 6 characters'
         ]);
-
+        
+        $token = md5(rand(1, 10) . microtime());
         $user = User::create([
             'fname' => $request['fname'],
             'lname' => $request['lname'],
             'email' => $request['email'],
             'password' => bcrypt($request['password']),
+            'verification_token' => $token
         ]);
-
+        
         $to_name = $request['fname'];
         $to_email = $request['email'];
         $full_name = $request['fname'].' '. $request['lname'];
-        $data = array('name'=> $full_name, 'body' => "Welcome mail");
+        $data = array('name'=> $full_name, 'body' => "Welcome mail", 'token' => $token);
         Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
             ->subject('Welcome to Barking Owl');

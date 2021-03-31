@@ -64,15 +64,22 @@ class LoginController extends Controller
             'email.required' => 'Email address is required',
         ]);
 
+        $token = md5(rand(1, 10) . microtime());
         $user = DB::table('users as u')
             ->where('u.email', $request->email)
             ->select('u.*')
             ->first();
+
         if($user){
+
+            $query = DB::table('users as u')
+                ->where('u.email', $request->email)
+                ->update(['reset_password_token' => $token]);
+
             $to_name = $user->fname;
             $to_email = $user->email;
             $full_name = $user->fname.' '. $user->lname;
-            $data = array('name'=> $full_name, 'body' => "Reset password mail");
+            $data = array('name'=> $full_name, 'body' => "Reset password mail", 'token' => $token);
             Mail::send('emails.passwordResetmail', $data, function($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)
                 ->subject('Reset Password - Barking Owl');
@@ -88,7 +95,19 @@ class LoginController extends Controller
         
     }
 
-    public function verifyEmail(){
-        return view('emailVerified');
+    public function verifyEmail(Request $request){
+
+        if ($request->has('token')) {
+            $user = DB::table('users as u')
+            ->where('u.email', $request->has('token'))
+            ->select('u.*')
+            ->first();
+
+            if($user){
+                return view('emailVerified');
+            }
+            return view('emailVerifiedFailed');
+        }
+        return view('emailVerifiedFailed');
     }
 }

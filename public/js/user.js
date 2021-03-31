@@ -126,7 +126,8 @@ $("#load-more").on("click", function () {
             );
 
             if (response.total <= totalCurrentResult) {
-                $("#load-more-section").hide();
+                $("#load-more").attr("disabled", "disabled");
+                // $("#load-more-section").hide();
             }
         },
     });
