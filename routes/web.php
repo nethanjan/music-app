@@ -25,6 +25,8 @@ Route::get('/test','App\Http\Controllers\RegisterController@test');
 Route::get('/login','App\Http\Controllers\LoginController@show')->name('login');
 Route::post('/login','App\Http\Controllers\LoginController@authenticate')->name('login');
 Route::post('/logout','App\Http\Controllers\LoginController@logout')->name('logout');
+Route::get('/forgot-password','App\Http\Controllers\LoginController@forgotPassword')->name('forgot-password');
+Route::post('/forgot-password','App\Http\Controllers\LoginController@sendForgotPassword')->name('forgot-password');
 
 // Sns
 Route::any('/audio-transcode/sns','App\Http\Controllers\MainPageController@transcodeSns')->name('audio-transcode/sns');

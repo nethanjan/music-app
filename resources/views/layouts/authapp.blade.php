@@ -189,7 +189,7 @@
   <body style="margin: 0; background: rgba(255, 255, 255, 1)">
     <input type="hidden" id="anPageName" name="page" value="login-default-active-state" />
     <div class="container-center-horizontal">
-      <div class="{{ Request::is('login') ? 'login-default-active-state screen' : 'register-default-active-state screen' }}">
+      <div class="{{ Request::is('register') ? 'register-default-active-state screen' : 'login-default-active-state screen' }}">
         
         @yield('content')  
 

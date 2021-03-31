@@ -47,4 +47,22 @@ class LoginController extends Controller
         Auth::logout();
         return redirect()->route('home');
     }
+
+    public function forgotPassword()
+    {
+        return view('forgotPassword');
+    }
+
+    public function sendForgotPassword(Request $request)
+    {
+        $validator = $request->validate([
+            'email'     => 'required',
+        ],
+        [
+            'email.required' => 'Email address is required',
+        ]);
+
+        return redirect()->route('forgot-password')
+                        ->with('success','A link to reset your password has been sent to your email account.');
+    }
 }

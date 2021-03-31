@@ -225,10 +225,10 @@ class MainPageController extends Controller
 
                                     $file_name_array = explode("/",$message->input->key);
                                     $file_name = $file_name_array[count($file_name_array) - 1];
-
+                                    error_log($file_name);
                                     $new_file_name = explode(".",$file_name);
                                     $new_file_path = $message->outputKeyPrefix . $new_file_name[0] . '.mp3';
-
+                                    error_log($new_file_path);
                                     $query = DB::table('songs as s')
                                         ->where('s.name', '=', $file_name)
                                         ->update(['path' => $new_file_path]);
