@@ -105,7 +105,7 @@
         </div>
     </div>
         
-    <div class="overlap-group6-C61RwL">
+    <div class="overlap-group6-C61RwL" style="margin-top: 170px">
       <div class="rectangle-72-KnyYHa"></div>
       <div class="x2021-copyr-s-reserved-KnyYHa">© 2021 Copyright LoseFound. All Rights Reserved.</div>
     </div>
