@@ -81,6 +81,7 @@ $("#load-more").on("click", function () {
                     '<audio class="audio-player" id="audio-' +
                     value.id +
                     '" src="' +
+                    s3Url +
                     value.path +
                     '"></audio>';
                 _html +=
@@ -98,6 +99,7 @@ $("#load-more").on("click", function () {
                 _html += "</span>";
                 _html +=
                     '<a href="' +
+                    s3Url +
                     value.path +
                     '" download="' +
                     value.name +

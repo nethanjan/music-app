@@ -115,6 +115,7 @@
 <script src="js/user.js"></script>
 <script type="text/javascript">
     var main_site = "{{ url('/') }}";
+    var s3Url = '<?php echo env('AUDIO_S3_PATH'); ?>';
 </script>
 
 @endsection

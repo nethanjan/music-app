@@ -633,7 +633,8 @@
         'mood': []
     };
     var globalAudioVolume = 0.5;
-
+    var s3Url = '<?php echo env('AUDIO_S3_PATH'); ?>';
+    console.log(s3Url);
     //handle progress bar styles of slider in Chrome
     $('input[type="range"]').change(function () {
         var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
