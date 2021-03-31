@@ -1544,7 +1544,7 @@
     <meta name="author" content="AnimaApp.com - Design to code, Automated." />
   </head>
   <body style="margin: 0; background: rgba(255, 255, 255, 1);">
-    <div class="container-center-horizontal">
+    <div class="container-center-horizontal" style="position: relative;min-height: 100vh;">
         @yield('content')
     </div>
   </body>
