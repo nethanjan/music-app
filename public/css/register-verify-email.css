@@ -1,435 +1,456 @@
 /* screen - register-verify-email */
 
 .border-1px-black {
-  border: 1px solid var(--black);
+    border: 1px solid var(--black);
 }
 .border-1px-eerie-black {
-  border: 1px solid var(--eerie-black);
+    border: 1px solid var(--eerie-black);
 }
 .border-2px-eerie-black {
-  border: 2px solid var(--eerie-black);
+    border: 2px solid var(--eerie-black);
 }
 .inter-bold-black-16px {
-  color: var(--black);
-  font-family: 'Inter', Helvetica, Arial, serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
+    color: var(--black);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
 }
 .inter-bold-eerie-black-16px {
-  color: var(--eerie-black);
-  font-family: 'Inter', Helvetica, Arial, serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
+    color: var(--eerie-black);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
 }
 .inter-medium-chicago-12px {
-  color: var(--chicago);
-  font-family: 'Inter', Helvetica, Arial, serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
+    color: var(--chicago);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
 }
 .inter-medium-chicago-14px {
-  color: var(--chicago);
-  font-family: 'Inter', Helvetica, Arial, serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
+    color: var(--chicago);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
 }
 .inter-normal-black-14px {
-  color: var(--black);
-  font-family: 'Inter', Helvetica, Arial, serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
+    color: var(--black);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
 }
 .inter-normal-eerie-black-14px {
-  color: var(--eerie-black);
-  font-family: 'Inter', Helvetica, Arial, serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
+    color: var(--eerie-black);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
 }
 .inter-normal-eerie-black-16px {
-  color: var(--eerie-black);
-  font-family: 'Inter', Helvetica, Arial, serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
+    color: var(--eerie-black);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
 }
 .inter-normal-white-16px {
-  color: var(--white);
-  font-family: 'Inter', Helvetica, Arial, serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
+    color: var(--white);
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
 }
 .ourstorybeginsfree-regular-normal-eerie-black-30px {
-  color: var(--eerie-black);
-  font-family: 'Our Story Begins FREE-Regular', Helvetica, Arial, serif;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 400;
+    color: var(--eerie-black);
+    font-family: "Our Story Begins FREE-Regular", Helvetica, Arial, serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
 }
 .ourstorybeginsfree-regular-normal-eerie-black-56px {
-  color: var(--eerie-black);
-  font-family: 'Our Story Begins FREE-Regular', Helvetica, Arial, serif;
-  font-size: 56px;
-  font-style: normal;
-  font-weight: 400;
+    color: var(--eerie-black);
+    font-family: "Our Story Begins FREE-Regular", Helvetica, Arial, serif;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 400;
 }
 .register-verify-email {
-  background-color: var(--white);
-  height: 100vh;
-  margin: 0px;
-  min-height: 712px;
-  min-width: 1440px;
-  overflow: hidden;
-  overflow-x: hidden;
-  position: relative;
-  width: 100%;
+    background-color: var(--white);
+    height: 100vh;
+    margin: 0px;
+    min-height: 712px;
+    min-width: 1440px;
+    overflow: hidden;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
 }
 .register-verify-email .an-email-h-r-password-mCninq {
-  background-color: transparent;
-  flex-shrink: 1;
-  height: 61px;
-  letter-spacing: 0.00px;
-  line-height: 24px;
-  min-height: 61px;
-  position: relative;
-  text-align: center;
-  width: 624px;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 61px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    min-height: 61px;
+    position: relative;
+    text-align: center;
+    width: 624px;
 }
 .register-verify-email .auto-flex-uxzUmT {
-  align-items: center;
-  background-color: transparent;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 1;
-  height: auto;
-  justify-content: flex-start;
-  margin-left: 406px;
-  min-height: 73px;
-  position: relative;
-  width: 441px;
+    align-items: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    height: auto;
+    justify-content: flex-start;
+    margin-left: 406px;
+    min-height: 73px;
+    position: relative;
+    width: 441px;
 }
 .register-verify-email .auto-flex1-C61RwL {
-  align-items: flex-start;
-  background-color: transparent;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  height: 73px;
-  justify-content: flex-start;
-  left: 54px;
-  min-width: 888px;
-  position: absolute;
-  top: 100px;
-  width: auto;
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: 73px;
+    justify-content: flex-start;
+    left: 54px;
+    min-width: 888px;
+    position: absolute;
+    top: 100px;
+    width: auto;
 }
 .register-verify-email .auto-flex2-mCninq {
-  align-items: flex-start;
-  background-color: transparent;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 1;
-  height: 40px;
-  justify-content: flex-start;
-  margin-left: 4px;
-  margin-top: 64px;
-  min-width: 614px;
-  position: relative;
-  width: auto;
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 40px;
+    justify-content: flex-start;
+    margin-left: 4px;
+    margin-top: 64px;
+    min-width: 614px;
+    position: relative;
+    width: auto;
 }
 .register-verify-email .auto-flex3-C61RwL {
-  align-items: flex-start;
-  background-color: transparent;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  justify-content: flex-start;
-  left: 409px;
-  min-height: 165px;
-  position: absolute;
-  top: 442px;
-  width: 624px;
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: flex-start;
+    left: 409px;
+    min-height: 165px;
+    position: absolute;
+    top: 442px;
+    width: 624px;
 }
 .register-verify-email .buttonsoli-arydefault-O104dy {
-  background-color: transparent;
-  height: 40px;
-  left: 0px;
-  pointer-events: auto;
-  position: absolute;
-  top: 0px;
-  transition: all 0.2s ease;
-  width: 282px;
+    background-color: transparent;
+    height: 40px;
+    left: 0px;
+    pointer-events: auto;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s ease;
+    width: 282px;
 }
 .register-verify-email .buttonsoli-arydefault-O104dy:hover {
-
-opacity: 0;
+    opacity: 0;
 }
 .register-verify-email .buttonsoli-arydefault-QxkHfZ {
-  align-items: flex-start;
-  background-color: transparent;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 1;
-  height: 40px;
-  justify-content: flex-start;
-  margin-left: 50px;
-  min-width: 282px;
-  position: relative;
-  width: auto;
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 40px;
+    justify-content: flex-start;
+    margin-left: 50px;
+    min-width: 282px;
+    position: relative;
+    width: auto;
 }
 .register-verify-email .buttonsoli-arydefault-SLt283 {
-  align-items: flex-start;
-  background-color: transparent;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  height: 40px;
-  justify-content: flex-start;
-  left: 0px;
-  min-width: 282px;
-  position: absolute;
-  top: 0px;
-  width: auto;
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    justify-content: flex-start;
+    left: 0px;
+    min-width: 282px;
+    position: absolute;
+    top: 0px;
+    width: auto;
 }
 .register-verify-email .content-fATuIe {
-  align-items: flex-start;
-  background-color: transparent;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 1;
-  height: 24px;
-  justify-content: flex-start;
-  overflow: hidden;
-  position: relative;
-  width: 147px;
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 24px;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    width: 147px;
 }
 .register-verify-email .content-ilOwOY {
-  align-items: flex-start;
-  background-color: transparent;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 1;
-  height: 24px;
-  justify-content: flex-start;
-  overflow: hidden;
-  position: relative;
-  width: 147px;
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 24px;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    width: 147px;
 }
 .register-verify-email .content-xpx4lI {
-  align-items: flex-start;
-  background-color: transparent;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 1;
-  height: 24px;
-  justify-content: flex-start;
-  overflow: hidden;
-  position: relative;
-  width: 147px;
+    align-items: flex-start;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 24px;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    width: 147px;
 }
 .register-verify-email .frame-2-uxzUmT {
-  background-color: transparent;
-  flex-shrink: 1;
-  height: 38px;
-  overflow: hidden;
-  position: relative;
-  width: 41px;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 38px;
+    overflow: hidden;
+    position: relative;
+    width: 41px;
 }
 .register-verify-email .group-4-C61RwL {
-  background-color: transparent;
-  height: 112px;
-  left: 666px;
-  position: absolute;
-  top: 235px;
-  width: 160px;
+    background-color: transparent;
+    height: 112px;
+    left: 666px;
+    position: absolute;
+    top: 235px;
+    width: 160px;
 }
 .register-verify-email .login-Tqwylb {
-  background-color: transparent;
-  flex-shrink: 1;
-  height: 24px;
-  letter-spacing: 0.00px;
-  line-height: 25px;
-  min-height: 24px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: 147px;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    letter-spacing: 0px;
+    line-height: 25px;
+    min-height: 24px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 147px;
 }
 .register-verify-email .masterbutt-nlargetext-Rm3gaG {
-  align-items: center;
-  background-color: var(--eerie-black);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  height: 40px;
-  justify-content: flex-end;
-  left: 0px;
-  min-width: 282px;
-  padding: 0 66.5px;
-  position: relative;
-  top: 0px;
-  width: auto;
+    align-items: center;
+    background-color: var(--eerie-black);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    justify-content: flex-end;
+    left: 0px;
+    min-width: 282px;
+    padding: 0 66.5px;
+    position: relative;
+    top: 0px;
+    width: auto;
+    border: none;
 }
 .register-verify-email .masterbutt-nlargetext-YHC9xQ {
-  align-items: center;
-  background-color: var(--fuscous-gray);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 1;
-  height: 40px;
-  justify-content: flex-end;
-  min-width: 282px;
-  padding: 0 66.5px;
-  position: relative;
-  width: auto;
+    align-items: center;
+    background-color: var(--fuscous-gray);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 40px;
+    justify-content: flex-end;
+    min-width: 282px;
+    padding: 0 66.5px;
+    position: relative;
+    width: auto;
 }
 .register-verify-email .masterbutt-nlargetext-p257TO {
-  align-items: center;
-  background-color: var(--white);
-  border: 1.5px solid var(--black);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 1;
-  height: 40px;
-  justify-content: flex-end;
-  min-width: 282px;
-  padding: 0 66.5px;
-  position: relative;
-  width: auto;
+    align-items: center;
+    background-color: var(--white);
+    border: 1.5px solid var(--black);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    height: 40px;
+    justify-content: flex-end;
+    min-width: 282px;
+    padding: 0 66.5px;
+    position: relative;
+    width: auto;
 }
 .register-verify-email .overlap-group-C61RwL {
-  background-color: transparent;
-  height: 40px;
-  left: 559px;
-  position: absolute;
-  top: 287px;
-  width: 113px;
+    background-color: transparent;
+    height: 40px;
+    left: 559px;
+    position: absolute;
+    top: 287px;
+    width: 113px;
 }
 .register-verify-email .overlap-group1-QxkHfZ {
-  background-color: transparent;
-  flex-shrink: 1;
-  height: 40px;
-  position: relative;
-  width: 282px;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 40px;
+    position: relative;
+    width: 282px;
 }
 .register-verify-email .resend-link-hlx077 {
-  background-color: transparent;
-  flex-shrink: 1;
-  height: 24px;
-  letter-spacing: 0.00px;
-  line-height: 25px;
-  min-height: 24px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: 147px;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    letter-spacing: 0px;
+    line-height: 25px;
+    min-height: 24px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 147px;
 }
 .register-verify-email .resend-link-pkgFQS {
-  background-color: transparent;
-  flex-shrink: 1;
-  height: 24px;
-  letter-spacing: 0.00px;
-  line-height: 25px;
-  min-height: 24px;
-  position: relative;
-  text-align: center;
-  white-space: nowrap;
-  width: 147px;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 24px;
+    letter-spacing: 0px;
+    line-height: 25px;
+    min-height: 24px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 147px;
 }
 .register-verify-email .vector-12-C61RwL {
-  background-color: transparent;
-  height: 35px;
-  left: 602px;
-  position: absolute;
-  top: 344px;
-  width: 91px;
+    background-color: transparent;
+    height: 35px;
+    left: 602px;
+    position: absolute;
+    top: 344px;
+    width: 91px;
 }
 .register-verify-email .vector-13-4eduM0 {
-  background-color: transparent;
-  height: 17px;
-  left: 69px;
-  position: absolute;
-  top: 23px;
-  width: 44px;
+    background-color: transparent;
+    height: 17px;
+    left: 69px;
+    position: absolute;
+    top: 23px;
+    width: 44px;
 }
 .register-verify-email .vector-14-4eduM0 {
-  background-color: transparent;
-  height: 28px;
-  left: 0px;
-  position: absolute;
-  top: 0px;
-  width: 72px;
+    background-color: transparent;
+    height: 28px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 72px;
 }
 .register-verify-email .vector-6ZYbZn {
-  background-color: transparent;
-  height: 33px;
-  left: 3px;
-  position: absolute;
-  top: 2px;
-  width: 18px;
+    background-color: transparent;
+    height: 33px;
+    left: 3px;
+    position: absolute;
+    top: 2px;
+    width: 18px;
 }
 .register-verify-email .vector-rU8gYN {
-  background-color: transparent;
-  height: 5px;
-  left: 3px;
-  position: absolute;
-  top: 16px;
-  width: 35px;
+    background-color: transparent;
+    height: 5px;
+    left: 3px;
+    position: absolute;
+    top: 16px;
+    width: 35px;
 }
 .register-verify-email .verify-your-email-c24oYb {
-  background-color: transparent;
-  color: var(--eerie-black);
-  flex-shrink: 1;
-  font-family: 'Inter', Helvetica, Arial, serif;
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 500;
-  height: 46px;
-  letter-spacing: 0.00px;
-  line-height: 46px;
-  margin-right: 1.0px;
-  min-height: 46px;
-  min-width: 306px;
-  position: relative;
-  text-align: left;
-  white-space: nowrap;
-  width: auto;
+    background-color: transparent;
+    color: var(--eerie-black);
+    flex-shrink: 1;
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 500;
+    height: 46px;
+    letter-spacing: 0px;
+    line-height: 46px;
+    margin-right: 1px;
+    min-height: 46px;
+    min-width: 306px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: auto;
 }
 .register-verify-email .you-will-n-gistration-c24oYb {
-  background-color: transparent;
-  flex-shrink: 1;
-  height: 11px;
-  letter-spacing: 0.00px;
-  line-height: 24px;
-  margin-bottom: -13px;
-  margin-top: 16px;
-  min-height: 11px;
-  position: relative;
-  text-align: left;
-  white-space: nowrap;
-  width: 441px;
+    background-color: transparent;
+    flex-shrink: 1;
+    height: 11px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    margin-bottom: -13px;
+    margin-top: 16px;
+    min-height: 11px;
+    position: relative;
+    text-align: left;
+    white-space: nowrap;
+    width: 441px;
 }
 :root {
-  --black: rgba(0,0,0,1.0);
-  --chicago: rgba(89,89,89,1.0);
-  --eerie-black: rgba(32,32,32,1.0);
-  --fuscous-gray: rgba(85,85,85,1.0);
-  --geraldine: rgba(255,138,138,1.0);
-  --paradiso: rgba(55,128,126,1.0);
-  --shark: rgba(38,38,38,1.0);
-  --white: rgba(255,255,255,1.0);
+    --black: rgba(0, 0, 0, 1);
+    --chicago: rgba(89, 89, 89, 1);
+    --eerie-black: rgba(32, 32, 32, 1);
+    --fuscous-gray: rgba(85, 85, 85, 1);
+    --geraldine: rgba(255, 138, 138, 1);
+    --paradiso: rgba(55, 128, 126, 1);
+    --shark: rgba(38, 38, 38, 1);
+    --white: rgba(255, 255, 255, 1);
+}
+.register-verify-email .you-succes-ur-details-C61RwL {
+    background-color: transparent;
+    color: var(--eerie-black);
+    flex-shrink: 1;
+    font-family: "Inter", Helvetica, Arial, serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    height: 24px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    margin-left: 2px;
+    margin-top: 16px;
+    min-height: 24px;
+    min-width: 222px;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    top: 40px;
 }

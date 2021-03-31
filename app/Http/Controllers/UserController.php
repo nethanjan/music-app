@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
-
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
+
 use App\Models\User;
 use App\Models\UserFavourites;
 
@@ -99,6 +100,24 @@ class UserController extends Controller
     public function verify()
     {
         return view('verify');
+    }
+
+    public function resendVerify()
+    {
+        $user = Auth::user();
+
+        $to_name = $user->fname;
+        $to_email = $user->email;
+        $full_name = $user->fname.' '. $user->lname;
+        $data = array('name'=> $full_name, 'body' => "Welcome mail");
+        Mail::send('emails.mail', $data, function($message) use ($to_name, $to_email) {
+            $message->to($to_email, $to_name)
+            ->subject('Welcome to Barking Owl');
+            $message->from('noreply.barkingowl@gmail.com','Please Verify');
+        });
+
+        return redirect()->route('verify')
+                        ->with('success','A link to verify your account has been sent to your email account.');
     }
 
 }

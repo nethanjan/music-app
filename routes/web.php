@@ -28,12 +28,15 @@ Route::post('/logout','App\Http\Controllers\LoginController@logout')->name('logo
 Route::get('/forgot-password','App\Http\Controllers\LoginController@forgotPassword')->name('forgot-password');
 Route::post('/forgot-password','App\Http\Controllers\LoginController@sendForgotPassword')->name('forgot-password');
 
+Route::get('/verify-email','App\Http\Controllers\LoginController@verifyEmail')->name('verify-email');
+
 // Sns
 Route::any('/audio-transcode/sns','App\Http\Controllers\MainPageController@transcodeSns')->name('audio-transcode/sns');
 
 // protected routes
 Route::middleware('auth')->group(function () {
     Route::get('/verify', 'App\Http\Controllers\UserController@verify')->name('verify');
+    Route::post('/resend-verify', 'App\Http\Controllers\UserController@resendVerify')->name('resend-verify');
     Route::get('/profile', 'App\Http\Controllers\UserController@account')->name('my-account');
     Route::post('/profile', 'App\Http\Controllers\UserController@accountUpdate');
     Route::get('/favourites', 'App\Http\Controllers\UserController@favourites')->name('my-favourites');

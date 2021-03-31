@@ -194,12 +194,14 @@
                         <img class="vector-rU8gYN" src="img/vector-1@2x.svg" /> -->
                     </div>
                 <!-- </a> -->
+                
                 <div class="auto-flex-uxzUmT">
                     <div class="verify-your-email-c24oYb valign-text-middle">Verify your email</div>
                     <div class="you-will-n-gistration-c24oYb valign-text-middle inter-normal-eerie-black-16px">
                         You will need to verify your email to complete registration.
                     </div>
                 </div>
+                
             </div>
             <div class="auto-flex3-C61RwL">
                 <div class="an-email-h-r-password-mCninq valign-text-middle inter-normal-eerie-black-16px">
@@ -207,7 +209,8 @@
                 email after a few minutes, please check your spam folder or reset your password.
                 </div>
                 <div class="auto-flex2-mCninq">
-                    <form>
+                    <form method="POST" action="/resend-verify">
+                      @csrf
                         <div class="overlap-group1-QxkHfZ">
                             <div class="buttonsoli-arydefault-SLt283">
                                 <div class="masterbutt-nlargetext-YHC9xQ">
@@ -234,6 +237,11 @@
                             </div>
                         </div>
                     </a>
+                    <div class="you-succes-ur-details-C61RwL valign-text-middle">
+                      @if(session()->has('success'))
+                        {{ session()->get('success') }}
+                      @endif
+                    </div>
                 </div>
             </div>
             <img class="group-4-C61RwL" src="img/group-4@2x.svg" />

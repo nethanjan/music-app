@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -62,7 +64,31 @@ class LoginController extends Controller
             'email.required' => 'Email address is required',
         ]);
 
-        return redirect()->route('forgot-password')
-                        ->with('success','A link to reset your password has been sent to your email account.');
+        $user = DB::table('users as u')
+            ->where('u.email', $request->email)
+            ->select('u.*')
+            ->first();
+        if($user){
+            $to_name = $user->fname;
+            $to_email = $user->email;
+            $full_name = $user->fname.' '. $user->lname;
+            $data = array('name'=> $full_name, 'body' => "Reset password mail");
+            Mail::send('emails.passwordResetmail', $data, function($message) use ($to_name, $to_email) {
+                $message->to($to_email, $to_name)
+                ->subject('Reset Password - Barking Owl');
+                $message->from('noreply.barkingowl@gmail.com','Reset Password');
+            });
+
+            return redirect()->route('forgot-password')
+                            ->with('success','A link to reset your password has been sent to your email account.');
+        } else {
+            return redirect()->route('forgot-password')
+                            ->with('success','Email address not found.');
+        }
+        
+    }
+
+    public function verifyEmail(){
+        return view('emailVerified');
     }
 }
