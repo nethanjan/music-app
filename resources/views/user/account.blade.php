@@ -2,14 +2,14 @@
 
 @section('content')
 
-<div class="account-details screen">
+<div class="account-details screen" style="position: relative;min-height: 100vh;">
 
     <!-- Header -->
     <div class="overlap-group-C61RwL" style="z-index: 1;">
         <div class="navigation">
           <img class="logo-4eduM0" src="img/logo-1@2x.png" />
           <img class="barking-owl-4eduM0" src="img/barking-owl-7@2x.svg" />
-            
+
           <a href="{{ route('my-account') }}">
               <div class="profile-4eduM0 valign-text-middle inter-bold-eerie-black-16px">Profile</div>
           </a>
@@ -36,13 +36,13 @@
           <div class="favourites-fhuxN3 valign-text-middle">Favourites</div>
         </a>
       </div>
-          
+
       <img class="vector-25-C61RwL" src="img/vector-25@1x.svg" />
 
       <div class="my-account-form-wrapper">
         <form method="POST" action="/profile">
           @csrf
-            
+
           <div class="first-name-C61RwL valign-text-middle inter-medium-chicago-12px">First Name</div>
           <div class="overlap-group1-C61RwL">
             <div class="plate-RH0WJ5 border-1px-eerie-black"></div>
@@ -94,7 +94,7 @@
                   <div class="change-details-guNFp4 valign-text-middle inter-normal-white-16px">Change Details</div>
                 </div>
               </button>
-            </div> 
+            </div>
           </div>
         </form>
       </div>
@@ -104,8 +104,8 @@
             @endif
         </div>
     </div>
-        
-    <div class="overlap-group6-C61RwL" style="margin-top: 170px">
+
+    <div class="overlap-group6-C61RwL" style="position:absolute;bottom: 0;">
       <div class="rectangle-72-KnyYHa"></div>
       <div class="x2021-copyr-s-reserved-KnyYHa">© 2021 Copyright LoseFound. All Rights Reserved.</div>
     </div>

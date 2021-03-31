@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="account-details screen">
+<div class="account-details screen" style="position: relative;min-height: 100vh;">
 
     <!-- Header -->
     <div class="overlap-group-C61RwL" style="z-index: 1; margin-left: 0px;">
@@ -105,7 +105,7 @@
     <!-- CONTENT -->
 
     <!-- FOOTER -->
-    <div class="overlap-group6-C61RwL">
+    <div class="overlap-group6-C61RwL" style="position:absolute;bottom: 0;">
         <div class="rectangle-72-KnyYHa"></div>
         <div class="x2021-copyr-s-reserved-KnyYHa">© 2021 Copyright LoseFound. All Rights Reserved.</div>
     </div>
