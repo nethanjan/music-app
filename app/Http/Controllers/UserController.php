@@ -121,7 +121,7 @@ class UserController extends Controller
         });
 
         return redirect()->route('verify')
-                        ->with('success','A link to verify your account has been sent to your email account.');
+                        ->with('success','We’ve sent through your password reset email!');
     }
 
 }
