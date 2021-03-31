@@ -44,7 +44,7 @@
         <!--        tabs and separator line-->
 
         <!--        Results table-->
-        <div class="results-200-C61RwL valign-text-middle" style="padding-left:88px; padding-top:60px;">Results: {{
+        <div class="results-200-C61RwL valign-text-middle" style="padding-left:88px; padding-top:47px;">Results: {{
             $user_favourites->total() }}
         </div>
 
