@@ -6,6 +6,8 @@
     <img class="chair-2-C61RwL" src="img/chair-2@1x.png" />
     <div class="log-in-to--ur-account-C61RwL valign-text-middle">Reset your password</div>
 
+    Enter the email associated with your account and we’ll send an email with instructions to reset your password
+
     <form method="POST" action="/forgot-password">
         @csrf
 

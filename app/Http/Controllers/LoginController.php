@@ -52,7 +52,7 @@ class LoginController extends Controller
 
     public function forgotPassword()
     {
-        return view('forgotPassword');
+        return view('forgotPassword1');
     }
 
     public function sendForgotPassword(Request $request)
@@ -87,7 +87,7 @@ class LoginController extends Controller
             });
 
             return redirect()->route('forgot-password')
-                            ->with('success','A link to reset your password has been sent to your email account.');
+                            ->with('success','We’ve sent through your password reset email!');
         } else {
             return redirect()->route('forgot-password')
                             ->with('success','Email address not found.');
