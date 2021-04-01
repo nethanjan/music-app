@@ -15,6 +15,7 @@ use App\Models\EnergyLevel;
 use App\Models\UserFavourites;
 use Aws\Sns\Message;
 use Aws\Sns\MessageValidator;
+use Carbon\Carbon;
 
 class MainPageController extends Controller
 {
@@ -248,6 +249,26 @@ class MainPageController extends Controller
         } catch (Exception $e) {
             return response('Error', 400);
         }
+    }
+
+    public function verifyEmail(Request $request){
+
+        if ($request->has('token')) {
+            $user = DB::table('users as u')
+            ->where('u.verification_token', $request->token)
+            ->select('u.*')
+            ->first();
+
+            $query = DB::table('users as u')
+                    ->where('u.id', $user->id)
+                    ->update(['email_verified_at' =>  Carbon::now()->format('Y-m-d H:i:s'), 'verification_token' => null]);
+
+            if($user){
+                return view('emailVerified');
+            }
+            return view('emailVerifiedFailed');
+        }
+        return view('emailVerifiedFailed');
     }
 
 }

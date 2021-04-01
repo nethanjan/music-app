@@ -11,23 +11,30 @@
       </div>
     </a>
 
-    <div class="forgot-password-C61RwL valign-text-middle">Forgot password?</div>
-        
-    <div class="enter-the--r-password-C61RwL valign-text-middle inter-normal-eerie-black-16px">
-      Enter the email associated with your account and we’ll send an email with instructions to reset your password
-    </div>
+    <div class="forgot-password-C61RwL valign-text-middle">Password reset</div>
 
     <div>
-      <form method="POST" action="/forgot-password" style="display: inline-block">
+      <form method="POST" action="/password-reset" style="display: inline-block">
         @csrf
-        <div class="email-address-C61RwL valign-text-middle inter-medium-chicago-12px">Email Address</div>
+        <div class="email-address-C61RwL valign-text-middle inter-medium-chicago-12px">New Password</div>
         <div class="overlap-group1-C61RwL">
           <div class="plate-RH0WJ5 border-1px-eerie-black"></div>
-          <input class="rectangle-78-RH0WJ5" name="email" placeholder="" type="email" value="{{ old('email') }}" />
-          @error('email')
+          <input class="rectangle-78-RH0WJ5" name="password" placeholder="" type="password" value="{{ old('password') }}" />
+          @error('password')
             <div class="login-error-C61RwL valign-text-middle">{{ $message }}</div>
           @enderror
         </div>
+
+        <div class="email-address-C61RwL valign-text-middle inter-medium-chicago-12px">Confirm Password</div>
+        <div class="overlap-group1-C61RwL">
+          <div class="plate-RH0WJ5 border-1px-eerie-black"></div>
+          <input class="rectangle-78-RH0WJ5" name="password_confirmation" placeholder="" type="password" value="{{ old('password_confirmation') }}" />
+          @error('password_confirmation')
+            <div class="login-error-C61RwL valign-text-middle">{{ $message }}</div>
+          @enderror
+        </div>
+
+        <input class="rectangle-78-RH0WJ5" name="token" placeholder="" type="text" hidden value="{{ $token }}"/>
 
         @if ($message = Session::get('error'))
             <div class="login-error-C61RwL valign-text-middle">{{ $message }}</div>

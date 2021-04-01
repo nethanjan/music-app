@@ -52,7 +52,7 @@ class LoginController extends Controller
 
     public function forgotPassword()
     {
-        return view('forgotPassword1');
+        return view('forgotPassword');
     }
 
     public function sendForgotPassword(Request $request)
@@ -95,19 +95,53 @@ class LoginController extends Controller
         
     }
 
-    public function verifyEmail(Request $request){
-
+    public function passwordResetView(Request $request)
+    {
+        $token = null;
         if ($request->has('token')) {
-            $user = DB::table('users as u')
-            ->where('u.email', $request->has('token'))
-            ->select('u.*')
-            ->first();
-
-            if($user){
-                return view('emailVerified');
-            }
-            return view('emailVerifiedFailed');
+            $token = $request->token;
         }
-        return view('emailVerifiedFailed');
+        
+        return view('passwordReset', ['token' => $token]);
+    }
+
+    public function passwordResetPost(Request $request)
+    {
+
+        $validator = $request->validate([
+            'password' => 'required|min:6|confirmed',
+            'password_confirmation' => 'required',
+        ],
+        [
+            'password.required' => 'Password is required',
+            'password.min' => 'Password must be at least 6 characters',
+            'password.confirmed' => 'Passwords does not match',
+            'password_confirmation.required' => 'Confirm password is required',
+        ]);
+
+        if ($request->token) {
+            try{
+                $user = DB::table('users as u')
+                ->where('u.reset_password_token', $request->token)
+                ->select('u.*')
+                ->first();
+                if($user){
+                    $query = DB::table('users as u')
+                    ->where('u.id', $user->id)
+                    ->update(['password' =>  bcrypt($request->password), 'reset_password_token' => null]);
+
+                return redirect()->route('password-reset')
+                    ->with('success','Password reset sucessful. Please login.');
+                }
+                return redirect()->route('password-reset')
+                    ->with('success','Invalid password reset link.');
+            } catch (\Exception $e){
+                return redirect()->route('password-reset')
+                    ->with('success','Invalid password reset link.');
+            }
+        } else {
+            return redirect()->route('password-reset')
+                ->with('success','Invalid password reset link.');
+        }
     }
 }

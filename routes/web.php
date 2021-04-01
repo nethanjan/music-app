@@ -27,8 +27,10 @@ Route::post('/login','App\Http\Controllers\LoginController@authenticate')->name(
 Route::post('/logout','App\Http\Controllers\LoginController@logout')->name('logout');
 Route::get('/forgot-password','App\Http\Controllers\LoginController@forgotPassword')->name('forgot-password');
 Route::post('/forgot-password','App\Http\Controllers\LoginController@sendForgotPassword')->name('forgot-password');
+Route::get('/password-reset','App\Http\Controllers\LoginController@passwordResetView')->name('password-reset');
+Route::post('/password-reset','App\Http\Controllers\LoginController@passwordResetPost')->name('password-reset');
 
-Route::get('/verify-email','App\Http\Controllers\LoginController@verifyEmail')->name('verify-email');
+Route::get('/verify-email','App\Http\Controllers\MainPageController@verifyEmail')->name('verify-email');
 
 // Sns
 Route::any('/audio-transcode/sns','App\Http\Controllers\MainPageController@transcodeSns')->name('audio-transcode/sns');
