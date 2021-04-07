@@ -37,7 +37,7 @@
                 <a href="{{ route('my-account') }}">
                     <div class="account-details-fhuxN3 valign-text-middle" style="font-weight: 500;">Account Details</div>
                 </a>
-                <div class="favourites-fhuxN3 valign-text-middle" style="font-weight: 700;">Favourites</div>
+                <div class="favourites-fhuxN3 valign-text-middle" style="font-weight: 700;">Favorites</div>
             </div>
             <img class="vector-25-C61RwL" src="img/vector-25@1x.svg"/>
         </div>

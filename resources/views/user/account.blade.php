@@ -33,7 +33,7 @@
       <div class="auto-flex-C61RwL">
         <div class="account-details-fhuxN3 valign-text-middle">Account Details</div>
         <a href="{{ route('my-favourites') }}">
-          <div class="favourites-fhuxN3 valign-text-middle">Favourites</div>
+          <div class="favourites-fhuxN3 valign-text-middle">Favorites</div>
         </a>
       </div>
 
