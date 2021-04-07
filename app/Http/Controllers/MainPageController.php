@@ -38,6 +38,7 @@ class MainPageController extends Controller
                 $join->on('songs.id', '=', 'user_favourites.song_id')
                 ->where('user_favourites.user_id', '=', $user->id);
             })
+            ->whereNotNull('songs.path')
             ->orderBy('songs.id', 'asc')
             ->groupBy('songs.id', 'user_favourites.user_id')
             ->paginate(10);
@@ -89,7 +90,7 @@ class MainPageController extends Controller
             if(isset($request->filter['mood']) && count($request->filter['mood'])){
                 $query->whereIn('m.mood_id', $request->filter['mood']);
             }
-
+            $query->whereNotNull('s.path');
             $query->orderBy('s.id', 'asc');
 
             $skip = $request->skip;
@@ -185,7 +186,7 @@ class MainPageController extends Controller
             if(isset($request->filter['mood']) && count($request->filter['mood'])){
                 $query->whereIn('m.mood_id', $request->filter['mood']);
             }
-
+            $query->whereNotNull('s.path');
             $query->groupBy('s.id', 'uf.user_id');
 
             $results = $query->paginate(10);
