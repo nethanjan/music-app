@@ -434,7 +434,7 @@
                         class="videoinputdrag"
                         name="getFile"
                         style="display: none;"
-                        accept="video/*"
+                        accept=""
                     />
                     </div>
                     </div>
@@ -593,7 +593,7 @@
             var message = 'Can play type "' + type + '": ' + canPlay
             var isError = canPlay === 'no'
 
-            if (isError) {
+            if (isError && type !== 'video/quicktime') {
                 return
             }
 
