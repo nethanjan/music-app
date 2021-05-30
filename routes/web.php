@@ -14,38 +14,42 @@ use Illuminate\Support\Facades\Route;
 */
 
 // home
-Route::get('/','App\Http\Controllers\RegisterController@home')->name('home');
+Route::get('/','RegisterController@home')->name('home');
 
 // register
-Route::get('/register','App\Http\Controllers\RegisterController@show')->name('register');
-Route::post('/register','App\Http\Controllers\RegisterController@create');
-Route::get('/test','App\Http\Controllers\RegisterController@test');
+Route::get('/register','RegisterController@show')->name('register');
+Route::post('/register','RegisterController@create');
+Route::get('/test','RegisterController@test');
 
 // login
-Route::get('/login','App\Http\Controllers\LoginController@show')->name('login');
-Route::post('/login','App\Http\Controllers\LoginController@authenticate')->name('login');
-Route::post('/logout','App\Http\Controllers\LoginController@logout')->name('logout');
-Route::get('/forgot-password','App\Http\Controllers\LoginController@forgotPassword')->name('forgot-password');
-Route::post('/forgot-password','App\Http\Controllers\LoginController@sendForgotPassword')->name('forgot-password');
-Route::get('/password-reset','App\Http\Controllers\LoginController@passwordResetView')->name('password-reset');
-Route::post('/password-reset','App\Http\Controllers\LoginController@passwordResetPost')->name('password-reset');
+Route::get('/login','LoginController@show')->name('login');
+Route::post('/login','LoginController@authenticate')->name('login');
+Route::post('/logout','LoginController@logout')->name('logout');
+Route::get('/forgot-password','LoginController@forgotPassword')->name('forgot-password');
+Route::post('/forgot-password','LoginController@sendForgotPassword')->name('forgot-password');
+Route::get('/password-reset','LoginController@passwordResetView')->name('password-reset');
+Route::post('/password-reset','LoginController@passwordResetPost')->name('password-reset');
 
-Route::get('/verify-email','App\Http\Controllers\MainPageController@verifyEmail')->name('verify-email');
+Route::get('/verify-email','MainPageController@verifyEmail')->name('verify-email');
 
 // Sns
-Route::any('/audio-transcode/sns','App\Http\Controllers\MainPageController@transcodeSns')->name('audio-transcode/sns');
+Route::any('/audio-transcode/sns','MainPageController@transcodeSns')->name('audio-transcode/sns');
 
 // protected routes
 Route::middleware('auth')->group(function () {
-    Route::get('/verify', 'App\Http\Controllers\UserController@verify')->name('verify');
-    Route::post('/resend-verify', 'App\Http\Controllers\UserController@resendVerify')->name('resend-verify');
-    Route::get('/profile', 'App\Http\Controllers\UserController@account')->name('my-account');
-    Route::post('/profile', 'App\Http\Controllers\UserController@accountUpdate');
-    Route::get('/favourites', 'App\Http\Controllers\UserController@favourites')->name('my-favourites');
-    Route::get('/favourites-load-more', 'App\Http\Controllers\UserController@favouritesLoadMore')->name('favourites-load-more');
-    Route::get('/search','App\Http\Controllers\MainPageController@search')->name('search');
-    Route::get('/make-favourite','App\Http\Controllers\MainPageController@makeFavourite')->name('make-favourite');
-    Route::get('/remove-favourite','App\Http\Controllers\MainPageController@removeFavourite')->name('remove-favourite');
-    Route::get('/search-load-more','App\Http\Controllers\MainPageController@searchLoadMore')->name('search-load-more');
-    Route::get('/filter','App\Http\Controllers\MainPageController@filter')->name('search-filter');
+    Route::get('/verify', 'UserController@verify')->name('verify');
+    Route::post('/resend-verify', 'UserController@resendVerify')->name('resend-verify');
+    Route::get('/profile', 'UserController@account')->name('my-account');
+    Route::post('/profile', 'UserController@accountUpdate');
+    Route::get('/favourites', 'UserController@favourites')->name('my-favourites');
+    Route::get('/favourites-load-more', 'UserController@favouritesLoadMore')->name('favourites-load-more');
+    Route::get('/search','MainPageController@search')->name('search');
+    Route::get('/make-favourite','MainPageController@makeFavourite')->name('make-favourite');
+    Route::get('/remove-favourite','MainPageController@removeFavourite')->name('remove-favourite');
+    Route::get('/search-load-more','MainPageController@searchLoadMore')->name('search-load-more');
+    Route::get('/filter','MainPageController@filter')->name('search-filter');
+});
+
+Route::prefix('admin')->name('admin')->group(function (){
+    Route::resource('/users', 'Admin\UserController');
 });

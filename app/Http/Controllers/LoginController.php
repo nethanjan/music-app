@@ -13,7 +13,14 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-    protected $redirectTo = '/search';
+    protected function redirectTo()
+    {
+        $user = Auth::user();
+        if ($user->roles()->first()->name == 'Admin') {
+            return redirect()->route('search');
+        }
+        return redirect()->route('search');
+    }
 
     public function __construct()
     {
@@ -37,6 +44,10 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($validator)) {
+            $user = Auth::user();
+            if ($user->roles()->first()->name == 'Admin') {
+                return redirect()->route('admin');
+            }
             return redirect()->route('search');
         } else {
             return back()->with('error', 'Incorrect Email or Password')->withInput();
