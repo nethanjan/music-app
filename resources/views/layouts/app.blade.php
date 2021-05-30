@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/account-details.css" />
 <!--    <link rel="stylesheet" type="text/css" href="css/favourites.css" />-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
+    <script src="https://unpkg.com/wavesurfer.js"></script>
     <style>
       @import url("https://fonts.googleapis.com/css?family=Inter:600,400");
 
