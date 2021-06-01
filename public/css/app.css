@@ -10002,3 +10002,25 @@ h3 {
     border-color: #dee2e6;
   }
 }
+body {
+  background-color: #f7f8f9;
+  color: #3A3C42;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.navbar {
+  background-color: #1E2632;
+  box-shadow: 0 5px 10px 0 rgba(204, 204, 204, 0.3);
+  margin-bottom: 30px;
+}
+.navbar a {
+  color: #fff;
+}
+
+.card {
+  box-shadow: 0 2px 4px rgba(204, 204, 204, 0.8);
+  padding: 20px, 40px;
+}

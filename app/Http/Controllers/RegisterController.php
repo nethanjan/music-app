@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -72,6 +73,9 @@ class RegisterController extends Controller
             'password' => bcrypt($request['password']),
             'verification_token' => $token
         ]);
+
+        $roles = Role::where('id', 2)->get();
+        $user->roles()->attach($roles[0]->id);
         
         $to_name = $request['fname'];
         $to_email = $request['email'];

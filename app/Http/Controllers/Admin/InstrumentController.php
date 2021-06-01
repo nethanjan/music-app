@@ -5,9 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Models\User;
-
-class UserController extends Controller
+class InstrumentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index', ['users' => User::paginate(10)]);
+        //
     }
 
     /**
@@ -82,7 +80,6 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        User::destroy($id);
-        return redirect(route('admin.users.index'));
+        //
     }
 }

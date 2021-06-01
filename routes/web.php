@@ -50,6 +50,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/filter','MainPageController@filter')->name('search-filter');
 });
 
-Route::prefix('admin')->name('admin')->group(function (){
+Route::prefix('admin')->name('admin.')->group(function (){
+    Route::get('/', 'Admin\DashboardController@index');
     Route::resource('/users', 'Admin\UserController');
+    Route::resource('/energy-levels', 'Admin\EnergyLevelController');
+    Route::resource('/genres', 'Admin\GenreController');
+    Route::resource('/instruments', 'Admin\InstrumentController');
+    Route::resource('/moods', 'Admin\MoodController');
+    Route::resource('/songs', 'Admin\SongController');
 });
