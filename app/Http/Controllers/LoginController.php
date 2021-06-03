@@ -46,7 +46,7 @@ class LoginController extends Controller
         if (Auth::attempt($validator)) {
             $user = Auth::user();
             if ($user->roles()->first()->name == 'Admin') {
-                return redirect()->route('admin');
+                return redirect('/admin');
             }
             return redirect()->route('search');
         } else {
