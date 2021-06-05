@@ -12,49 +12,37 @@
     <meta name="og:type" content="website" />
     <meta name="twitter:card" content="photo" />
 
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}" />
-    <link src="{{ asset('css/app.js') }}" defere/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/all.min.css') }}" />
+    <!-- <script src="/js/app.js" defere></script> -->
+    <script src="{{ asset('js/admin.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     
 
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg">
-    <div class="container">
-    <a class="navbar-brand" href="/admin">Dashboard</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+  <body id="page-top">
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="/admin/users">Users</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin/songs">Songs</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin/songs">Instruments</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin/songs">Moods</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin/songs">Energy Levels</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin/songs">Genre</a>
-        </li>
-        </ul>
+  <div id="wrapper">
+
+    @include('partials.sidebar')
+
+    <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+
+            @include('partials.adminNav')
+
+            <div class="container-fluid">
+                @yield('content')
+            </div>
+        </div>
     </div>
-    </div>
-    </nav>
+  </div>
 
-
-    <main class="container">
-        @yield('content')
-    </main>
   </body>
 </html>
