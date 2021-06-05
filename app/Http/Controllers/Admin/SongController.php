@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Song;
+
 class SongController extends Controller
 {
     /**
@@ -14,7 +16,7 @@ class SongController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.songs.index', ['songs' => Song::paginate(10)]);
     }
 
     /**

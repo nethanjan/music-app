@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\EnergyLevel;
+
 class EnergyLevelController extends Controller
 {
     /**
@@ -14,7 +16,7 @@ class EnergyLevelController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.energy-levels.index', ['energyLevels' => EnergyLevel::paginate(10)]);
     }
 
     /**

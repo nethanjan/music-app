@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Instrument;
+
 class InstrumentController extends Controller
 {
     /**
@@ -14,7 +16,7 @@ class InstrumentController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.instruments.index', ['instruments' => Instrument::paginate(10)]);
     }
 
     /**

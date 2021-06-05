@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use App\Models\Role;
 
 class UserController extends Controller
 {
@@ -26,7 +27,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.index', ['users' => Role::all()]);
     }
 
     /**
@@ -59,7 +60,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.users.edit', ['user' => User::find($id)]);
     }
 
     /**
@@ -71,7 +72,28 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = $request->validate([
+            'fname'     => 'required',
+            'lname'     => 'required',
+            'email'     => 'required|email|unique:users,id,'."$id".',id',
+        ], 
+        [
+            'fname.required' => 'First name is required',
+            'lname.required' => 'Last name is required',
+            'email.required' => 'Email address is required',
+            'email.email' => 'Email address must be valid email',
+            'email.unique' => 'Email address is already registered for another user',
+        ]);
+
+        $user = User::find($id);
+
+        $user->fname = $request->fname;
+        $user->lname = $request->lname;
+        $user->email = $request->email;
+
+        $user->save();
+
+        return redirect('/admin/users')->with('success','User details update successful!');
     }
 
     /**

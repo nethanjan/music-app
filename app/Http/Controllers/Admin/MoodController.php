@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\Mood;
+
 class MoodController extends Controller
 {
     /**
@@ -14,7 +16,7 @@ class MoodController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.moods.index', ['moods' => Mood::paginate(10)]);
     }
 
     /**
