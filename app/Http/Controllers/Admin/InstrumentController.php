@@ -26,7 +26,7 @@ class InstrumentController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.instruments.create');
     }
 
     /**
@@ -37,7 +37,19 @@ class InstrumentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = $request->validate([
+            'name'     => 'required|unique:instruments',
+        ], 
+        [
+            'name.required' => 'Instrument name is required',
+            'name.unique' => 'Instrument name is already in use',
+        ]);
+
+        $instrument = new Instrument;
+        $instrument->name = $request->name;
+        $instrument->save();
+
+        return redirect('/admin/instruments')->with('success','New Instrument successfully created!');
     }
 
     /**
@@ -59,7 +71,7 @@ class InstrumentController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.instruments.edit', ['instrument' => Instrument::find($id)]);
     }
 
     /**
@@ -71,7 +83,18 @@ class InstrumentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = $request->validate([
+            'name'     => 'required',
+        ], 
+        [
+            'name.required' => 'Instrument name is required',
+        ]);
+
+        $instrument = Instrument::find($id);
+        $instrument->name = $request->name;
+        $instrument->save();
+
+        return redirect('/admin/instruments')->with('success','Instrument details update successful!');
     }
 
     /**
@@ -82,6 +105,7 @@ class InstrumentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Instrument::destroy($id);
+        return redirect(route('admin.instruments.index'));
     }
 }

@@ -26,7 +26,7 @@ class EnergyLevelController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.energy-levels.create');
     }
 
     /**
@@ -37,7 +37,19 @@ class EnergyLevelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = $request->validate([
+            'name'     => 'required|unique:energy_levels',
+        ], 
+        [
+            'name.required' => 'Energy Level name is required',
+            'name.unique' => 'Energy Level name is already in use',
+        ]);
+
+        $energyLevel = new EnergyLevel;
+        $energyLevel->name = $request->name;
+        $energyLevel->save();
+
+        return redirect('/admin/energy-levels')->with('success','New Energy Level successfully created!');
     }
 
     /**
@@ -59,7 +71,7 @@ class EnergyLevelController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.energy-levels.edit', ['energyLevel' => EnergyLevel::find($id)]);
     }
 
     /**
@@ -71,7 +83,18 @@ class EnergyLevelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = $request->validate([
+            'name'     => 'required',
+        ], 
+        [
+            'name.required' => 'Energy Level name is required',
+        ]);
+
+        $energyLevel = EnergyLevel::find($id);
+        $energyLevel->name = $request->name;
+        $energyLevel->save();
+
+        return redirect('/admin/energy-levels')->with('success','Energy Level details update successful!');
     }
 
     /**
@@ -82,6 +105,7 @@ class EnergyLevelController extends Controller
      */
     public function destroy($id)
     {
-        //
+        EnergyLevel::destroy($id);
+        return redirect(route('admin.energy-levels.index'));
     }
 }

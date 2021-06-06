@@ -26,7 +26,7 @@ class MoodController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.moods.create');
     }
 
     /**
@@ -37,7 +37,19 @@ class MoodController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = $request->validate([
+            'name'     => 'required|unique:moods',
+        ], 
+        [
+            'name.required' => 'Mood name is required',
+            'name.unique' => 'Mood name is already in use',
+        ]);
+
+        $mood = new Mood;
+        $mood->name = $request->name;
+        $mood->save();
+
+        return redirect('/admin/moods')->with('success','New Mood successfully created!');
     }
 
     /**
@@ -59,7 +71,7 @@ class MoodController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.moods.edit', ['mood' => Mood::find($id)]);
     }
 
     /**
@@ -71,7 +83,18 @@ class MoodController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validator = $request->validate([
+            'name'     => 'required',
+        ], 
+        [
+            'name.required' => 'Mood name is required',
+        ]);
+
+        $mood = Mood::find($id);
+        $mood->name = $request->name;
+        $mood->save();
+
+        return redirect('/admin/moods')->with('success','Mood details update successful!');
     }
 
     /**
@@ -82,6 +105,7 @@ class MoodController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Mood::destroy($id);
+        return redirect(route('admin.moods.index'));
     }
 }
