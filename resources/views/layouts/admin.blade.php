@@ -30,7 +30,7 @@
 
   <div id="wrapper">
 
-    @if(Request::path() != 'admin' || Request::path() != 'admin/')
+    @if(Request::path() != 'admin')
       @include('partials.sidebar')
     @endif
 
