@@ -105,23 +105,21 @@ class SongController extends Controller
             'file.required' => 'Song files are required',
             'mimes' => 'Please select a valid file type',
         ]);
-        dd($request);     
+
         if($request->hasFile('file')) {
-
-            $file = $request->file('file');
-
-            $song = new Song;
-            $song->recorId = $request->recordId;
-            $song->name = $file->getClientOriginalName();
-            $song->length = '0';
-            $song->sourcePath = null;
-            $song->path = null;
-            $song->save();
-            
-            $fileName = $file->getClientOriginalName();
-            $file->storeAs('avatars/'.$song->id.'/', $fileName, 's3');
-
-            return redirect('/admin/songs')->with('success','New song upload successful!');
+            foreach ($request->file('file') as $file) {
+                $song = new Song;
+                $song->recordId = null;
+                $song->name = $file->getClientOriginalName();
+                $song->length = '0';
+                $song->sourcePath = null;
+                $song->path = null;
+                $song->save();
+                
+                $fileName = $file->getClientOriginalName();
+                $file->storeAs('avatars/'.$song->id.'/', $fileName, 's3');
+            }
+            return redirect('/admin/songs')->with('success','New songs upload successful!');
         }
     }
 
