@@ -5,42 +5,19 @@
     <div>
         <div class="row">
             <div class="col-12">
-                <h1 class="h3 mb-2 text-gray-800 float-left">Add New Song</h1>
+                <h1 class="h3 mb-2 text-gray-800 float-left">Add New Songs</h1>
             </div>
         </div>    
     </div>
 
-    <form method="POST" action="/admin/songs" enctype="multipart/form-data">
+    <form method="POST" action="/admin/songs/bulk/upload" enctype="multipart/form-data">
         @csrf
         @method('POST')
+
         <div class="form-group col-md-6">
-            <label for="name">Name</label>
-            <input type="text" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" id="name" name="name" 
-                placeholder="Enter Song name" value="{{ old('name') ? old('name') : '' }}">
-            @error('name')
-                <div class="col-sm-6">
-                    <small id="nameError" class="text-danger">
-                        {{ $message }}
-                    </small>      
-                </div>
-            @enderror
-        </div>
-        <div class="form-group col-md-6">
-            <label for="recordId">Name</label>
-            <input type="text" class="form-control {{ $errors->has('recordId') ? 'is-invalid' : '' }}" id="recordId" name="recordId" 
-                placeholder="Enter Record Id" value="{{ old('recordId') ? old('recordId') : '' }}">
-            @error('recordId')
-                <div class="col-sm-6">
-                    <small id="recordIdError" class="text-danger">
-                        {{ $message }}
-                    </small>      
-                </div>
-            @enderror
-        </div>
-        <div class="form-group col-md-6">
-            <label for="file">File</label>
+            <label for="file">Files</label>
             <div class="custom-file">
-                <input type="file" class="custom-file-input" id="file" name="file" accept=".wav,.aif,.mp3">
+                <input type="file" class="custom-file-input" id="file" name="file[]" accept=".wav,.aif,.mp3" multiple>
                 <label class="custom-file-label" for="file">Choose file</label>
             </div>
         </div>
@@ -137,14 +114,5 @@
 
         <button type="submit" class="btn btn-primary">Add Song</button>
     </form>  
-
-    <script>
-        $('#file').on('change',function(){
-            //get the file name
-            var fileName = $(this)[0].files[0].name;
-            //replace the "Choose a file" label
-            $(this).next('.custom-file-label').html(fileName);
-        })
-    </script>
 
 @endsection
