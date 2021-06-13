@@ -61,11 +61,30 @@ class SongController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->hasFile('file')){
+        $validator = $request->validate([
+            'file'     => 'required|mimes:mp3,wav,aif',
+        ], 
+        [
+            'file.required' => 'Song file is required',
+            'file.mimes' => 'Please select a valid file type',
+        ]);
+
+        if($request->hasFile('file')) {
+
             $file = $request->file('file');
+
+            $song = new Song;
+            $song->recordId = $request->recordId;
+            $song->name = $file->getClientOriginalName();
+            $song->length = '0';
+            $song->sourcePath = null;
+            $song->path = null;
+            $song->save();
+            
             $fileName = $file->getClientOriginalName();
-            $file->storeAs('avatars/', $fileName, 's3');
-            dd($fileName);
+            $file->storeAs('avatars/'.$song->id.'/', $fileName, 's3');
+
+            return redirect('/admin/songs')->with('success','New song upload successful!');
         }
         
     }
@@ -78,11 +97,31 @@ class SongController extends Controller
      */
     public function bulkStore(Request $request)
     {
-        if($request->hasFile('file')){
-            foreach ($request->file('file') as $file) { 
-                $fileName = $file->getClientOriginalName();
-                $file->storeAs('avatars/', $fileName, 's3');
-            }
+        $validator = $request->validate([
+            'file'     => 'required',
+            'file.*' => 'mimes:mp3,wav,aif'
+        ], 
+        [
+            'file.required' => 'Song files are required',
+            'mimes' => 'Please select a valid file type',
+        ]);
+        dd($request);     
+        if($request->hasFile('file')) {
+
+            $file = $request->file('file');
+
+            $song = new Song;
+            $song->recorId = $request->recordId;
+            $song->name = $file->getClientOriginalName();
+            $song->length = '0';
+            $song->sourcePath = null;
+            $song->path = null;
+            $song->save();
+            
+            $fileName = $file->getClientOriginalName();
+            $file->storeAs('avatars/'.$song->id.'/', $fileName, 's3');
+
+            return redirect('/admin/songs')->with('success','New song upload successful!');
         }
     }
 

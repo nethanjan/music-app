@@ -10,25 +10,47 @@
         </div>    
     </div>
 
-    <form method="POST" action="/admin/songs/bulk/upload" enctype="multipart/form-data">
+    <form method="POST" action="/admin/songs/bulk/upload" enctype="multipart/form-data" class="mb-3">
         @csrf
         @method('POST')
-
-        <div class="form-group col-md-6">
+        
+        <div class="form-group col-md-8">
             <label for="file">Files</label>
             <div class="custom-file">
-                <input type="file" class="custom-file-input" id="file" name="file[]" accept=".wav,.aif,.mp3" multiple>
-                <label class="custom-file-label" for="file">Choose file</label>
+                <input type="file" class="custom-file-input {{ $errors->has('file') ? 'is-invalid' : '' }}" id="file" name="file[]" accept=".wav,.aif,.mp3" multiple>
+                <label class="custom-file-label" for="file">Choose files</label>
+                @error('file')
+                    <div class="col-sm-6">
+                        <small id="fileError" class="text-danger">
+                            {{ $message }}
+                        </small>      
+                    </div>
+                @enderror
+                @if (count($errors) > 0)
+                    @php
+                        $errorArray = $errors->default->toArray();
+                    @endphp
+                        @foreach ($errorArray as $key => $value)
+                            @if ($key != 'file')
+                                <div class="col-sm-6">
+                                    <small id="fileError" class="text-danger">
+                                        {{ $value[0] }}
+                                    </small>      
+                                </div>
+                                @break
+                            @endif
+                        @endforeach
+                @endif 
             </div>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-8 border">
             <label for="customFile">Genres</label>
-            <div class="container">
-            @foreach(array_chunk($genres->toArray(), 3) as $genresChunk)
+            <div class="container p-3 my-3 border">
+            @foreach(array_chunk($genres->toArray(), 4) as $genresChunk)
                 <div class="row">
                     @foreach($genresChunk as $genre)
-                        <div class="col-4">
+                        <div class="col-3">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" 
                                     value="{{ $genre['id'] }}" name="genres[]" id="genre-{{ $genre['id'] }}">
@@ -49,13 +71,13 @@
             </div> -->
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-8 border">
             <label for="customFile">Instruments</label>
-            <div class="container">
-            @foreach(array_chunk($instruments->toArray(), 3) as $instrumentsChunk)
+            <div class="container p-3 my-3 border">
+            @foreach(array_chunk($instruments->toArray(), 4) as $instrumentsChunk)
                 <div class="row">
                     @foreach($instrumentsChunk as $instrument)
-                        <div class="col-4">
+                        <div class="col-3">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" 
                                     value="{{ $instrument['id'] }}" name="instruments[]" id="instrument-{{ $instrument['id'] }}">
@@ -70,13 +92,13 @@
             </div>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-8 border">
             <label for="customFile">Energy Levels</label>
-            <div class="container">
-            @foreach(array_chunk($energyLevels->toArray(), 3) as $energyLevelsChunk)
+            <div class="container p-3 my-3 border">
+            @foreach(array_chunk($energyLevels->toArray(), 4) as $energyLevelsChunk)
                 <div class="row">
                     @foreach($energyLevelsChunk as $energyLevel)
-                        <div class="col-4">
+                        <div class="col-3">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" 
                                     value="{{ $energyLevel['id'] }}" name="energyLevels[]" id="energyLevel-{{ $energyLevel['id'] }}">
@@ -91,13 +113,13 @@
             </div>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-8 border">
             <label for="customFile">Moods</label>
-            <div class="container">
-            @foreach(array_chunk($moods->toArray(), 3) as $moodsChunk)
+            <div class="container p-3 my-3 border">
+            @foreach(array_chunk($moods->toArray(), 4) as $moodsChunk)
                 <div class="row">
                     @foreach($moodsChunk as $mood)
-                        <div class="col-4">
+                        <div class="col-3">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" 
                                     value="{{ $mood['id'] }}" name="moods[]" id="mood-{{ $mood['id'] }}">
@@ -114,5 +136,21 @@
 
         <button type="submit" class="btn btn-primary">Add Song</button>
     </form>  
+
+    <script>
+        $('#file').on('change',function(){
+            //get the file name
+            let fileName = '';
+            const fileOjb = $(this)[0].files;
+
+            for (var key of Object.keys(fileOjb)) {
+                fileName += fileOjb[key].name + ', ';
+            }
+
+            fileName = fileName.slice(0, -2);
+            //replace the "Choose a file" label
+            $(this).next('.custom-file-label').html(fileName);
+        })
+    </script>
 
 @endsection
