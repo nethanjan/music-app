@@ -147,7 +147,19 @@ class SongController extends Controller
      */
     public function edit($id)
     {
-        //
+        $song = Song::with('genres')
+            ->with('instruments')
+            ->with('energyLevels')
+            ->with('moods')
+            ->find($id);
+
+        return view('admin.songs.edit', [
+            'song' => Song::find($id),
+            'genres' => Genre::all(), 
+            'instruments' => Instrument::all(),
+            'energyLevels' => EnergyLevel::all(),
+            'moods' => Mood::all()
+            ]);
     }
 
     /**
