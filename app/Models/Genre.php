@@ -15,4 +15,9 @@ class Genre extends Model
     ];
 
     protected $dates = ['deleted_at'];
+
+    public function songs()
+    {
+        return $this->belongsToMany('App\Song');
+    }
 }

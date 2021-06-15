@@ -80,6 +80,11 @@ class SongController extends Controller
             $song->sourcePath = null;
             $song->path = null;
             $song->save();
+
+            $song->genres()->attach($request->genres);
+            $song->instruments()->attach($request->instruments);
+            $song->energyLevels()->attach($request->energyLevels);
+            $song->moods()->attach($request->moods);
             
             $fileName = $file->getClientOriginalName();
             $file->storeAs('avatars/'.$song->id.'/', $fileName, 's3');

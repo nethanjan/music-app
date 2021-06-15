@@ -6,11 +6,14 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="h3 mb-2 text-gray-800 float-left">Add New Songs</h1>
+                <a class="btn btn-sm btn-primary float-right" href="/admin/songs/create" role="button">
+                    Upload A Song
+                </a>
             </div>
         </div>    
     </div>
 
-    <form method="POST" action="/admin/songs/bulk/upload" enctype="multipart/form-data" class="mb-3">
+    <form method="POST" action="/admin/songs/multiple/upload" enctype="multipart/form-data" class="mb-3">
         @csrf
         @method('POST')
         
@@ -42,7 +45,12 @@
                         @endforeach
                 @endif 
             </div>
-        </div>
+            <div class="row">
+            <div class="col-sm-6 mb-3 mt-3">
+                <ul class="list-group" id="song-list">
+                </ul>
+            </div>
+            </div>
 
         <div class="form-group col-md-8 border">
             <label for="customFile">Genres</label>
@@ -140,16 +148,21 @@
     <script>
         $('#file').on('change',function(){
             //get the file name
-            let fileName = '';
+            // let fileName = '';
             const fileOjb = $(this)[0].files;
 
             for (var key of Object.keys(fileOjb)) {
-                fileName += fileOjb[key].name + ', ';
+                // fileName += fileOjb[key].name + ', ';
+                const ul = document.getElementById("song-list");
+                const li = document.createElement("li");
+                li.appendChild(document.createTextNode(fileOjb[key].name));
+                li.setAttribute("class", "list-group-item");
+                ul.appendChild(li);
             }
 
-            fileName = fileName.slice(0, -2);
-            //replace the "Choose a file" label
-            $(this).next('.custom-file-label').html(fileName);
+            // fileName = fileName.slice(0, -2);
+            // //replace the "Choose a file" label
+            // $(this).next('.custom-file-label').html(fileName);
         })
     </script>
 

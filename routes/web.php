@@ -58,6 +58,6 @@ Route::prefix('admin')->name('admin.')->group(function (){
     Route::resource('/instruments', 'Admin\InstrumentController');
     Route::resource('/moods', 'Admin\MoodController');
     Route::resource('/songs', 'Admin\SongController');
-    Route::get('/songs/bulk/upload', 'Admin\SongController@bulkCreate');
-    Route::post('/songs/bulk/upload', 'Admin\SongController@bulkStore');
+    Route::get('/songs/multiple/upload', 'Admin\SongController@bulkCreate');
+    Route::post('/songs/multiple/upload', 'Admin\SongController@bulkStore');
 });

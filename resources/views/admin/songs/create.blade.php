@@ -6,6 +6,9 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="h3 mb-2 text-gray-800 float-left">Add New Song</h1>
+                <a class="btn btn-sm btn-primary float-right" href="/admin/songs/multiple/upload" role="button">
+                    Upload Multiple Songs
+                </a>
             </div>
         </div>    
     </div>
