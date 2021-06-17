@@ -14,9 +14,17 @@ class EnergyLevelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.energy-levels.index', ['energyLevels' => EnergyLevel::paginate(10)]);
+        $filter = $request->query('name');
+        if($filter) {
+            return view('admin.energy-levels.index', [
+                'energyLevels' => EnergyLevel::where('name', 'like', "%{$filter}%")->paginate(10)->appends(request()->query()), 
+                'name' => $filter]
+            );
+        } else {
+            return view('admin.energy-levels.index', ['energyLevels' => EnergyLevel::paginate(10), 'name' => '']);
+        }
     }
 
     /**

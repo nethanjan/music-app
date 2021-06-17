@@ -15,9 +15,27 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.users.index', ['users' => User::paginate(10)]);
+        $name = $request->query('name');
+        $email = $request->query('email');
+        if($name || $email) {
+            
+            return view('admin.users.index', [
+                'users' => User::where('email', 'like', "%{$email}%")
+                        ->where(function($query) use ($name) {
+                            $query->where('fname', 'like', "%{$name}%")
+                            ->orWhere('lname', 'like', "%{$name}%");
+                        })
+                        ->paginate(10)
+                        ->appends(request()->query()), 
+                'name' => $name,
+                'email' => $email
+                ]
+            );
+        } else {
+            return view('admin.users.index', ['users' => User::paginate(10), 'name' => '', 'email' => '']);
+        }
     }
 
     /**
