@@ -28,19 +28,32 @@ class SongController extends Controller
 
         if($name || $genre || $instrument || $energyLevel || $mood) {
 
-            $songs = Song::whereHas('genres', function ($q) use ($genre) {
-                        $q->where('genre_id', $genre);
-                    })
-                    ->whereHas('instruments', function ($q) use ($instrument) {
-                        $q->where('instrument_id', $instrument);
-                     })
-                     ->whereHas('energyLevels', function ($q) use ($energyLevel) {
-                        $q->where('energy_level_id', $energyLevel);
-                     })
-                     ->whereHas('moods', function ($q) use ($mood) {
-                        $q->where('mood_id', $mood);
-                     })
-                    ->paginate(10)->appends(request()->query());
+            $query = Song::query();
+            if($name){
+                $query = $query->where('name', 'like', "%{$name}%");
+            }
+            if($genre){
+                $query = $query->whereHas('genres', function ($q) use ($genre) {
+                    $q->where('genre_id', $genre);
+                });
+            }
+            if($instrument){
+                $query = $query->whereHas('instruments', function ($q) use ($instrument) {
+                    $q->where('instrument_id', $instrument);
+                });
+            }
+            if($energyLevel){
+                $query = $query->whereHas('energyLevels', function ($q) use ($energyLevel) {
+                    $q->where('energy_level_id', $energyLevel);
+                });
+            }
+            if($mood){
+                $query = $query->whereHas('moods', function ($q) use ($mood) {
+                    $q->where('mood_id', $mood);
+                });
+            }
+
+            $songs = $query->paginate(10)->appends(request()->query());
 
             return view('admin.songs.index', [
                 'songs' => $songs, 
