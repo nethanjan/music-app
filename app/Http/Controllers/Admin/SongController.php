@@ -18,9 +18,61 @@ class SongController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.songs.index', ['songs' => Song::paginate(10)]);
+        $name = $request->query('name');
+        $genre = $request->query('genre');
+        $instrument = $request->query('instrument');
+        $energyLevel = $request->query('energyLevel');
+        $mood = $request->query('mood');
+
+        if($name || $genre || $instrument || $energyLevel || $mood) {
+
+            $query = Song::query();
+            if($name){
+                $query = $query->where('name', 'like', "%{$name}%");
+            }
+            if($genre){
+                $query = $query->whereHas('genres', function ($q) use ($genre) {
+                    $q->where('genre_id', $genre);
+                });
+            }
+            if($instrument){
+                $query = $query->whereHas('instruments', function ($q) use ($instrument) {
+                    $q->where('instrument_id', $instrument);
+                });
+            }
+            if($energyLevel){
+                $query = $query->whereHas('energyLevels', function ($q) use ($energyLevel) {
+                    $q->where('energy_level_id', $energyLevel);
+                });
+            }
+            if($mood){
+                $query = $query->whereHas('moods', function ($q) use ($mood) {
+                    $q->where('mood_id', $mood);
+                });
+            }
+
+            $songs = $query->paginate(10)->appends(request()->query());
+
+            return view('admin.songs.index', [
+                'songs' => $songs, 
+                'genres' => Genre::all(),
+                'instruments' => Instrument::all(),
+                'energyLevels' => EnergyLevel::all(),
+                'moods' => Mood::all()
+                ]
+            );
+        } else {
+            return view('admin.songs.index', [
+                'songs' => Song::paginate(10), 
+                'genres' => Genre::all(),
+                'instruments' => Instrument::all(),
+                'energyLevels' => EnergyLevel::all(),
+                'moods' => Mood::all()
+                ]
+            );
+        }
     }
 
     /**
@@ -147,7 +199,19 @@ class SongController extends Controller
      */
     public function edit($id)
     {
-        //
+        $song = Song::with('genres')
+            ->with('instruments')
+            ->with('energyLevels')
+            ->with('moods')
+            ->find($id);
+
+        return view('admin.songs.edit', [
+            'song' => Song::find($id),
+            'genres' => Genre::all(), 
+            'instruments' => Instrument::all(),
+            'energyLevels' => EnergyLevel::all(),
+            'moods' => Mood::all()
+            ]);
     }
 
     /**
@@ -159,7 +223,18 @@ class SongController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $song = Song::find($id);
+
+        $song->recordId = $request->recordId;
+        $song->save();
+
+        $song->genres()->sync($request->genres);
+        $song->instruments()->sync($request->instruments);
+        $song->energyLevels()->sync($request->energyLevels);
+        $song->moods()->sync($request->moods);
+
+
+        return redirect('/admin/songs')->with('success','Song update successful!');
     }
 
     /**

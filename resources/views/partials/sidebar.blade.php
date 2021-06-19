@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
     <div class="sidebar-brand-icon">
         <i class="fas fa-user-cog"></i>
     </div>
@@ -28,7 +28,7 @@
 </div>
 
 <!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item">
+<li class="nav-item {{ Request::is('admin/users*') ? 'active' : '' }}">
     <a class="nav-link collapsed" href="/admin/users">
         <i class="fas fa-fw fa-user"></i>
         <span>Users</span>
@@ -44,7 +44,7 @@
 </div>
 
 <!-- Nav Item - Pages Collapse Menu -->
-<li class="nav-item">
+<li class="nav-item {{ Request::is('admin/songs*') ? 'active' : '' }}">
     <a class="nav-link collapsed" href="/admin/songs">
         <i class="fas fa-fw fa-music"></i>
         <span>Songs</span>
@@ -52,28 +52,28 @@
 </li>
 
 <!-- Nav Item - Charts -->
-<li class="nav-item">
+<li class="nav-item {{ Request::is('admin/genres*') ? 'active' : '' }}">
     <a class="nav-link" href="/admin/genres">
         <i class="fas fa-fw fa-compact-disc"></i>
         <span>Genre</span></a>
 </li>
 
 <!-- Nav Item - Tables -->
-<li class="nav-item">
+<li class="nav-item {{ Request::is('admin/instruments*') ? 'active' : '' }}">
     <a class="nav-link" href="/admin/instruments">
         <i class="fas fa-fw fa-guitar"></i>
         <span>Instruments</span></a>
 </li>
 
 <!-- Nav Item - Tables -->
-<li class="nav-item">
+<li class="nav-item {{ Request::is('admin/energy-levels*') ? 'active' : '' }}">
     <a class="nav-link" href="/admin/energy-levels">
         <i class="fas fa-fw fa-battery-half"></i>
         <span>Energy Levels</span></a>
 </li>
 
 <!-- Nav Item - Tables -->
-<li class="nav-item">
+<li class="nav-item {{ Request::is('admin/moods*') ? 'active' : '' }}">
     <a class="nav-link" href="/admin/moods">
         <i class="fas fa-fw fa-theater-masks"></i>
         <span>Moods</span></a>

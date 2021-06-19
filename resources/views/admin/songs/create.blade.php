@@ -52,7 +52,9 @@
                         <div class="col-3">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" 
-                                    value="{{ $genre['id'] }}" name="genres[]" id="genre-{{ $genre['id'] }}">
+                                    value="{{ $genre['id'] }}" name="genres[]" id="genre-{{ $genre['id'] }}" 
+                                    {{ (is_array(old('genres')) && in_array($genre['id'], old('genres'))) ? ' checked' : '' }}
+                                >
                                 <label class="form-check-label" for="genre-{{ $genre['id'] }}">
                                     {{ $genre['name'] }}
                                 </label>
@@ -62,12 +64,6 @@
                 </div>
             @endforeach
             </div>
-            <!-- <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                <label class="form-check-label" for="flexCheckChecked">
-                    Checked checkbox
-                </label>
-            </div> -->
         </div>
 
         <div class="form-group col-md-8 border">
@@ -79,7 +75,9 @@
                         <div class="col-3">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" 
-                                    value="{{ $instrument['id'] }}" name="instruments[]" id="instrument-{{ $instrument['id'] }}">
+                                    value="{{ $instrument['id'] }}" name="instruments[]" id="instrument-{{ $instrument['id'] }}"
+                                    {{ (is_array(old('instruments')) && in_array($instrument['id'], old('instruments'))) ? ' checked' : '' }}    
+                                >
                                 <label class="form-check-label" for="instrument-{{ $instrument['id'] }}">
                                     {{ $instrument['name'] }}
                                 </label>
@@ -100,7 +98,9 @@
                         <div class="col-3">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" 
-                                    value="{{ $energyLevel['id'] }}" name="energyLevels[]" id="energyLevel-{{ $energyLevel['id'] }}">
+                                    value="{{ $energyLevel['id'] }}" name="energyLevels[]" id="energyLevel-{{ $energyLevel['id'] }}"
+                                    {{ (is_array(old('energyLevels')) && in_array($energyLevel['id'], old('energyLevels'))) ? ' checked' : '' }}    
+                                >
                                 <label class="form-check-label" for="energyLevel-{{ $energyLevel['id'] }}">
                                     {{ $energyLevel['name'] }}
                                 </label>
@@ -121,7 +121,9 @@
                         <div class="col-3">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" 
-                                    value="{{ $mood['id'] }}" name="moods[]" id="mood-{{ $mood['id'] }}">
+                                    value="{{ $mood['id'] }}" name="moods[]" id="mood-{{ $mood['id'] }}"
+                                    {{ (is_array(old('moods')) && in_array($mood['id'], old('moods'))) ? ' checked' : '' }}    
+                                >
                                 <label class="form-check-label" for="mood-{{ $mood['id'] }}">
                                     {{ $mood['name'] }}
                                 </label>

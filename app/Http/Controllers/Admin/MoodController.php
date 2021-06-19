@@ -14,9 +14,16 @@ class MoodController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.moods.index', ['moods' => Mood::paginate(10)]);
+        $filter = $request->query('name');
+        if($filter) {
+            return view('admin.moods.index', [
+                'moods' => Mood::where('name', 'like', "%{$filter}%")->paginate(10)->appends(request()->query()), 
+                'name' => $filter]);
+        } else {
+            return view('admin.moods.index', ['moods' => Mood::paginate(10), 'name' => '']);
+        }
     }
 
     /**

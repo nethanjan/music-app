@@ -14,9 +14,14 @@ class InstrumentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('admin.instruments.index', ['instruments' => Instrument::paginate(10)]);
+        $filter = $request->query('name');
+        if($filter) {
+            return view('admin.instruments.index', ['instruments' => Instrument::where('name', 'like', "%{$filter}%")->paginate(10), 'name' => $filter]);
+        } else {
+            return view('admin.instruments.index', ['instruments' => Instrument::paginate(10), 'name' => '']);
+        }
     }
 
     /**
