@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\DB;
+
 use App\Models\User;
 use App\Models\Role;
 
@@ -67,7 +69,14 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return view('admin.users.view', ['user' => User::find($id)]);
+        $user_favourites = DB::table('songs as s')
+            ->join('user_favourites as uf', 's.id', '=', 'uf.song_id')
+            ->join('users as u', 'uf.user_id', '=', 'u.id')
+            ->where('u.id', $id)
+            ->select('s.*')
+            ->paginate(10);
+
+        return view('admin.users.view', ['user' => User::find($id), 'user_favourites' => $user_favourites]);
     }
 
     /**

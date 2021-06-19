@@ -21,6 +21,42 @@
         <dd class="col-sm-9">{{ $user->email }}</dd>
     </dl>
 
-    
+    <div class="card shadow mb-4">
+        <div class="row ml-2 mt-2 mb-2">
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" width="100%" id="dataTable">
+                    <thead>
+                        <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Record Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if ($user_favourites->total() > 0)
+                            @foreach($user_favourites as $user_favourite)
+                                <tr>
+                                    <th scope="row">{{ $user_favourite->id }}</th>
+                                    <td>{{ $user_favourite->recordId }}</td>
+                                    <td>{{ $user_favourite->name }}</td>
+                                    <td>
+                                        Player    
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @else
+                            <tr class="no-data">
+                                <td colspan="3">No data available in table</td>
+                            </tr>
+                        @endif
+                    </tbody>
+                </table>
+            </div>
+        </div>    
+        {{ $user_favourites->links() }}
+    </div>
 
 @endsection
