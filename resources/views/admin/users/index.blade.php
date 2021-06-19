@@ -32,6 +32,9 @@
                                 <td>{{ $user->fname .' '. $user->lname }}</td>
                                 <td>{{ $user->email }}</td>
                                 <td>
+                                    <a class="btn btn-sm btn-primary" href="{{ route('admin.users.show', $user->id) }}" role="button">
+                                        View
+                                    </a>
                                     <a class="btn btn-sm btn-secondary" href="{{ route('admin.users.edit', $user->id) }}" role="button">
                                         Edit
                                     </a>

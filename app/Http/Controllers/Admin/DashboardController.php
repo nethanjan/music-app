@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -14,8 +16,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //dd('Admin page loaded');
-        return view('admin.index');
+        $user = Auth::user();
+        return view('admin.index', ['user' => $user]);
     }
 
 }
