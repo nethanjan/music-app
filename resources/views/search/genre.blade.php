@@ -2,6 +2,8 @@
 
 @section('content')
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/peaks.js/0.26.0/peaks.min.js"></script>
+
 <div class="page-choose-the-genre screen">
     <!-- HEADER -->
     <div class="rectangle-71-C61RwLL" style="z-index: 1;">
@@ -490,6 +492,12 @@
                 {{ $songs->total() }}
             </div>
 
+            <div id="overview-container">
+            </div>
+
+            <div id="zoomview-container">
+            </div>
+
             <!--          results table -->
             <div style="padding-left: 80px; padding-top: 22px;">
                 <table class="results-table">
@@ -562,7 +570,7 @@
 
 </div>
 
-<script src="js/app.js"></script>
+<script src="js/application.js"></script>
 <script src="js/search.js"></script>
 
 <script>
