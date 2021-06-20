@@ -51,8 +51,6 @@
 <script>
   $(document).ready(function(){
 
-    $('#accordionSidebar').hide();
-
     $('#sidebarToggleTop').click(function(){
       $('#accordionSidebar').toggle();
     });
