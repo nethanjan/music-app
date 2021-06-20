@@ -48,5 +48,21 @@
     </div>
   </div>
 
+<script>
+  $(document).ready(function(){
+
+    $('#accordionSidebar').hide();
+
+    $('#sidebarToggleTop').click(function(){
+      $('#accordionSidebar').toggle();
+    });
+    // hiding accordian icon in dashboard page
+    if(window.location.pathname == '/admin') {
+      $('#sidebarToggleTop').hide();
+    }
+
+  });
+</script>
+
   </body>
 </html>
