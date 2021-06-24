@@ -597,61 +597,61 @@ var currenntAudioTrack = null;
 
 function play(id) {
     console.log(id);
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    const audioContext = new AudioContext();
+    // const AudioContext = window.AudioContext || window.webkitAudioContext;
+    // const audioContext = new AudioContext();
 
-    (function (Peaks) {
-        const options = {
-            containers: {
-                overview: document.getElementById("overview-container"),
-                zoomview: document.getElementById("zoomview-container"),
-            },
-            mediaElement: document.querySelector("#audio-" + id),
-            webAudio: {
-                audioContext: audioContext,
-            },
-        };
+    // (function (Peaks) {
+    //     const options = {
+    //         containers: {
+    //             overview: document.getElementById("overview-container"),
+    //             zoomview: document.getElementById("zoomview-container"),
+    //         },
+    //         mediaElement: document.querySelector("#audio-" + id),
+    //         webAudio: {
+    //             audioContext: audioContext,
+    //         },
+    //     };
 
-        Peaks.init(options, function (err, peaks) {
-            if (err) {
-                console.error(
-                    "Failed to initialize Peaks instance: " + err.message
-                );
-                return;
-            }
+    //     Peaks.init(options, function (err, peaks) {
+    //         if (err) {
+    //             console.error(
+    //                 "Failed to initialize Peaks instance: " + err.message
+    //             );
+    //             return;
+    //         }
 
-            console.log(peaks.player);
-        });
-    })(peaks);
-    // const audio = document.getElementById("audio-" + id);
+    //         console.log(peaks.player);
+    //     });
+    // })(peaks);
+    const audio = document.getElementById("audio-" + id);
 
-    // const divsToHide = document.getElementsByClassName("pauseIcon");
-    // for (let i = 0; i < divsToHide.length; i++) {
-    //     divsToHide[i].style.display = "none";
-    // }
+    const divsToHide = document.getElementsByClassName("pauseIcon");
+    for (let i = 0; i < divsToHide.length; i++) {
+        divsToHide[i].style.display = "none";
+    }
 
-    // const divsToShow = document.getElementsByClassName("playIcon");
-    // for (let i = 0; i < divsToHide.length; i++) {
-    //     divsToShow[i].style.display = "inline";
-    // }
+    const divsToShow = document.getElementsByClassName("playIcon");
+    for (let i = 0; i < divsToHide.length; i++) {
+        divsToShow[i].style.display = "inline";
+    }
 
-    // $("#play-" + id).hide();
-    // $("#pause-" + id).show();
+    $("#play-" + id).hide();
+    $("#pause-" + id).show();
 
-    // const playersToStop = document.getElementsByClassName("audio-player");
-    // for (let i = 0; i < playersToStop.length; i++) {
-    //     playersToStop[i].pause();
-    // }
-    // audio.volume = globalAudioVolume;
-    // audio.currentTime = 0;
-    // audio.play();
-    // currenntAudioTrack = "audio-" + id;
-    // const volumeSlider = document.getElementById("audioController");
+    const playersToStop = document.getElementsByClassName("audio-player");
+    for (let i = 0; i < playersToStop.length; i++) {
+        playersToStop[i].pause();
+    }
+    audio.volume = globalAudioVolume;
+    audio.currentTime = 0;
+    audio.play();
+    currenntAudioTrack = "audio-" + id;
+    const volumeSlider = document.getElementById("audioController");
 
-    // volumeSlider.addEventListener("input", (e) => {
-    //     const value = e.target.value;
-    //     audio.volume = value / 100;
-    // });
+    volumeSlider.addEventListener("input", (e) => {
+        const value = e.target.value;
+        audio.volume = value / 100;
+    });
 }
 
 function pause(id) {
