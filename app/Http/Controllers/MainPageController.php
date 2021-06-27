@@ -231,9 +231,10 @@ class MainPageController extends Controller
                                     $new_file_name = explode(".",$file_name);
                                     $new_file_path = $message->outputKeyPrefix . $new_file_name[0] . '.mp3';
                                     error_log($new_file_path);
+                                    $duration = $message->outputs[0]->duration;
                                     $query = DB::table('songs as s')
                                         ->where('s.name', '=', $file_name)
-                                        ->update(['path' => $new_file_path]);
+                                        ->update(['path' => $new_file_path, 'length' => $duration]);
                                     return response()->json(['success' => 'success'], 200);
                             }
                     
