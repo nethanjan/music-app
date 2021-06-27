@@ -139,7 +139,7 @@ class SongController extends Controller
             $song->moods()->attach($request->moods);
             
             $fileName = $file->getClientOriginalName();
-            $file->storeAs('avatars/'.$song->id.'/', $fileName, 's3');
+            $file->storeAs('files/'.$song->id.'/', $fileName, 's3');
 
             return redirect('/admin/songs')->with('success','New song upload successful!');
         }
@@ -174,7 +174,7 @@ class SongController extends Controller
                 $song->save();
                 
                 $fileName = $file->getClientOriginalName();
-                $file->storeAs('avatars/'.$song->id.'/', $fileName, 's3');
+                $file->storeAs('files/'.$song->id.'/', $fileName, 's3');
             }
             return redirect('/admin/songs')->with('success','New songs upload successful!');
         }
