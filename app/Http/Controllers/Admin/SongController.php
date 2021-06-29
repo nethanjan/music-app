@@ -175,6 +175,11 @@ class SongController extends Controller
                 
                 $fileName = $file->getClientOriginalName();
                 $file->storeAs('files/'.$song->id.'/', $fileName, 's3');
+
+                $song->genres()->attach($request->genres);
+                $song->instruments()->attach($request->instruments);
+                $song->energyLevels()->attach($request->energyLevels);
+                $song->moods()->attach($request->moods);
             }
             return redirect('/admin/songs')->with('success','New songs upload successful!');
         }
