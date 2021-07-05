@@ -594,80 +594,70 @@ $(document).on("click", ".select-mood", function () {
 });
 
 var currenntAudioTrack = null;
+var currentTrack = null;
 
 function play(id) {
-    console.log(id);
-    // const AudioContext = window.AudioContext || window.webkitAudioContext;
-    // const audioContext = new AudioContext();
-
-    // (function (Peaks) {
-    //     const options = {
-    //         containers: {
-    //             overview: document.getElementById("overview-container"),
-    //             zoomview: document.getElementById("zoomview-container"),
-    //         },
-    //         mediaElement: document.querySelector("#audio-" + id),
-    //         webAudio: {
-    //             audioContext: audioContext,
-    //         },
-    //     };
-
-    //     Peaks.init(options, function (err, peaks) {
-    //         if (err) {
-    //             console.error(
-    //                 "Failed to initialize Peaks instance: " + err.message
-    //             );
-    //             return;
-    //         }
-
-    //         console.log(peaks.player);
-    //     });
-    // })(peaks);
     const audio = document.getElementById("audio-" + id);
-
     const divsToHide = document.getElementsByClassName("pauseIcon");
     for (let i = 0; i < divsToHide.length; i++) {
         divsToHide[i].style.display = "none";
     }
-
     const divsToShow = document.getElementsByClassName("playIcon");
     for (let i = 0; i < divsToHide.length; i++) {
         divsToShow[i].style.display = "inline";
     }
-
     $("#play-" + id).hide();
     $("#pause-" + id).show();
 
-    const playersToStop = document.getElementsByClassName("audio-player");
-    for (let i = 0; i < playersToStop.length; i++) {
-        playersToStop[i].pause();
+    // const playersToStop = document.getElementsByClassName("audio-player");
+    // for (let i = 0; i < playersToStop.length; i++) {
+    //     playersToStop[i].pause();
+    // }
+    // audio.volume = globalAudioVolume;
+    // audio.currentTime = 0;
+    // // audio.play();
+    if (currentTrack !== id) {
+        wavesurfer.load(audio.src);
+        if (isSafari) {
+            wavesurfer.on("waveform-ready", function () {
+                wavesurfer.play();
+            });
+        } else {
+            wavesurfer.on("ready", function () {
+                wavesurfer.play();
+            });
+        }
+        currentTrack = id;
+    } else {
+        wavesurfer.playPause();
     }
-    audio.volume = globalAudioVolume;
-    audio.currentTime = 0;
-    audio.play();
-    currenntAudioTrack = "audio-" + id;
-    const volumeSlider = document.getElementById("audioController");
 
-    volumeSlider.addEventListener("input", (e) => {
-        const value = e.target.value;
-        audio.volume = value / 100;
-    });
+    // currenntAudioTrack = "audio-" + id;
+    // const volumeSlider = document.getElementById("audioController");
+
+    // volumeSlider.addEventListener("input", (e) => {
+    //     const value = e.target.value;
+    //     audio.volume = value / 100;
+    // });
 }
 
 function pause(id) {
     const audio = document.getElementById("audio-" + id);
-    audio.pause();
+    // audio.pause();
 
     $("#pause-" + id).hide();
     $("#play-" + id).show();
+
+    wavesurfer.playPause();
 }
 
 //mixer controler
 function changeAudioVolume(elementID, volumePercentage = 100) {
-    let element = document.getElementById(elementID);
+    // let element = document.getElementById(elementID);
     let volume = volumePercentage / 100;
 
-    element.volume = volume;
+    // element.volume = volume;
+    wavesurfer.setVolume(volume);
     globalAudioVolume = volume;
 }
 

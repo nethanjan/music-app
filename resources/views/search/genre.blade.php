@@ -482,6 +482,10 @@
                 </span>
             </div>
 
+            <div id="waveform" style="background-color: #000; width: 44%; height: 100px; margin: auto; margin-top: -50px;">
+            </div>
+            
+
             <!--          separator above results table-->
             <div style="padding: 8px;position: absolute;padding-left: 80px;">
                 <img class="vector-22-C61RwLL" src="img/vector-22@1x.svg"/>
@@ -490,12 +494,6 @@
             <!--          results table topic -->
             <div class="results-200-C61RwLL valign-text-middle" style="padding-top: 45px;padding-left: 88px;">Results:
                 {{ $songs->total() }}
-            </div>
-
-            <div id="overview-container">
-            </div>
-
-            <div id="zoomview-container">
             </div>
 
             <!--          results table -->
@@ -589,7 +587,7 @@
             element.className = isError ? 'error' : 'info'
         }
         var playSelectedFile = function (event) {
-            console.log(event);
+
             document.getElementById('mixer').style.display = 'block';
             document.getElementById('video-section').style.display = 'none';
 
@@ -642,7 +640,7 @@
     };
     var globalAudioVolume = 0.5;
     var s3Url = '<?php echo env('AUDIO_S3_PATH'); ?>';
-    console.log(s3Url);
+
     //handle progress bar styles of slider in Chrome
     $('input[type="range"]').change(function () {
         var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
@@ -654,6 +652,25 @@
             + ')'
         );
     });
+
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if(isSafari){
+        var wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            height: 100,
+            waveColor: '#fff',
+            backend: 'MediaElement'
+        });
+    } else {
+        var wavesurfer = WaveSurfer.create({
+            container: '#waveform',
+            height: 100,
+            waveColor: '#fff'
+        });
+    }
+
+    
 
 </script>
 
