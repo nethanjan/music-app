@@ -484,6 +484,28 @@
 
             <div id="waveform" style="background-color: #000; width: 44%; height: 100px; margin: auto; margin-top: -50px;">
             </div>
+
+            <div class="controls" style="width: 44%; height: 50px; margin: auto; margin-top: 20px; text-align: center;">
+                <!-- <button class="btn btn-primary" onclick="wavesurfer.skipBackward()">
+                <i class="fa fa-step-backward"></i>
+                Backward
+                </button> -->
+
+                <img id="mainPlay" class="mainPlayIcon" src="img/vector-4@2x.svg" onclick="mainPlay('play')"/>
+                <img id="mainPause" class="mainPauseIcon" src="img/pause-circle-line.svg" onclick="mainPlay('pause')" style="display: none"/>
+
+                <!-- <button class="btn btn-primary" onclick="wavesurfer.skipForward()">
+                <i class="fa fa-step-forward"></i>
+                Forward
+                </button> -->
+
+                <img id="mainMuteOff" class="mainMute" src="img/mute-off.png" onclick="mainMute('off')"/>
+                <img id="mainMuteOn" class="mainMute" src="img/mute-on.png" onclick="mainMute('on')" style="display: none"/>
+                <!-- <button class="btn btn-primary" onclick="mainMute()">
+                <i class="fa fa-volume-off"></i>
+                Toggle Mute
+                </button>  -->
+            </div>
             
 
             <!--          separator above results table-->

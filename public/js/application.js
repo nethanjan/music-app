@@ -609,6 +609,9 @@ function play(id) {
     $("#play-" + id).hide();
     $("#pause-" + id).show();
 
+    const mainPlay = document.getElementById("mainPlay");
+    const mainPause = document.getElementById("mainPause");
+
     // const playersToStop = document.getElementsByClassName("audio-player");
     // for (let i = 0; i < playersToStop.length; i++) {
     //     playersToStop[i].pause();
@@ -621,15 +624,21 @@ function play(id) {
         if (isSafari) {
             wavesurfer.on("waveform-ready", function () {
                 wavesurfer.play();
+                $("#mainPlay").hide();
+                $("#mainPause").show();
             });
         } else {
             wavesurfer.on("ready", function () {
                 wavesurfer.play();
+                $("#mainPlay").hide();
+                $("#mainPause").show();
             });
         }
         currentTrack = id;
     } else {
         wavesurfer.playPause();
+        $("#mainPlay").hide();
+        $("#mainPause").show();
     }
 
     // currenntAudioTrack = "audio-" + id;
@@ -649,6 +658,38 @@ function pause(id) {
     $("#play-" + id).show();
 
     wavesurfer.playPause();
+    $("#mainPlay").show();
+    $("#mainPause").hide();
+}
+
+function mainPlay(type) {
+    if (!currentTrack) {
+        return false;
+    }
+    wavesurfer.playPause();
+    if (type === "play") {
+        $("#mainPlay").hide();
+        $("#mainPause").show();
+    }
+    if (type === "pause") {
+        $("#mainPlay").show();
+        $("#mainPause").hide();
+    }
+}
+
+function mainMute(type) {
+    if (!currentTrack) {
+        return false;
+    }
+    wavesurfer.toggleMute();
+    if (type === "on") {
+        $("#mainMuteOff").show();
+        $("#mainMuteOn").hide();
+    }
+    if (type === "off") {
+        $("#mainMuteOff").hide();
+        $("#mainMuteOn").show();
+    }
 }
 
 //mixer controler

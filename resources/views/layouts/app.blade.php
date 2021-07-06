@@ -370,6 +370,23 @@
           padding-top: 6px;
       }
 
+      .mainPlayIcon {
+          vertical-align: middle;
+          padding-top: 6px;
+          height: 50px;
+      }
+
+      .mainPauseIcon {
+          vertical-align: middle;
+          padding-top: 6px;
+          height: 50px;
+      }
+      .mainMute {
+          vertical-align: middle;
+          padding-top: 6px;
+          height: 50px;
+      }
+
       /*results table*/
       /* .pauseIcon {
           height: 18px;
