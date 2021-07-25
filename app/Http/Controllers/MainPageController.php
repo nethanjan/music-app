@@ -43,7 +43,7 @@ class MainPageController extends Controller
             ->groupBy('songs.id', 'user_favourites.user_id')
             ->paginate(10);
 
-        return view('search.genre', ['genres' => $genres, 'instruments' => $instruments, 'moods' => $moods, 'energyLevels' => $energyLevels, 'songs' => $songs ]);
+        return view('search.test', ['genres' => $genres, 'instruments' => $instruments, 'moods' => $moods, 'energyLevels' => $energyLevels, 'songs' => $songs ]);
     }
 
     /**
@@ -261,11 +261,11 @@ class MainPageController extends Controller
             ->select('u.*')
             ->first();
 
-            $query = DB::table('users as u')
+            if($user){
+                $query = DB::table('users as u')
                     ->where('u.id', $user->id)
                     ->update(['email_verified_at' =>  Carbon::now()->format('Y-m-d H:i:s'), 'verification_token' => null]);
 
-            if($user){
                 return view('emailVerified');
             }
             return view('emailVerifiedFailed');

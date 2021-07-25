@@ -1,72 +1,68 @@
-@extends('layouts.reset')
+@extends('layouts.application')
 
 @section('content')
 
-<div class="container-center-horizontal">
-  <div class="forgot-password screen">
-    <a href="/login" class="align-self-flex-start">
-      <div class="frame-2-C61RwL">
-        <img class="vector-gUEd1c" src="img/vector-52@2x.svg" />
-        <img class="vector-h9rsX8" src="img/vector-53@2x.svg" />
-      </div>
-    </a>
+<body class="auth verify-page">
+    <div class="module-spacer container verify-container">
+        <h1 class="variation-one vari-one-sub">Password reset</h1>
 
-    <div class="forgot-password-C61RwL valign-text-middle">Password reset</div>
-
-    <div>
-      <form method="POST" action="/password-reset" style="display: inline-block">
-        @csrf
-        <div class="email-address-C61RwL valign-text-middle inter-medium-chicago-12px">New Password</div>
-        <div class="overlap-group1-C61RwL">
-          <div class="plate-RH0WJ5 border-1px-eerie-black"></div>
-          <input class="rectangle-78-RH0WJ5" name="password" placeholder="" type="password" value="{{ old('password') }}" />
-          @error('password')
-            <div class="login-error-C61RwL valign-text-middle">{{ $message }}</div>
-          @enderror
+        <div class="arrow-icon">
+            <a href="/login">
+                <svg class="arrow-curve" width="18" height="33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5625 2.8718L2 16.936l13.5625 14.0642" stroke="#000" stroke-width="4"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg class="arrow-line" width="35" height="5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 2.936h31" stroke="#000" stroke-width="4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
         </div>
+        <form class="form" method="POST" action="/password-reset">
+          @csrf
+            <div class="container form-container">
+                <div class="form-group">
+                    <label for="email">New Password</label>
+                    <div class="form-control">
+                        <input placeholder="" name="password" placeholder="" type="password" id="password">
+                        @error('password')
+                          <span class="error required">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
 
-        <div class="email-address-C61RwL valign-text-middle inter-medium-chicago-12px">Confirm Password</div>
-        <div class="overlap-group1-C61RwL">
-          <div class="plate-RH0WJ5 border-1px-eerie-black"></div>
-          <input class="rectangle-78-RH0WJ5" name="password_confirmation" placeholder="" type="password" value="{{ old('password_confirmation') }}" />
-          @error('password_confirmation')
-            <div class="login-error-C61RwL valign-text-middle">{{ $message }}</div>
-          @enderror
-        </div>
+                <div class="form-group">
+                    <label for="email">Confirm Password</label>
+                    <div class="form-control">
+                        <input placeholder="" name="password_confirmation" placeholder="" type="password" id="password_confirmation">
+                        @error('password_confirmation')
+                          <span class="error required">{{ $message }}</span>
+                        @enderror
+                    </div>
+                </div>
 
-        <input class="rectangle-78-RH0WJ5" name="token" placeholder="" type="text" hidden value="{{ $token }}"/>
+                <input class="rectangle-78-RH0WJ5" name="token" placeholder="" type="text" hidden value="{{ $token }}"/>
 
-        @if ($message = Session::get('error'))
-            <div class="login-error-C61RwL valign-text-middle">{{ $message }}</div>
-        @endif
+                <button class="btn btn-submit" type="submit">Reset Password</button>
 
-        <div class="overlap-group-C61RwL">
-          <div class="buttonsoli-arydefault-4eduM0">
-            <button class="masterbutt-nlargetext-VfO5nt">
-              <div class="content-KW9xXp">
-                <div class="reset-password-IVx1Ci valign-text-middle inter-normal-white-16px">Reset Password</div>
-              </div>
-            </button>
-          </div>
+                @if(session()->has('success'))
+                  <div class="form-notice variation-three">
+                    {{ session()->get('success') }}
+                  </div>
+                @endif
 
-          <div class="buttonsoli-arydefault-BJQsbv smart-layers-pointers">
-            <button class="masterbutt-nlargetext-WqQ16E">
-              <div class="content-mc3CxX">
-                <div class="reset-password-CMZUxz valign-text-middle inter-normal-white-16px">Reset Password</div>
-              </div>
-            </button>
-          </div>
-        </div>    
-      <form>
+                @if ($message = Session::get('error'))
+                <div class="form-notice variation-three">{{ $message }}</div>
+                @endif
+                
+            </div>
+        </form>
     </div>
-
-    @if(session()->has('success'))
-      <div class="email-sent">
-        {{ session()->get('success') }}
-      </div>
-    @endif
-      
-  </div>
-</div>
+    <footer class="footer variation-one">
+        <div class="container">
+            © 2021 Copyright LoseFound. All Rights Reserved.
+        </div>
+    </footer>
+</body>
 
 @endsection
