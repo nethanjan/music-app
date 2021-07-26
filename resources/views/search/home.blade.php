@@ -229,7 +229,7 @@
                 </div>
                 <div class="video-player-box">
                     <div class="video-player">
-                        <div id="video-section" class="instructions">
+                        <div id="video-section" class="instructions" onclick="document.getElementById('getFile').click()">
                             <div>
                                 <p class="main-text">Select a video file from your computer</p>
 
@@ -238,18 +238,38 @@
                                     and will only play<br>directly from your computer</p>
                             </div>
                         </div>
-                        <video class="player" controls="true" id="mixer" autoplay></video>
+                        <!-- <video class="player" controls="true" id="mixer" autoplay></video>
                         <input type="file" id="getFile" class="uploader videoinputdrag" name="getFile"
-                            accept="video/mp4,video/x-m4v,video/*">
-                    </div>
-                    <div class="cont-container">
-                        <div style="margin-top: -15px;">
-                            <button onclick="playVideo()">Play</button>
-                            <button onclick="pauseVideo()">Pause</button>
-                            <button onclick="changeSpeed('up')">Mute</button>
+                            accept="video/mp4,video/x-m4v,video/*"> -->
+
+                            <video class="player" autoplay id="mixer" controls="true"
+                            style="display: none" onclick="document.getElementById('getFile').click()"></video>
+                        <!-- <div id="video-section" class="select-a-v-ovies-here-C61RwLL valign-text-middle"
+                            style="top:40px; left:64px;" onclick="document.getElementById('getFile').click()">
+                            Select a video file from your computer<br/><br/>this video will not be uploaded to any<br/>server or cloud
+                            and will only play<br/>directly from your computer<br/><br/>tip: you can drag and drop movies here
+                        </div> -->
+                        <div>
+                            <input
+                                type="file"
+                                id="getFile"
+                                class="videoinputdrag"
+                                name="getFile"
+                                style="display: none;"
+                                accept=""
+                            />
                         </div>
                     </div>
+                    
                     <div id="waveform" class="box"></div>
+
+                    <div class="cont-container">
+                        <div>
+                            <button onclick="mainPlay('play')">Play</button>
+                            <button onclick="mainPlay('pause')">Pause</button>
+                            <button onclick="mainMute('on')">Mute</button>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="volume-controller">
@@ -334,14 +354,14 @@
                             </svg>
                         </a>
                         
-                        <div class="action-icons audio-not-fav make-favourite" style="{{ !empty($song->user_id) ? 'display: none' : 'display: inline' }};" id="make-favourite-{{ $song->id }}">
+                        <div class="action-icons audio-not-fav make-favourite" style="{{ !empty($song->user_id) ? 'display: none' : 'display: inline' }}; cursor: pointer;" id="make-favourite-{{ $song->id }}">
                             <svg width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M17.48 2.583A5.766 5.766 0 0010 1.997a5.748 5.748 0 00-7.48 8.69l5.692 5.701a2.548 2.548 0 003.575 0l5.693-5.701a5.748 5.748 0 000-8.104zm-1.293 6.839l-5.692 5.692a.695.695 0 01-.99 0l-5.693-5.72a3.932 3.932 0 010-5.5 3.914 3.914 0 015.5 0 .917.917 0 001.302 0 3.914 3.914 0 015.5 0 3.932 3.932 0 01.073 5.5v.028z"
                                     fill="#37807E" />
                             </svg>
                         </div>
-                        <div class="action-icons audio-not-fav remove-favourite" style="{{ !empty($song->user_id) ? 'display: inline' : 'display: none' }};" id="favoured-{{ $song->id }}">
+                        <div class="action-icons audio-not-fav remove-favourite" style="{{ !empty($song->user_id) ? 'display: inline' : 'display: none' }}; cursor: pointer;" id="favoured-{{ $song->id }}">
                             <svg width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M17.48 2.583A5.766 5.766 0 0010 1.997a5.748 5.748 0 00-7.48 8.69l5.692 5.7016a2.548 2.548 0 003.575 0l5.6925-5.7016a5.7477 5.7477 0 000-8.1034z"
@@ -363,6 +383,8 @@
     </div>
 
     <script>
+        var currentAudioPlayerId = null;
+
         document.addEventListener("DOMContentLoaded", () => {
             if (document.querySelector(".nav")) {
                 onMenuClick();
@@ -378,29 +400,38 @@
                 rangeStylesUpdater(document.getElementById("video-control-js"));
                 rangeStylesUpdater(document.getElementById("audio-control-js"));
             }
-
-            // if (document.querySelector(".results-table")) {
-            //     loadMoreSearch();
-            //     audioPlayer();
-            // }
         });
 
-    function localFileVideoPlayer() {
-        const URL = window.URL || window.webkitURL;
-        const displayMessage = (message, isError) => {
-            var element = document.querySelector("#message");
-            element.innerHTML = message;
-            element.className = isError ? "error" : "info";
-        };
-        const playerVolumeUpdater = (player, volumeController) => {
-            player.volume = volumeController.value / 100;
-        };
+        function localFileVideoPlayer() {
+
+            const URL = window.URL || window.webkitURL;
+            const displayMessage = (message, isError) => {
+                var element = document.querySelector("#message");
+                element.innerHTML = message;
+                element.className = isError ? "error" : "info";
+            };
+
+            document.getElementById("video-control-js").addEventListener("input", (e) => {
+                rangeStylesUpdater(e.target);
+                playerVolumeUpdater(document.getElementById("mixer"), e.target);
+            });
+
+            document.getElementById("btn-search-js").addEventListener("click", () => {
+                window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+                });
+            });
+        }
+
         const playSelectedFile = (e) => {
+
+            const URL = window.URL || window.webkitURL;
             const file = e.target.files[0];
             const type = file.type;
             const player = document.getElementById("mixer");
             const canPlay = player.canPlayType(type);
-            console.log(canPlay);
+
             if (canPlay === "") canPlay = "no";
             const isError = canPlay === "no";
             const fileURL = URL.createObjectURL(file);
@@ -410,9 +441,11 @@
             }
 
             const getFileInput = document.getElementById("getFile");
-            getFileInput.disable = true;
+            getFileInput.disabled = true;
             player.style.display = "block";
             player.src = fileURL;
+
+            document.getElementById('video-section').style.display = 'none';
             playerVolumeUpdater(player, document.getElementById("video-control-js"));
         };
 
@@ -424,24 +457,6 @@
             rangeStylesUpdater(e.target);
             playerVolumeUpdater(document.getElementById("mixer"), e.target);
         });
-
-        // document.getElementById("audio-control-js").addEventListener("input", (e) => {
-        //     rangeStylesUpdater(e.target);
-        //     siteVolume = e.target.value / 100;
-        //     document.getElementByClass("audio-player-js").volume = siteVolume;
-        // });
-
-        document.getElementById("btn-video-js").addEventListener("click", () => {
-            document.getElementById("getFile").click();
-        });
-
-        document.getElementById("btn-search-js").addEventListener("click", () => {
-            window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-            });
-        });
-    }
 
         // Nav
         function onMenuClick() {
@@ -481,6 +496,10 @@
             ele.style.cssText = `background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, var(--dark)), color-stop(${val}, var(--light)))`;
         }
 
+        const playerVolumeUpdater = (player, volumeController) => {
+            player.volume = volumeController.value / 100;
+        };
+
     </script>
 
     <script type="text/javascript">
@@ -511,75 +530,18 @@
         if(isSafari){
             var wavesurfer = WaveSurfer.create({
                 container: '#waveform',
-                height: 100,
+                height: 82,
                 waveColor: '#fff',
                 backend: 'MediaElement'
             });
         } else {
             var wavesurfer = WaveSurfer.create({
                 container: '#waveform',
-                height: 100,
+                height: 82,
                 waveColor: '#fff'
             });
         }
 
     </script>
-
-<!-- <script>
-
-    (function localFileVideoPlayer() {
-
-    'use strict'
-    var URL = window.URL || window.webkitURL
-    var displayMessage = function (message, isError) {
-        var element = document.querySelector('#message')
-        element.innerHTML = message
-        element.className = isError ? 'error' : 'info'
-    }
-    var playSelectedFile = function (event) {
-
-        document.getElementById('mixer').style.display = 'block';
-        document.getElementById('video-section').style.display = 'none';
-        // document.getElementById('getFile').disabled = true;
-
-        var file = this.files[0]
-        var type = file.type
-        var videoNode = document.querySelector('video')
-        var canPlay = videoNode.canPlayType(type)
-        if (canPlay === '') canPlay = 'no'
-        var message = 'Can play type "' + type + '": ' + canPlay
-        var isError = canPlay === 'no'
-
-        if (isError && type !== 'video/quicktime') {
-            return
-        }
-
-        var fileURL = URL.createObjectURL(file)
-        videoNode.src = fileURL
-    }
-
-    var inputNode = document.getElementById('getFile')
-    console.log(inputNode);
-    inputNode.addEventListener('change', playSelectedFile, false)
-    var inputNodedrag = document.querySelector('.videoinputdrag')
-    inputNodedrag.addEventListener('change', playSelectedFile, false)
-    })()
-
-    //mixer controler
-    function changeVolume(elementID, volumePercentage = 100) {
-        let element = document.getElementById(elementID);
-        let volume = volumePercentage / 100;
-
-        element.volume = volume;
-    }
-
-    $(document).ready(function () {
-        $(document).on('input', '#mixercontroller', function () {
-            let volumePercentage = $(this).val();
-            changeVolume('mixer', volumePercentage);
-        });
-    })
-
-</script> -->
 
 @endsection

@@ -17,7 +17,7 @@ class UserController extends Controller
     public function account()
     {
         $user = Auth::user();
-        return view('user.account', ['user' => $user]);
+        return view('user.profile', ['user' => $user]);
     }
 
     public function accountUpdate(Request $request)

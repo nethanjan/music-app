@@ -14,19 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/user.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://unpkg.com/wavesurfer.js"></script>
-    <style>
-    .cont-container { 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 40px;
-    }
-
-    </style>
 </head>
 
-<body>
+<body class="user">
     <header class="nav">
         <div class="container">
             <nav>
@@ -81,7 +71,7 @@
         </div>
     </footer>
     <!-- <script src="js/user.min.js"></script> -->
-    <script src="js/application.js"></script>
+    <!-- <script src="js/application.js"></script> -->
 </body>
 
 </html>

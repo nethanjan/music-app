@@ -88,8 +88,7 @@ $("#load-more").on("click", function () {
             const totalResult = parseInt(
                 $("#load-more").attr("data-totalResult")
             );
-            console.log(totalCurrentResult);
-            console.log(totalResult);
+
             if (totalCurrentResult == totalResult) {
                 $("#load-more").hide();
             }
@@ -555,6 +554,8 @@ var currentTrack = null;
 
 function play(id) {
     const audio = document.getElementById("audio-" + id);
+    currentAudioPlayerId = id;
+
     const divsToHide = document.getElementsByClassName("pauseIcon");
     for (let i = 0; i < divsToHide.length; i++) {
         divsToHide[i].style.display = "none";
@@ -611,12 +612,12 @@ function pause(id) {
     const audio = document.getElementById("audio-" + id);
     // audio.pause();
 
-    $("#pause-" + id).hide();
-    $("#play-" + id).show();
+    // $("#pause-" + id).hide();
+    // $("#play-" + id).show();
 
     wavesurfer.playPause();
-    $("#mainPlay").show();
-    $("#mainPause").hide();
+    // $("#mainPlay").show();
+    // $("#mainPause").hide();
 }
 
 function mainPlay(type) {
@@ -624,14 +625,14 @@ function mainPlay(type) {
         return false;
     }
     wavesurfer.playPause();
-    if (type === "play") {
-        $("#mainPlay").hide();
-        $("#mainPause").show();
-    }
-    if (type === "pause") {
-        $("#mainPlay").show();
-        $("#mainPause").hide();
-    }
+    // if (type === "play") {
+    //     $("#mainPlay").hide();
+    //     $("#mainPause").show();
+    // }
+    // if (type === "pause") {
+    //     $("#mainPlay").show();
+    //     $("#mainPause").hide();
+    // }
 }
 
 function mainMute(type) {
@@ -639,14 +640,14 @@ function mainMute(type) {
         return false;
     }
     wavesurfer.toggleMute();
-    if (type === "on") {
-        $("#mainMuteOff").show();
-        $("#mainMuteOn").hide();
-    }
-    if (type === "off") {
-        $("#mainMuteOff").hide();
-        $("#mainMuteOn").show();
-    }
+    // if (type === "on") {
+    //     $("#mainMuteOff").show();
+    //     $("#mainMuteOn").hide();
+    // }
+    // if (type === "off") {
+    //     $("#mainMuteOff").hide();
+    //     $("#mainMuteOn").show();
+    // }
 }
 
 //mixer controler
@@ -660,7 +661,7 @@ function changeAudioVolume(elementID, volumePercentage = 100) {
 }
 
 $(document).ready(function () {
-    $(document).on("input", "#audioController", function () {
+    $(document).on("input", "#audio-control-js", function () {
         let volumePercentage = $(this).val();
         changeAudioVolume(currenntAudioTrack, volumePercentage);
     });

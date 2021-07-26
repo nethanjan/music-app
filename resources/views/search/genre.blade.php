@@ -600,6 +600,7 @@
 </script>
 
 <script>(function localFileVideoPlayer() {
+    console.log("frf");
 
         'use strict'
         var URL = window.URL || window.webkitURL
@@ -609,14 +610,15 @@
             element.className = isError ? 'error' : 'info'
         }
         var playSelectedFile = function (event) {
-
+            console.log(event);
             document.getElementById('mixer').style.display = 'block';
             document.getElementById('video-section').style.display = 'none';
 
             var file = this.files[0]
             var type = file.type
             var videoNode = document.querySelector('video')
-            var canPlay = videoNode.canPlayType(type)
+            var canPlay = videoNode.canPlayType(type);
+            console.log(canPlay);
             if (canPlay === '') canPlay = 'no'
             var message = 'Can play type "' + type + '": ' + canPlay
             var isError = canPlay === 'no'
@@ -626,6 +628,7 @@
             }
 
             var fileURL = URL.createObjectURL(file)
+            console.log(fileURL);
             videoNode.src = fileURL
         }
 

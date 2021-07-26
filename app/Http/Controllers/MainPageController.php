@@ -43,7 +43,7 @@ class MainPageController extends Controller
             ->groupBy('songs.id', 'user_favourites.user_id')
             ->paginate(10);
 
-        return view('search.test', ['genres' => $genres, 'instruments' => $instruments, 'moods' => $moods, 'energyLevels' => $energyLevels, 'songs' => $songs ]);
+        return view('search.home', ['genres' => $genres, 'instruments' => $instruments, 'moods' => $moods, 'energyLevels' => $energyLevels, 'songs' => $songs ]);
     }
 
     /**
