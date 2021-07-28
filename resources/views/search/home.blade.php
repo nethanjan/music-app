@@ -275,7 +275,7 @@
                 <div class="volume-controller">
                     <div class="levels">
                         <div class="audio-control">
-                            <input type="range" id="audio-control-js" class="slider" min="1" max="100">
+                            <input type="range" id="audio-control-js" class="slider" min="1" max="100" step="1">
                         </div>
                         <div>
                             <input type="range" id="video-control-js" class="slider" min="1" max="100" step="1">
@@ -458,6 +458,10 @@
             playerVolumeUpdater(document.getElementById("mixer"), e.target);
         });
 
+        document.getElementById("audio-control-js").addEventListener("input", (e) => {
+            rangeStylesUpdater(e.target);
+        });
+
         // Nav
         function onMenuClick() {
             document.getElementById("menu-js").addEventListener("click", (e) => {
@@ -514,16 +518,16 @@
         var s3Url = '<?php echo env('AUDIO_S3_PATH'); ?>';
 
         //handle progress bar styles of slider in Chrome
-        $('input[type="range"]').change(function () {
-            var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
+        // $('input[type="range"]').change(function () {
+        //     var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
 
-            $(this).css('background-image',
-                '-webkit-gradient(linear, left top, right top, '
-                + 'color-stop(' + val + ', var(--eerie-black)), '
-                + 'color-stop(' + val + ', var(--white))'
-                + ')'
-            );
-        });
+        //     $(this).css('background-image',
+        //         '-webkit-gradient(linear, left top, right top, '
+        //         + 'color-stop(' + val + ', var(--eerie-black)), '
+        //         + 'color-stop(' + val + ', var(--white))'
+        //         + ')'
+        //     );
+        // });
 
         var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
