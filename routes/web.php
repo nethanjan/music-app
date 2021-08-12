@@ -30,6 +30,7 @@ Route::post('/forgot-password','LoginController@sendForgotPassword')->name('forg
 Route::get('/password-reset','LoginController@passwordResetView')->name('password-reset');
 Route::post('/password-reset','LoginController@passwordResetPost')->name('password-reset');
 
+Route::get('/verify', 'UserController@verify')->name('verify');
 Route::get('/verify-email','MainPageController@verifyEmail')->name('verify-email');
 
 // Sns
@@ -37,7 +38,6 @@ Route::any('/audio-transcode/sns','MainPageController@transcodeSns')->name('audi
 
 // protected routes
 Route::middleware('auth')->group(function () {
-    Route::get('/verify', 'UserController@verify')->name('verify');
     Route::post('/resend-verify', 'UserController@resendVerify')->name('resend-verify');
     Route::get('/profile', 'UserController@account')->name('my-account');
     Route::post('/profile', 'UserController@accountUpdate');

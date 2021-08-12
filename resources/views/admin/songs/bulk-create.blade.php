@@ -18,7 +18,7 @@
         @method('POST')
         
         <div class="form-group col-md-8">
-            <label for="file">Files</label>
+            <label for="file">Files <small>(max upload size 100mb)</small></label>
             <div class="custom-file">
                 <input type="file" class="custom-file-input {{ $errors->has('file') ? 'is-invalid' : '' }}" id="file" name="file[]" accept=".wav,.aif,.mp3" multiple>
                 <label class="custom-file-label" for="file">Choose files</label>

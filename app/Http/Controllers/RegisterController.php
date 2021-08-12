@@ -87,7 +87,7 @@ class RegisterController extends Controller
             $message->from('noreply.barkingowl@gmail.com','Please Verify');
         });
 
-        auth()->login($user);
+        // auth()->login($user);
 
         return redirect()->route('verify');
         

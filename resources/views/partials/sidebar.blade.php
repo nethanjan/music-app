@@ -3,10 +3,10 @@
 
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
-    <div class="sidebar-brand-icon">
+    <!-- <div class="sidebar-brand-icon">
         <i class="fas fa-user-cog"></i>
-    </div>
-    <div class="sidebar-brand-text mx-3">Barking Owl</div>
+    </div> -->
+    <div class="sidebar-brand-text mx-3"><img src="/img/BarkingOwlLogo.png" style="max-width:100%; max-height:100%;"></div>
 </a>
 
 <!-- Divider -->
