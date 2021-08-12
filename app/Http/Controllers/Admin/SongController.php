@@ -156,7 +156,7 @@ class SongController extends Controller
     {
         $validator = $request->validate([
             'file'     => 'required',
-            'file.*' => 'mimes:mp3,wav,aif'
+            'file.*' => 'mimes:mp3,wav,aif|max:102400'
         ], 
         [
             'file.required' => 'Song files are required',
