@@ -14,6 +14,172 @@
     </svg>
 </div>
 
+<div class="module-spacer results-player">
+  <div class="container">
+    <div class="title">YOUR RESULTS</div>
+    <div class="video-player-box">
+      <div class="video-player">
+        <div
+          id="video-section"
+          class="instructions"
+          onclick="document.getElementById('getFile').click()"
+        >
+          <div>
+            <p class="main-text">Select a video file from your computer</p>
+
+            <p>
+              This video will not be uploaded to any<br />server or cloud and
+              will only play<br />directly from your computer
+            </p>
+          </div>
+        </div>
+        <!-- <video class="player" controls="true" id="mixer" autoplay></video>
+                <input type="file" id="getFile" class="uploader videoinputdrag" name="getFile"
+                    accept="video/mp4,video/x-m4v,video/*"> -->
+
+        <video
+          class="player"
+          autoplay=""
+          id="mixer"
+          controls="true"
+          style="display: none"
+          onclick="document.getElementById('getFile').click()"
+        ></video>
+        <!-- <div id="video-section" class="select-a-v-ovies-here-C61RwLL valign-text-middle"
+                    style="top:40px; left:64px;" onclick="document.getElementById('getFile').click()">
+                    Select a video file from your computer<br/><br/>this video will not be uploaded to any<br/>server or cloud
+                    and will only play<br/>directly from your computer<br/><br/>tip: you can drag and drop movies here
+                </div> -->
+        <div>
+          <input
+            type="file"
+            id="getFile"
+            class="videoinputdrag"
+            name="getFile"
+            style="display: none"
+            accept=""
+          />
+        </div>
+      </div>
+
+      <div id="waveform" class="box">
+        <!-- <wave
+          style="
+            display: block;
+            position: relative;
+            user-select: none;
+            height: 82px;
+            width: 100%;
+            overflow: auto hidden;
+          "
+          ><wave
+            style="
+              position: absolute;
+              z-index: 3;
+              left: 0px;
+              top: 0px;
+              bottom: 0px;
+              overflow: hidden;
+              width: 0px;
+              display: none;
+              box-sizing: border-box;
+              border-right: 1px solid rgb(51, 51, 51);
+              pointer-events: none;
+            "
+            ><canvas
+              style="
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                bottom: 0px;
+                height: 100%;
+              "
+            ></canvas></wave
+          ><canvas
+            style="
+              position: absolute;
+              z-index: 2;
+              left: 0px;
+              top: 0px;
+              bottom: 0px;
+              height: 100%;
+              pointer-events: none;
+            "
+          ></canvas
+        ></wave> -->
+      </div>
+
+      <div class="cont-container">
+        <div>
+          <button onclick="mainPlay('play')">Play</button>
+          <button onclick="mainPlay('pause')">Pause</button>
+          <button onclick="mainMute('on')">Mute</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="volume-controller">
+      <div class="levels">
+        <div class="audio-control">
+          <input
+            type="range"
+            id="audio-control-js"
+            class="slider"
+            min="1"
+            max="100"
+            step="1"
+            style="
+              background-image: -webkit-gradient(
+                linear,
+                left top,
+                right top,
+                color-stop(0.5050505050505051, var(--dark)),
+                color-stop(0.5050505050505051, var(--light))
+              );
+            "
+          />
+        </div>
+        <div>
+          <input
+            type="range"
+            id="video-control-js"
+            class="slider"
+            min="1"
+            max="100"
+            step="1"
+            style="
+              background-image: -webkit-gradient(
+                linear,
+                left top,
+                right top,
+                color-stop(0.5050505050505051, var(--dark)),
+                color-stop(0.5050505050505051, var(--light))
+              );
+            "
+          />
+        </div>
+      </div>
+      <div class="content">
+        <span class="level-text music-level">Music level</span>
+        <span class="level-text video-level">Video level</span>
+      </div>
+    </div>
+    <div class="actions">
+      <button
+        type="button"
+        class="btn load-video"
+        id="btn-video-js"
+        onclick="document.getElementById('getFile').click()"
+      >
+        Load Video Here
+      </button>
+      <button type="button" class="btn" id="btn-search-js">
+        Forget It, let's search
+      </button>
+    </div>
+  </div>
+</div>
+
     <div class="results-count">
         <div class="container">
             <div class="count">Results : {{ $user_favourites->total() }}</div>
@@ -25,17 +191,9 @@
             <div class="row header">
                 <div class="col-one title">
                     Title
-                    <svg width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.25 1.375L6 6.625.75 1.375" stroke="#000" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
                 </div>
                 <div class="col-two title">
                     Length
-                    <svg width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.25 1.375L6 6.625.75 1.375" stroke="#000" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
                 </div>
                 <div class="col-three title">
                     Action
@@ -98,10 +256,13 @@
     </div>
 
 
-    <script>
+    <script type="text/javascript">
 
         var main_site = "{{ url('/') }}";
         var s3Url = '<?php echo env('AUDIO_S3_PATH'); ?>';
+        var globalAudioVolume = 0.5;
+        var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        var currentTrack = null;
 
         document.addEventListener("DOMContentLoaded", () => {
             if (document.querySelector(".nav")) {
@@ -117,7 +278,6 @@
         }
 
         function play(id) {
-            console.log(id);
             const audio = document.getElementById("audio-" + id);
 
             const divsToHide = document.getElementsByClassName("pauseIcon");
@@ -133,28 +293,65 @@
             $("#play-" + id).hide();
             $("#pause-" + id).show();
 
-            const playersToStop = document.getElementsByClassName("audio-player");
-            for (let i = 0; i < playersToStop.length; i++) {
-                playersToStop[i].pause();
-            }
+            // const playersToStop = document.getElementsByClassName("audio-player");
+            // for (let i = 0; i < playersToStop.length; i++) {
+            //     playersToStop[i].pause();
+            // }
 
-            audio.currentTime = 0;
-            audio.play();
+            // audio.currentTime = 0;
+            // audio.play();
+
+            if (currentTrack !== id) {
+            wavesurfer.load(audio.src);
+            if (isSafari) {
+                wavesurfer.on("waveform-ready", function () {
+                    wavesurfer.play();
+                    // $("#mainPlay").hide();
+                    // $("#mainPause").show();
+                });
+            } else {
+                wavesurfer.on("ready", function () {
+                    wavesurfer.play();
+                    // $("#mainPlay").hide();
+                    // $("#mainPause").show();
+                });
+            }
+            currentTrack = id;
+          } else {
+              wavesurfer.playPause();
+              // $("#mainPlay").hide();
+              // $("#mainPause").show();
+          }
         }
 
         function pause(id) {
             const audio = document.getElementById("audio-" + id);
-            audio.pause();
+            // audio.pause();
 
             $("#pause-" + id).hide();
             $("#play-" + id).show();
+
+            wavesurfer.playPause();
+        }
+
+        function mainPlay(type) {
+            if (!currentTrack) {
+                return false;
+            }
+            wavesurfer.playPause();
+        }
+
+        function mainMute(type) {
+            if (!currentTrack) {
+                return false;
+            }
+            wavesurfer.toggleMute();
         }
 
         $(document).on("click", ".remove-favourite", function () {
             //do something
             const elementId = this.id;
             const songId = elementId.replace("favoured-", "");
-            console.log(songId)
             // Ajax Reuqest
             $.ajax({
                 url: main_site + "/remove-favourite",
@@ -173,7 +370,6 @@
 
         $("#load-more").on("click", function () {
             let totalCurrentResult = $(".result-element").length;
-            console.log(totalCurrentResult);
             // Ajax Reuqest
             $.ajax({
                 url: main_site + "/favourites-load-more",
@@ -184,7 +380,6 @@
                 },
                 success: function (response) {
                     let _html = "";
-                    console.log(response);
                     $.each(response.results, function (index, value) {
 
                         _html += `<div class="row body result-element">
@@ -235,6 +430,154 @@
                         $("#load-more").hide();
                     }
                 },
+            });
+        });
+
+        if(isSafari){
+            var wavesurfer = WaveSurfer.create({
+                container: '#waveform',
+                height: 82,
+                waveColor: '#fff',
+                backend: 'MediaElement'
+            });
+        } else {
+            var wavesurfer = WaveSurfer.create({
+                container: '#waveform',
+                height: 82,
+                waveColor: '#fff'
+            });
+        }
+
+    </script>
+
+<script>
+        var currentAudioPlayerId = null;
+        var currenntAudioTrack = null;
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            if (document.querySelector(".results-player")) {
+                localFileVideoPlayer();
+                rangeStylesUpdater(document.getElementById("video-control-js"));
+                rangeStylesUpdater(document.getElementById("audio-control-js"));
+            }
+        });
+
+        function localFileVideoPlayer() {
+
+            const URL = window.URL || window.webkitURL;
+            const displayMessage = (message, isError) => {
+                var element = document.querySelector("#message");
+                element.innerHTML = message;
+                element.className = isError ? "error" : "info";
+            };
+
+            document.getElementById("video-control-js").addEventListener("input", (e) => {
+                rangeStylesUpdater(e.target);
+                playerVolumeUpdater(document.getElementById("mixer"), e.target);
+            });
+
+            document.getElementById("btn-search-js").addEventListener("click", () => {
+                window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+                });
+            });
+        }
+
+        const playSelectedFile = (e) => {
+
+            const URL = window.URL || window.webkitURL;
+            const file = e.target.files[0];
+            const type = file.type;
+            const player = document.getElementById("mixer");
+            const canPlay = player.canPlayType(type);
+
+            if (canPlay === "") canPlay = "no";
+            const isError = canPlay === "no";
+            const fileURL = URL.createObjectURL(file);
+
+            if (isError && type !== "video/quicktime") {
+            return;
+            }
+
+            const getFileInput = document.getElementById("getFile");
+            getFileInput.disabled = true;
+            player.style.display = "block";
+            player.src = fileURL;
+
+            document.getElementById('video-section').style.display = 'none';
+            playerVolumeUpdater(player, document.getElementById("video-control-js"));
+        };
+
+        document
+            .getElementById("getFile")
+            .addEventListener("change", playSelectedFile);
+
+        document.getElementById("video-control-js").addEventListener("input", (e) => {
+            rangeStylesUpdater(e.target);
+            playerVolumeUpdater(document.getElementById("mixer"), e.target);
+        });
+
+        document.getElementById("audio-control-js").addEventListener("input", (e) => {
+            rangeStylesUpdater(e.target);
+        });
+
+        // // Nav
+        // function onMenuClick() {
+        //     document.getElementById("menu-js").addEventListener("click", (e) => {
+        //         e.preventDefault();
+        //         document.getElementsByTagName("body")[0].classList.toggle("menu-open");
+        //     });
+        // }
+
+        // Categories
+        // function onCategoryClick() {
+        //     document.querySelectorAll(".category-js").forEach((item) => {
+        //         item.addEventListener("click", (e) => {
+        //         const id = e.target.dataset.id;
+        //         e.preventDefault();
+        //         document.querySelector(".categories").setAttribute("data-id", id);
+        //         });
+        //     });
+        // }
+
+        // function onViewResultsClick() {
+        //     document.getElementById("view-results-js").addEventListener("click", (e) => {
+        //         e.preventDefault();
+        //         window.scroll({
+        //         top: document.querySelector(".results-player").offsetTop - 35,
+        //         left: 0,
+        //         behavior: "smooth",
+        //         });
+        //     });
+        // }
+
+        function rangeStylesUpdater(ele) {
+            const val =
+                (ele.value - ele.getAttribute("min")) /
+                (ele.getAttribute("max") - ele.getAttribute("min"));
+
+            ele.style.cssText = `background-image: -webkit-gradient(linear, left top, right top, color-stop(${val}, var(--dark)), color-stop(${val}, var(--light)))`;
+        }
+
+        const playerVolumeUpdater = (player, volumeController) => {
+            player.volume = volumeController.value / 100;
+        };
+
+        function changeAudioVolume(elementID, volumePercentage = 100) {
+            // let element = document.getElementById(elementID);
+            let volume = volumePercentage / 100;
+
+            // element.volume = volume;
+            wavesurfer.setVolume(volume);
+            globalAudioVolume = volume;
+        }
+
+        $(document).ready(function () {
+            $(document).on("input", "#audio-control-js", function () {
+                let volumePercentage = $(this).val();
+                changeAudioVolume(currenntAudioTrack, volumePercentage);
             });
         });
 

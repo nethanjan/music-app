@@ -612,8 +612,8 @@ function pause(id) {
     const audio = document.getElementById("audio-" + id);
     // audio.pause();
 
-    // $("#pause-" + id).hide();
-    // $("#play-" + id).show();
+    $("#pause-" + id).hide();
+    $("#play-" + id).show();
 
     wavesurfer.playPause();
     // $("#mainPlay").show();

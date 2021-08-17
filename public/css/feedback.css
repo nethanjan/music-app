@@ -1,0 +1,80 @@
+.results-player {
+    width: 100%;
+}
+
+/* Player Control Button Styles */
+.cont-container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-container div button {
+    background-color: transparent;
+    border: 2px solid #212121;
+    padding: 9px 23px;
+    box-sizing: border-box;
+    margin-right: 13px;
+    cursor: pointer;
+    transition: opacity 0.2s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+    .cont-container div button {
+        font-size: 1rem;
+    }
+}
+
+@media (hover: hover) {
+    .cont-container div button:hover {
+        opacity: 0.7;
+    }
+}
+
+.cont-container div button:last-of-type {
+    margin-right: 0;
+}
+
+/* Category Column Update */
+@media (max-width: 767.98px) {
+    .categories .sub-categories {
+        height: 372px;
+    }
+
+    .categories #instrument .sub-categories {
+        margin-bottom: 272px;
+    }
+}
+
+@media (min-width: 768px) {
+    .categories #genre .sub-categories {
+        height: 236px;
+        margin-bottom: 100px;
+    }
+
+    .categories #instrument .sub-categories {
+        margin-bottom: 186px;
+    }
+
+    .categories #energy-level .sub-categories,
+    .categories #mood .sub-categories {
+        margin-bottom: 166px;
+    }
+}
+
+@media (min-width: 1366px) {
+    .categories #genre .sub-categories {
+        height: 236px;
+        margin-bottom: 29px;
+    }
+
+    .categories #instrument .sub-categories {
+        margin-bottom: 115px;
+    }
+
+    .categories #energy-level .sub-categories,
+    .categories #mood .sub-categories {
+        margin-bottom: 95px;
+    }
+}
