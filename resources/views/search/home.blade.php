@@ -199,7 +199,7 @@
             </div>
 
             <a href="#" class="view-results" id="view-results-js">
-                View results below (12)
+                View results below
                 <svg class="arrow arrow-line" width="4" height="31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.5 1c0 4.44-.157 14.135-.784 17.4-.628 3.265.261 9.094.784 11.6" stroke="#000"
                         stroke-width="2" stroke-linecap="round" />
