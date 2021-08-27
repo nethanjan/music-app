@@ -225,6 +225,7 @@ $(document).on("click", ".select-genre", function () {
             });
             $(".table-of-results").append(_html);
             $(".count").text("Results : " + response.total);
+            $("#link-count").text("(" + response.total + ")");
             const totalCount = response.total;
             totalCurrentResult = $(".result-element").length;
             if (totalCurrentResult < totalCount) {
@@ -324,6 +325,7 @@ $(document).on("click", ".select-instrument", function () {
             });
             $(".table-of-results").append(_html);
             $(".count").text("Results : " + response.total);
+            $("#link-count").text("(" + response.total + ")");
             const totalCount = response.total;
             totalCurrentResult = $(".result-element").length;
             if (totalCurrentResult < totalCount) {
@@ -423,6 +425,7 @@ $(document).on("click", ".select-energy-level", function () {
             });
             $(".table-of-results").append(_html);
             $(".count").text("Results : " + response.total);
+            $("#link-count").text("(" + response.total + ")");
             const totalCount = response.total;
             totalCurrentResult = $(".result-element").length;
             $("#load-more").data("totalresult", totalCount);
@@ -539,6 +542,7 @@ $(document).on("click", ".select-mood", function () {
             });
             $(".song-results").append(_html);
             $(".results-200-C61RwLL").text("Results : " + response.total);
+            $("#link-count").text("(" + response.total + ")");
 
             $("#load-more").data("totalResult", response.total);
             totalCurrentResult = $(".song-list").length;
