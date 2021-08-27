@@ -167,16 +167,14 @@
                         <?PHP
                             for ($q = 0; $q < sizeof($moods); $q++) {
                         ?>
-                            <li class="" id="<?PHP echo $moods[$q]->id ?>">
-                                <a href="#">
-                                    <?PHP echo $moods[$q]->name ?>
-                                    <svg class="shape" width="87" height="23" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M83.487 2.525c1.317 6.253 6.542 18.943-20.99 19.398-34.413.568-63.631-1.9-61.374-10.427 2.256-8.527 11.844-7.265 29.333-9.54 17.49-2.273 45.697 0 51.339 1.706 4.513 1.364 4.513 2.842 3.949 3.41"
-                                            stroke="#37807E" />
-                                    </svg>
-                                </a>
+                            <li class="select-energy-level" id="<?PHP echo $moods[$q]->id ?>" style="cursor: pointer;">
+                                <?PHP echo $moods[$q]->name ?>
+                                <svg class="shape" width="87" height="23" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                         d="M83.487 2.525c1.317 6.253 6.542 18.943-20.99 19.398-34.413.568-63.631-1.9-61.374-10.427 2.256-8.527 11.844-7.265 29.333-9.54 17.49-2.273 45.697 0 51.339 1.706 4.513 1.364 4.513 2.842 3.949 3.41"
+                                        stroke="#37807E" />
+                                </svg>
                             </li>
                         <?PHP 
                             }
@@ -201,7 +199,7 @@
             </div>
 
             <a href="#" class="view-results" id="view-results-js">
-                View results below
+                View results below (12)
                 <svg class="arrow arrow-line" width="4" height="31" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.5 1c0 4.44-.157 14.135-.784 17.4-.628 3.265.261 9.094.784 11.6" stroke="#000"
                         stroke-width="2" stroke-linecap="round" />
