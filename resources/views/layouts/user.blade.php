@@ -85,7 +85,7 @@
         </div>
     </footer>
     <!-- <script src="js/user.min.js"></script> -->
-    <script src="js/application.js"></script>
+    <script src="js/application.js?v=1.1"></script>
 </body>
 
 </html>
